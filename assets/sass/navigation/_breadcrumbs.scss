@@ -1,0 +1,37 @@
+.breadcrumbs {
+	position: relative;
+	margin: 1.35em 0;
+	text-transform: none;
+	&__title {
+		display: none;
+		.page-title {
+			margin: 0;
+		}
+	}
+	&__items {
+		float: left;
+		@include font-size(0.75);
+		color: $color__link;
+	}
+	&__browse {
+		float: left;
+		margin-right: .5em;
+	}
+	&__wrap {
+		float: left;
+		margin: 0;
+	}
+	&__item {
+		float: left;
+		&-sep {
+			margin: 0 .55em;
+			color: $color__separator;
+		}
+		&-link {
+			text-decoration: none;
+			&:hover {
+				color: $color__link-hover;
+			}
+		}
+	}
+}

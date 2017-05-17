@@ -1,0 +1,30 @@
+.post {
+	/* Video */
+	&-type-archive-video-tutorials {
+		.wapu-video-item {
+			text-align: center;
+			margin-bottom: 2.5em;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 4em;
+			}
+			.entry-title {
+				margin: 0.7em 0 0.2em 0;
+			}
+			.short_description {
+				p {
+					margin-bottom: 0;
+					@include font-size(0.875);
+				}
+			}
+		}
+	}
+	&-type-archive-faq {
+		.faq-terms {
+			.faq-post {
+				&__content {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headings;
+	font-weight: 700;
+	clear: both;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 1.225em;
+}
+
+h3 {
+	font-size: 34px;
+	line-height: 1.2em;
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 1.286em
+}
+
+h5 {
+	font-size: 22px;
+	line-height: 1.2em;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
+.invert {
+	h1, h2, h3, h4, h5, h6, p {
+		color: $color__invert-main;
+	}
+}
+
+.single {
+	h2 {
+		margin: 0.325em 0 0.650em
+	}
+	h3, h4, h5, h6 {
+		margin: 1.16em 0;
+	}
+}

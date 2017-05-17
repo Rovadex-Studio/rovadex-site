@@ -1,0 +1,180 @@
+.main-navigation {
+	clear: both;
+	float: right;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 2.5em;
+			left: -999em;
+			z-index: 99999;
+			background-color: $color__background-sub-menu;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+				color: $color__invert-main;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+				color: $color__link-hover;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+		margin-left: 38px;
+		&:firs-child {
+			margin-left: 0;
+		}
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__link-hover;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	
+	overflow: hidden;
+	padding: 1.45em 0;
+	margin: 2em 0;
+	border-top: 1px solid $color__separator; 
+	border-bottom: 1px solid $color__separator; 
+	@include media-breakpoint-up(md) {
+		padding: 2.45em 0;
+	}
+
+	.nav-links {
+		a {
+			color: $color__link;
+		}
+		.meta-nav{
+			@include font-size(1);
+			font-family: $font__headings;
+			color: $color__link_hover;
+			@include transition(all 0.28s ease);
+		}
+		.post-title {
+			line-height: 1.385em;
+		}
+	}
+	.nav-previous, .nav-next {
+		overflow: hidden;
+		display: block;
+		margin: 0;
+		@include media-breakpoint-up(md) {
+			margin: 0;
+			width: 48.5%;
+			display: flex;
+		}
+		a {
+			position: relative;
+			padding: 1em 10px;
+			display: block;
+			width: 100%;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -8px;
+				text-align: center;
+				width: 16px;
+				height: 16px;
+				line-height: 1em;
+				@include nucleo-icon();
+				@include font-size(0.75);
+			}
+			&:hover {
+				color: $color__link_hover;
+				.meta-nav {
+					color: $color__link;
+				}
+			}
+		}
+	}
+	.nav-previous {
+		text-align: left;
+		float: left;
+
+		> a {
+			padding-left: 28px;
+
+			&:before {
+				content: '\e903';
+				left: 0;
+			}
+		}
+	}
+	.nav-next {
+		text-align: right;
+		float: right;
+
+		> a {
+			padding-right: 28px;
+
+			&:before {
+				content: '\e904';
+				right: 0;
+			}
+		}
+	}
+}

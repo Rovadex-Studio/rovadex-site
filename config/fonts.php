@@ -4,8 +4,13 @@
  */
 return array(
 	array(
-		'family'  => 'Poppins',
-		'styles'  => '300,400,500,600,700',
+		'family'  => 'Open Sans',
+		'styles'  => '300,400,600,700',
+		'charset' => 'latin',
+	),
+	array(
+		'family'  => 'Muli',
+		'styles'  => '700',
 		'charset' => 'latin',
 	),
 );

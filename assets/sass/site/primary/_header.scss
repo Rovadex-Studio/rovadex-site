@@ -15,25 +15,15 @@
 			order: 0;
 			align-self: auto;
 			flex: 0 1 auto;
-		}
+		}		
 		.site-branding {
-			margin: 20px $grid-gutter-width/2 18px;
+			margin: 20px $grid-gutter-width/2 18px; 
 		}
 		.main-navigation {
-			margin: 15px $grid-gutter-width/2;
+			margin: 15px $grid-gutter-width/2; 
 		}
 	}
 }
-.home {
-	.site-header {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-		z-index: 1;
-	}
-}
-
 .header-area-wrap {
 	background-color: $color__background-pre;
 	padding: 3.8em 0 3.6em;

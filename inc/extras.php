@@ -79,21 +79,6 @@ function rovadex_layout_class( $context = 'content' ) {
 }
 
 /**
- * Returns site content classes
- *
- * @return string
- */
-function rovadex_site_content_classes() {
-	$clasess[] = 'site-content_wrap';
-
-	if ( ! is_front_page() ) {
-		$clasess[] = 'container';
-	}
-
-	return implode( ' ', $clasess );
-}
-
-/**
  * Replace %s with theme URL.
  *
  * @param  string $url Formatted URL to parse.

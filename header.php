@@ -30,34 +30,27 @@
 					rovadex_header_logo();
 					rovadex_site_description();
 				?></div><!-- .site-branding -->
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'one_page_navi' ) ) : ?>
+				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 					<?php
-						if ( is_front_page() ) {
-							rovadex_nav_menu(
-								'one_page_navi',
-								'<nav id="site-navigation" class="main-navigation main-navigation--onepage-navigation" role="navigation">%s</nav>',
-								false
-							);
-						} else {
-							rovadex_nav_menu(
-								'primary',
-								'<nav id="site-navigation" class="main-navigation" role="navigation">%s</nav>',
-								true
-							);
-						}
+						rovadex_nav_menu(
+							'primary',
+							'<nav id="site-navigation" class="main-navigation" role="navigation">%s</nav>',
+							true
+						);
 					?>
 				<?php endif; ?>
 			</div>
 		</div>
 	</header><!-- #masthead -->
 
-	<?php if ( ! is_front_page() ) : ?>
-		<div class="header-area-wrap">
-			<div class="container"><?php
-				//do_action( 'rovadex_render_widget_area', 'home-header' );
+	<div class="header-area-wrap">
+		<div class="container"><?php
+			if ( is_front_page() ) {
+				do_action( 'rovadex_render_widget_area', 'home-header' );
+			} else {
 				do_action( 'rovadex_render_widget_area', 'header' );
-			?></div>
-		</div>
-	<?php endif; ?>
+			}
+		?></div>
+	</div>
 
 	<div id="content" class="site-content">

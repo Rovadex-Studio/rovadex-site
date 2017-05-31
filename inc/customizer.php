@@ -14,9 +14,10 @@ function rovadex_get_customizer_options() {
 				'title'           => esc_html__( 'Logo Upload', 'rovadex' ),
 				'description'     => esc_html__( 'Upload logo image', 'rovadex' ),
 				'section'         => 'title_tagline',
-				'default'         => '%s/assets/images/logo.png',
+				'default'         => '%s/assets/images/logo.svg',
 				'field'           => 'image',
 				'type'            => 'control',
+				'extensions' => array( 'jpg', 'jpeg', 'gif', 'png', 'svg' ),
 			),
 			'retina_header_logo_url' => array(
 				'title'           => esc_html__( 'Retina Logo Upload', 'rovadex' ),

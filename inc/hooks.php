@@ -4,30 +4,6 @@
  *
  * @package Rovadex
  */
-add_filter( 'cherry_search_placeholder', 'rovadex_cherry_search_placeholder' );
-add_filter( 'cherry_search_thumbnail_size', 'rovadex_search_thumbnail_set_size', 9, 1 );
-add_filter( 'body_class', 'rovadex_body_sidebar_class' );
-
-/**
- * cherry_search_thumbnail_set_size
- *
- * @param $array
- * @return $array
- */
-function rovadex_search_thumbnail_set_size( $size ){
-	return 'search-thumbnail';
-}
-
-/**
- * cherry_search_placeholder.
- * @param $array
- * @return $array
- */
-function rovadex_cherry_search_placeholder( $args ) {
-	$args['width'] = 86;
-	$args['height'] = 66;
-	return $args;
-}
 
 /**
  * Adds 'has_sidebar' class to body if required.
@@ -45,3 +21,37 @@ function rovadex_body_sidebar_class( $classes ) {
 
 	return $classes;
 }
+add_filter( 'body_class', 'rovadex_body_sidebar_class' );
+
+/**
+ * Add SVG into allowed mime types
+ *
+ * @param array $mimes Default mime types.
+ */
+function add_mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'add_mime_types' );
+
+/**
+ * Customize one page menu item link attr line
+ *
+ * @return Object
+ */
+function customize_nav_menu_link_attributes( $atts, $item, $args ) {
+
+	if ( 'one_page_navi' === $args->theme_location ) {
+		$menuanchor = str_replace( '#', '', $item->url );
+		// inspect $item, then …
+		$atts[ 'data-menuanchor' ] = $menuanchor;
+	}
+
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'customize_nav_menu_link_attributes', 10, 3 );
+
+
+
+

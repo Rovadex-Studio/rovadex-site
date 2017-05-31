@@ -79,6 +79,21 @@ function rovadex_layout_class( $context = 'content' ) {
 }
 
 /**
+ * Returns site content classes
+ *
+ * @return string
+ */
+function rovadex_site_content_classes() {
+	$clasess[] = 'site-content_wrap';
+
+	if ( ! is_front_page() ) {
+		$clasess[] = 'container';
+	}
+
+	return implode( ' ', $clasess );
+}
+
+/**
  * Replace %s with theme URL.
  *
  * @param  string $url Formatted URL to parse.
@@ -101,4 +116,30 @@ function rovadex_get_image_id_by_url( $image_src ) {
 	$id    = $wpdb->get_var( $wpdb->prepare( $query, esc_url( $image_src ) ) );
 
 	return $id;
+}
+
+/**
+ * Try to get SVG icon
+ *
+ * @return string|bool false
+ */
+function rovadex_get_svg_by_attachment_id( $attachment_id ) {
+	$transient = md5( $attachment_id );
+	$svg = get_transient( $transient );
+
+	if ( $svg ) {
+		return $svg;
+	}
+
+	$icon_url    = wp_get_attachment_url( $attachment_id );
+	$svg_request = wp_remote_get( $icon_url );
+	$svg         = wp_remote_retrieve_body( $svg_request );
+
+	if ( ! empty( $svg ) ) {
+		set_transient( $transient, $svg, 3 * DAY_IN_SECONDS );
+
+		return $svg;
+	} else {
+		return false;
+	}
 }

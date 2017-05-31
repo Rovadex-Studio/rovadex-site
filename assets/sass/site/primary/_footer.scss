@@ -1,7 +1,7 @@
 .site-footer {
 	background-color: $color__background-footer;
 	color: white;
-	padding: 1.286em 0 1.429em;
+	padding: 5px 0;
 	@include font-size(0.875);
 	.footer-conatiner__flex {
 		display: flex;
@@ -30,11 +30,20 @@
 			margin: 0 10px 0 0;
 		}
 	}
+
 	a {
 		color: $color__link-footer;
 		&:hover {
 			color: white;
 		}
+	}
+
+	.home & {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
 	}
 }
 .footer-area-wrap {

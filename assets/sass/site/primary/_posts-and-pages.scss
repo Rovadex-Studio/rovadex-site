@@ -19,8 +19,6 @@
 
 }
 
-
-
 .posted-on .updated:not(.published){
 	display: none;
 }
@@ -37,6 +35,12 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-content {
+	.home & {
+		margin: 0;
+	}
 }
 
 .page-links {
@@ -90,7 +94,7 @@
 		span{
 			font-family: $font__main;
 			font-weight: normal;
-		}		
+		}
 	}
 	&__tags {
 		font-family: $font__main;
@@ -118,7 +122,7 @@
 	}
 }
 .entry {
-	&-meta, 
+	&-meta,
 	&-footer {
 		@include font-size(0.875);
 		text-transform: capitalize;

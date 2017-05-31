@@ -1,0 +1,47 @@
+.cherry-team {
+	width: 80%;
+
+	.team-item {
+
+		.team-listing_photo {
+			filter: saturate(0.1);
+			transition: filter .4s ease;
+		}
+
+		.team-listing_content {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px;
+			width: calc(100% - 40px);
+			height: calc(100% - 40px);
+			background: linear-gradient(to bottom, rgba(214,83,146,0.5) 0%, rgba(125,95,168,0.5) 100%);
+		}
+
+		.team-listing_name {
+			font-size: 30px;
+			font-weight: 600;
+			margin: 0;
+		}
+
+		.team-listing_position {
+			font-size: 25px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+
+		.team-listing_socials {
+			.team-socials_icon {
+				color: #fff;
+			}
+		}
+
+		&:hover {
+			.team-listing_photo {
+				filter: saturate(1);
+			}
+		}
+
+	}
+}

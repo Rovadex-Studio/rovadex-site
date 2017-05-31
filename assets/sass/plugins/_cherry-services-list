@@ -1,0 +1,30 @@
+.cherry-services {
+	.services-listing {
+
+	}
+
+	.services-item {
+		display: flex;
+		padding-bottom: 0;
+
+		.icon_wrap {
+			min-width: 40px;
+			margin-right: 25px;
+
+			.service-icon {
+				font-size: 40px;
+				line-height: 1em;
+			}
+		}
+
+		.content_wrap {
+
+		}
+
+		.title_wrap {
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}

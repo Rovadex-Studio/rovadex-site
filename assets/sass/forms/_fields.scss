@@ -17,7 +17,7 @@ textarea {
 	@include font-size(0.875);
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: $border__radius;
+	border-radius: 0;
 	padding: $input__indents;
 	background-color: $color__field-background;
 	&:focus {

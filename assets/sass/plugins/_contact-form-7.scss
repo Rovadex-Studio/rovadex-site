@@ -1,0 +1,41 @@
+.home-contact-form {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='password'],
+	input[type='search'],
+	input[type='number'],
+	input[type='tel'],
+	input[type='range'],
+	input[type='date'],
+	input[type='month'],
+	input[type='week'],
+	input[type='time'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	input[type='color'],
+	textarea {
+		width: 100%;
+		border: none;
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.1);
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+
+	.wpcf7-form-control-wrap {
+		display: block;
+		margin-bottom: 15px;
+		min-width: 100%;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

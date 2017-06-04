@@ -33,7 +33,7 @@
 
 			$fullPageSection.fullpage( {
 				//sectionsColor: ['#25272d', '#ffffff', '#ffffff', '#ffffff', '#25272d', '#ffffff', '#25272d'],
-				anchors: ['home', 'about', 'services', 'projects', 'team', 'blog', 'contacts'],
+				anchors: ['home', 'about', 'services', 'team', 'projects', 'contacts'],
 				menu: '#one_page_navi-menu',
 				navigation: true,
 				navigationPosition: 'left',

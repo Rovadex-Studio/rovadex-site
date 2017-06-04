@@ -300,9 +300,11 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			require get_template_directory() . '/inc/customizer.php';
 			require get_template_directory() . '/inc/template-meta.php';
 			require get_template_directory() . '/inc/hooks.php';
+			require get_template_directory() . '/inc/register-plugins.php';
 
 			require get_template_directory() . '/inc/classes/class-widget-area.php';
 			require get_template_directory() . '/inc/classes/class-wrapping.php';
+			require get_template_directory() . '/inc/classes/class-tgm-plugin-activation.php';
 
 		}
 

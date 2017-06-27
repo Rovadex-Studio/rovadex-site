@@ -1,3 +1,11 @@
+.admin-bar.home {
+	.site-header {
+		.header-container__flex {
+			padding-top: 50px;
+		}
+	}
+}
+
 .site-header {
 	.home & {
 		position: fixed;
@@ -5,6 +13,19 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
+
+		.header-container__flex {
+			padding-top: 30px;
+			padding-bottom: 0;
+		}
+
+		.site-branding {
+			margin-left: 20px;
+		}
+
+		.main-navigation {
+			margin-right: 20px;
+		}
 	}
 
 	.header-container__flex {
@@ -14,7 +35,7 @@
 		justify-content: space-between;
 		align-content: space-around;
 		align-items: center;
-		padding-top: 40px;
+		padding: 40px 0;
 		margin-right: -$grid-gutter-width/2;
 		margin-left: -$grid-gutter-width/2;
 		.site-branding,
@@ -24,9 +45,14 @@
 		}
 		.site-branding {
 			flex: 0 1 auto;
+
+			@include media-breakpoint-up(sm) {
+				margin-right: 40px;
+			}
+
 			.site-logo {
 				.site-link__img {
-					width: 200px;
+					width: 120px;
 				}
 			}
 		}
@@ -38,8 +64,9 @@
 
 .header-area-wrap {
 	background-color: $color__background-pre;
-	padding: 3.8em 0 3.6em;
+
 	&:empty {
+		padding: 3.8em 0 3.6em;
 		display: none;
 	}
 }

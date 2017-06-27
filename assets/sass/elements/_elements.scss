@@ -23,19 +23,20 @@ blockquote, q {
 		padding: $pre_indents;
 	}
 	&:before {
-		@include nucleo-icon();
-		content: "\eb16";
+		@include font-awesome-icon();
+		content: "\f10d";
 		position: absolute;
-		@include font-size(1.125);
+		@include font-size(1.75);
 		top: 25px;
 		left: 25px;
+		color: $color_primary;
 		@include media-breakpoint-up(md) {
 			top: 15px;
 			left: 25px;
 		}
 	}
-	p{
-		margin: 0; 
+	p {
+		margin: 0;
 	}
 }
 

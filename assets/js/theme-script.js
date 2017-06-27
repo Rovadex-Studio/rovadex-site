@@ -1,8 +1,9 @@
 ( function( $ ) {
 	'use strict';
 
-	CherryJsCore.utilites.namespace( 'theme_script' );
-	CherryJsCore.theme_script = {
+	var rovadexThemeScript = null;
+
+	rovadexThemeScript = {
 		init: function () {
 			// Document ready event check
 			if( CherryJsCore.status.is_ready ){
@@ -20,6 +21,8 @@
 		},
 
 		document_ready_render: function () {
+			this.onePageMenuInit( this );
+			this.responsiveMenuInit( this );
 			this.fullPageInit( this );
 		},
 
@@ -27,17 +30,53 @@
 
 		},
 
+		onePageMenuInit: function ( self ) {
+			var $navigation    = $( '.onepage-navigation' ),
+				$toogleButton  = $( '.navi-toggle-button', $navigation ),
+				$menuContainer = $( '.menu-onepage-menu-container', $navigation ),
+				$menu          = $( '.one_page_navi-menu', $navigation ),
+				$menuItems     = $( '> .menu-item', $menu );
+
+				$toogleButton.on( 'click', function() {
+					$navigation.toggleClass( 'active' );
+					$toogleButton.toggleClass( 'active' );
+
+					if ( $navigation.hasClass( 'active' ) ) {
+						showMenu();
+					} else {
+						hideMenu();
+					}
+				} );
+
+				function showMenu() {
+					var timeline = new TimelineMax;
+
+					timeline.to( $menuContainer, 0.6, { right:0, ease: Expo.easeOut } );
+					timeline.staggerFrom( $menuItems, 0.75, { opacity: 0, rotationX:90, transformOrigin:"0% 50% 50", ease:Back.easeOut }, 0.1, '-=0.3' );
+
+					timeline.play();
+
+				}
+
+				function hideMenu() {
+					TweenMax.to( $menuContainer, 0.5, { right:'-100%', ease: Circ.easeIn } );
+				}
+		},
+
 		fullPageInit: function ( self ) {
 			var $fullPageSection = $( '.fullPageSection' ),
-				$sectionList = $( '> .cherry-section', $fullPageSection);
+				$sectionList     = $( '> .cherry-section', $fullPageSection),
+				$footer          = $( '.site-footer' );
+
+			rovadexThemeScript.textSplit( $( 'h2:not(.splitted)', $fullPageSection ) );
 
 			$fullPageSection.fullpage( {
-				//sectionsColor: ['#25272d', '#ffffff', '#ffffff', '#ffffff', '#25272d', '#ffffff', '#25272d'],
-				anchors: ['home', 'about', 'services', 'team', 'projects', 'contacts'],
+				anchors: ['home', 'about', 'services', 'projects', 'team', 'news', 'contacts'],
 				menu: '#one_page_navi-menu',
 				navigation: true,
 				navigationPosition: 'left',
 				verticalCentered: false,
+				scrollingSpeed: 700,
 				afterLoad: function( anchorLink, index ) {
 					var loadedSection = $( this );
 
@@ -52,7 +91,9 @@
 				},
 				onLeave: function( index, nextIndex, direction ) {
 					var leavingSection = $( this ),
-						currentSection = $sectionList.eq( nextIndex - 1 );
+						currentSection = $sectionList.eq( nextIndex - 1 ),
+						$coverCurrentImage = $( '.fullpage-image', currentSection ),
+						$boxCurrentImage = $( '.box-image', currentSection );
 
 					if ( currentSection.hasClass( 'dark-section' ) ) {
 						$( '.site-header' ).addClass( 'invert' );
@@ -61,10 +102,102 @@
 						$( '.site-header' ).removeClass( 'invert' );
 						$( '#fp-nav' ).removeClass( 'invert' );
 					}
+
+					if ( currentSection.hasClass( 'home-section' ) ) {
+						self.homeAnimationShow( currentSection );
+					}
+
+					if ( currentSection.hasClass( 'contacts-section' ) ) {
+						TweenMax.to( $footer, 1, { bottom: 0, ease: Expo.easeOut } );
+					} else {
+						TweenMax.to( $footer, 0.8, { bottom: '-100%', ease: Circ.easeIn } );
+					}
+
+					TweenMax.from( $coverCurrentImage, 0.7, { scaleX: 1.7, scaleY: 1.7, ease: Circ.easeOut } );
+
+					//TweenMax.set( currentSection, { perspective:800 } );
+					//TweenMax.from( $boxCurrentImage, 1.5, { opacity:0, z:-500, rotationY:-90, delay:0.5, force3D: true, ease: Expo.easeOut } );
+
+					rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
+
 				}
 			} );
+		},
+
+		homeAnimationShow: function ( $homeSection ) {
+			var $homeSection     = $homeSection,
+				timeline         = new TimelineMax( { delay: 0.4 } ),
+				$svgLogo         = $( '#rovadex-logo-svg' ),
+				$shape1          = $( '.shape-1', $svgLogo ),
+				$shape2          = $( '.shape-2', $svgLogo ),
+				$symbol          = $( '.main-symbol', $svgLogo ),
+				$drops           = $( '.drop', $svgLogo ),
+				$symbols         = $( '.symbol', $svgLogo ),
+				$contentSection  = $( '.content-section', $homeSection );
+
+				$svgLogo.attr( {width: 840});
+
+			timeline.fromTo( $shape1, 0.8, { scale:0, rotation:-180, transformOrigin: '50% 50%'}, { scale:1, rotation:0, ease: Expo.easeOut } );
+			timeline.staggerFromTo( $drops, 0.5, { scale:0, transformOrigin: '50% 50%' }, { scale:1, ease: Expo.easeOut }, 0.1, '-=0.5' );
+			timeline.fromTo( $shape2, 0.8, { scale:0, rotation: 180, transformOrigin: '50% 50%' }, { scale:1, rotation: 0, ease: Expo.easeOut }, '-=1' );
+			timeline.fromTo( $symbol, 0.8, { opacity:0, scale:1.1, rotation:180, transformOrigin: '50% 50%' }, { opacity:1, scale:1, rotation:0, ease: Expo.easeOut }, '-=0.9' );
+			timeline.staggerFromTo( $symbols, 0.9, { scale:0, transformOrigin: '50% 50%' }, { scale:1, ease: Elastic.easeOut }, 0.1, '-=0.6' );
+			timeline.fromTo( $contentSection, 0.9, { opacity:0, left: -50 }, { opacity:1, left: 0, ease: Circ.easeOut }, '-=0.9' );
+
+			timeline.play();
+		},
+
+		titleShow: function( $selector ) {
+			var $title = $selector;
+
+			$title.each( function() {
+				var $this = $( this ),
+					$symbols = $( 'span', $this ),
+					randTop = rovadexThemeScript.getRandomInt(-20, 20);
+
+				var timeline = new TimelineMax( { delay: 0.5 } );
+
+				timeline.set( $symbols, { clearProps: 'opacity, top' } );
+				timeline.staggerFrom( $symbols, 0.8, { opacity:0, top: -100, ease: Circ.easeOut }, 0.05 );
+
+				timeline.play();
+
+			} );
+
+		},
+
+		responsiveMenuInit: function( self ) {
+
+			$( '.main-navigation' ).cherryResponsiveMenu( {
+				moreMenuContent: '&middot;&middot;&middot;',
+				clotting: true
+			} );
+
+		},
+
+		textSplit: function( $selector ) {
+			var $textSelector = $selector;
+
+			$textSelector.each( function() {
+				var $this = $( this ),
+					symbolArray = $this.html().split(''),
+					spanedSympols;
+
+					$this.addClass( 'splitted' );
+
+					spanedSympols = symbolArray.map( function( symbol ) {
+						return '<span>' + symbol + '</span>';
+					});
+
+					$this.html( spanedSympols.join( '' ) );
+
+			} );
+		},
+
+		getRandomInt: function( min, max ) {
+			return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
 		}
 	}
 
-	CherryJsCore.theme_script.init();
+	rovadexThemeScript.init();
 }( jQuery ) );

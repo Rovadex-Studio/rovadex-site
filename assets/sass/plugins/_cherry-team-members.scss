@@ -1,10 +1,8 @@
 .cherry-team {
-	width: 80%;
 
 	.team-item {
 
 		.team-listing_photo {
-			filter: saturate(0.1);
 			transition: filter .4s ease;
 		}
 
@@ -16,7 +14,7 @@
 			margin: 20px;
 			width: calc(100% - 40px);
 			height: calc(100% - 40px);
-			background: linear-gradient(to bottom, rgba(214,83,146,0.5) 0%, rgba(125,95,168,0.5) 100%);
+			background: linear-gradient(to bottom, rgba(0,138,201,0.5) 0%, rgba(108,204,221,0.5) 100%);
 		}
 
 		.team-listing_name {
@@ -39,9 +37,42 @@
 
 		&:hover {
 			.team-listing_photo {
-				filter: saturate(1);
+
 			}
 		}
 
+	}
+}
+
+.team-loader {
+	.cherry-spinner-double-bounce {
+		.cherry-double-bounce1, .cherry-double-bounce2 {
+			background-color: $color_primary;
+		}
+	}
+}
+
+.team-ajax-pager {
+	display: flex;
+	justify-content: center;
+
+	.nav-links {
+		a {
+			width: 12px;
+			height: 12px;
+			margin: 0 10px;
+			background-color: white;
+			opacity: 0.3;
+			text-indent: -9999px;
+			min-width: 12px;
+			border-radius: 50%;
+			border: none;
+			transition: all 0.5s ease-in-out;
+
+			&.current {
+				background-color: $color_primary;
+				opacity: 1;
+			}
+		}
 	}
 }

@@ -1,0 +1,15 @@
+.projects-container {
+	width: 80%;
+}
+
+.projects-list {
+	.projects-item {
+		margin: 0 !important;
+
+		.featured-image {
+			filter: saturate(0.1);
+			transition: filter .4s ease;
+			margin: 0;
+		}
+	}
+}

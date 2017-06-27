@@ -102,11 +102,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/buttons";
 
 /*--------------------------------------------------------------
-# Shortcodes
---------------------------------------------------------------*/
-@import "shortcodes/shortcodes";
-
-/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
@@ -131,5 +126,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "plugins/cherry-services-list";
 @import "plugins/cherry-team-members";
+@import "plugins/cherry-projects";
 @import "plugins/contact-form-7";
 

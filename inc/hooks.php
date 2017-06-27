@@ -52,6 +52,12 @@ function customize_nav_menu_link_attributes( $atts, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'customize_nav_menu_link_attributes', 10, 3 );
 
+function update_shortcodes_avaliable_styles( $styles ) {
+	unset( $styles['grid'] );
+
+	return $styles;
+}
+add_filter( 'cherry-site-shortcodes-avaliable-styles', 'update_shortcodes_avaliable_styles' );
 
 
 

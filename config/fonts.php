@@ -4,8 +4,8 @@
  */
 return array(
 	array(
-		'family'  => 'Poppins',
-		'styles'  => '300,400,500,600,700',
+		'family'  => 'Lato',
+		'styles'  => '300,400,700',
 		'charset' => 'latin',
 	),
 );

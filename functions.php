@@ -236,11 +236,17 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 		public function enqueue_assets() {
 
 			wp_enqueue_style( 'rovadex-fonts', $this->fonts_url() );
+			wp_enqueue_style( 'font-awesome', $this->assets_url() . 'css/font-awesome.min.css', array(), '2.2.0' );
+			wp_enqueue_style( 'material-icons', $this->assets_url() . 'css/material-icons.min.css', array(), '2.2.0' );
 			wp_enqueue_style( 'jquery.fullpage', $this->assets_url() . 'css/jquery.fullpage.min.css', array(), '2.9.4' );
 			wp_enqueue_style( 'rovadex-style', get_stylesheet_uri() );
 
-			wp_enqueue_script( 'rovadex-navigation', $this->assets_url() . 'js/navigation.js', array(), '1.0.0', true );
-			wp_enqueue_script( 'rovadex-skip-link-focus-fix', $this->assets_url() . 'js/skip-link-focus-fix.js', array(), '1.0.0', true );
+			// Register JavaScripts.
+			wp_enqueue_script( 'rovadex-tween-max', $this->assets_url() . 'js/TweenMax.js', array( 'jquery' ), '1.19.1', true );
+			wp_enqueue_script( 'rovadex-timeline-max', $this->assets_url() . 'js/TimelineMax.js', array( 'jquery' ), '1.19.1', true );
+			wp_enqueue_script( 'rovadex-ease-pack', $this->assets_url() . 'js/EasePack.js', array( 'jquery' ), '1.15.5', true );
+
+			wp_enqueue_script( 'jquery-cherry-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array( 'jquery'  ), '1.0.0', true );
 			wp_enqueue_script( 'jquery.fullpage.extensions', $this->assets_url() . 'js/min/jquery.fullpage.extensions.min.js', array(), '2.9.4', true );
 			wp_enqueue_script( 'jquery.fullpage', $this->assets_url() . 'js/min/jquery.fullpage.min.js', array(), '2.9.4', true );
 			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );

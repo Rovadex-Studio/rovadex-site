@@ -13,7 +13,7 @@ return array(
 		'args'    => array(),
 	),
 	'is_page' => array(
-		'content' => 'col-md-12',
+		'content' => 'col-xs-12 col-sm-12 col-md-12 col-lg-12',
 		'sidebar' => false,
 	),
 	'is_home' => array(

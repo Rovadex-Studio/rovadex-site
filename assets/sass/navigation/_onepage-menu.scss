@@ -63,8 +63,8 @@
 
 	.menu-onepage-menu-container {
 		position: fixed;
-		width: 300px;
 		height: 100%;
+		width: 100%;
 		top: 0;
 		right: -100%;
 
@@ -75,8 +75,15 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: rgba(37, 39, 45, 0.8);
+			background-color: rgb(37, 39, 45);
 			z-index: 1;
+		}
+
+		@include media-breakpoint-up(sm){
+			width: 300px;
+			.cover {
+				background-color: rgba(37, 39, 45, 0.8);
+			}
 		}
 	}
 
@@ -87,20 +94,20 @@
 
 		.menu-item {
 			text-align: center;
-
-			a {
-				color: white;
-				font-size: 20px;
-
-
-				&.active {
-					color: $color_primary;
-				}
-
-				&:hover {
-					color: $color_primary;
-				}
-			}
 		}
 	}
+}
+.menu{
+	a {
+	color: white;
+	font-size: 20px;
+
+	&.active {
+		color: $color_primary;
+	}
+
+	&:hover {
+		color: $color_primary;
+	}
+}
 }

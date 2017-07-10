@@ -84,7 +84,7 @@ function rovadex_layout_class( $context = 'content' ) {
  * @return string
  */
 function rovadex_site_content_classes() {
-	$clasess[] = 'site-content_wrap';
+	$clasess[] = 'site-content_wrap container-fluid';
 
 	if ( ! is_front_page() ) {
 		$clasess[] = 'container';

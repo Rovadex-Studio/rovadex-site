@@ -2,13 +2,6 @@
 	display: block;
 }
 
-.site-content_wrap {
-	margin-bottom: 3.25em;
-	@include media-breakpoint-up(md) {
-		margin-bottom: 6.25em;
-	}
-}
-
 .single, .blog, .search, .archive {
 	#primary, #primary-sidebar {
 		margin-top: 2.125em;
@@ -49,7 +42,6 @@
 }
 
 .hentry {
-	margin: 0 0 3.7em;
 	.blog &, .archive &, .seatrch & {
 		margin: 0 0 5.3em;
 	}

@@ -24,6 +24,8 @@
 			this.onePageMenuInit( this );
 			this.responsiveMenuInit( this );
 			this.fullPageInit( this );
+			this.wpcf7Form();
+			this.homePageCarousel();
 		},
 
 		window_load_render: function () {
@@ -51,8 +53,8 @@
 				function showMenu() {
 					var timeline = new TimelineMax;
 
-					timeline.to( $menuContainer, 0.6, { right:0, ease: Expo.easeOut } );
-					timeline.staggerFrom( $menuItems, 0.75, { opacity: 0, rotationX:90, transformOrigin:"0% 50% 50", ease:Back.easeOut }, 0.1, '-=0.3' );
+					timeline.to( $menuContainer, 0.4, { right:0, ease: Expo.easeOut } );
+					timeline.staggerFrom( $menuItems, 0.45, { opacity: 0, rotationX:90, transformOrigin:"0% 50% 50", ease:Back.easeOut }, 0.08, '-=0.3' );
 
 					timeline.play();
 
@@ -77,6 +79,7 @@
 				navigationPosition: 'left',
 				verticalCentered: false,
 				scrollingSpeed: 700,
+				responsiveWidth: 1024,
 				afterLoad: function( anchorLink, index ) {
 					var loadedSection = $( this );
 
@@ -107,10 +110,10 @@
 						self.homeAnimationShow( currentSection );
 					}
 
-					if ( currentSection.hasClass( 'contacts-section' ) ) {
-						TweenMax.to( $footer, 1, { bottom: 0, ease: Expo.easeOut } );
+					if ( currentSection.hasClass( 'show-footer' ) ) {
+						TweenMax.to( $footer, 0.8, { bottom: 0, ease: Cubic.easeOut } );
 					} else {
-						TweenMax.to( $footer, 0.8, { bottom: '-100%', ease: Circ.easeIn } );
+						TweenMax.to( $footer, 0.5, { bottom: '-200%', ease: Cubic.easeIn } );
 					}
 
 					TweenMax.from( $coverCurrentImage, 0.7, { scaleX: 1.7, scaleY: 1.7, ease: Circ.easeOut } );
@@ -122,6 +125,7 @@
 
 				}
 			} );
+			//$fullPageSection.fullpage.setResponsive(false);
 		},
 
 		homeAnimationShow: function ( $homeSection ) {
@@ -196,6 +200,38 @@
 
 		getRandomInt: function( min, max ) {
 			return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+		},
+
+		wpcf7Form: function() {
+			$( 'body' ).on( 'focus', '.wpcf7-form.invalid .wpcf7-not-valid', function(){
+				$( '+.wpcf7-not-valid-tip', this ).remove();
+			})
+		},
+
+		homePageCarousel: function() {
+			if( $.fn.owlCarousel ){
+				$('.team-container').owlCarousel({
+					nestedItemSelector: 'team-item',
+					stageOuterClass: 'team-wrap cherry-team team-wrap template-grid-boxes',
+					stageClass: 'team-listing',
+					items: 2,
+					margin: 17,
+					dots: true,
+					responsive: {
+						0: {
+							items: 1,
+						},
+						// breakpoint from 480 up
+						480: {
+							items: 1,
+						},
+						// breakpoint from 768 up
+						768: {
+							items: 2,
+						}
+					}
+				});
+			}
 		}
 	}
 

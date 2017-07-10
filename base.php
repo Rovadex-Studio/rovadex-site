@@ -10,7 +10,7 @@
 		rovadex_breadcrumbs();
 	?>
 	<div class="<?php echo rovadex_site_content_classes(); ?>">
-		<div class="row">
+		<div class="row no-gutters">
 			<div id="primary" class="<?php echo rovadex_layout_class( 'content' ); ?>">
 				<main id="main" class="site-main" role="main">
 					<?php include rovadex_template_path(); ?>

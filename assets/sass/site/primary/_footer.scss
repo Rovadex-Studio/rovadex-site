@@ -40,12 +40,18 @@
 	}
 
 	.home & {
-		position: fixed;
-		width: 100%;
+		@include media-breakpoint-up(md){
+			position: fixed;
+		}
 		background-color: transparent;
 		bottom: 0;
 		left: 0;
 		z-index: 1;
+		right: 0;
+		width: 320px;
+		margin: 0 auto;
+		margin: 15px auto;
+		padding: 0;
 	}
 }
 .footer-area-wrap {

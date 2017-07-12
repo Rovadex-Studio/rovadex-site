@@ -1,42 +1,39 @@
-$color__background-body: #25272d;
+$color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
 $color__background-pre: #f7f7fb;
 $color__background-ins: #fff9c0;
-$color__background-footer-area-wrap: #6f6d70;
 $color__background-sub-menu: #6f6d70;
 
-$color__text-screen: #21759b;
-$color__text-input: #6f6d70;
+$color__text-screen: #45474b;
+$color__text-input: #45474b;
 $color__text-input-focus: $color__text-input;
 $color__link: #578cc7;
 $color__link-visited: $color__link;
-$color__link-hover: #763b89;
-$color__text-main: #6f6d70;
+$color__link-hover: #45474b;
+
+$color__border: #e8e8f6;
 
 $color__border-abbr: #666;
-
-$button_text_color: #fff;
-$color_gradient_1: #80cfe9;
-$color_gradient_2: #578cc7;
-
-$color__separator: #e8e8f6;
-
-$color__background-footer: #25272d;
-$color__link-footer: #763b89;
 
 $color_icon: #578cc7;
 $color__points: #d9dce5;
 
-//forms fields
-$color__field-background: #f5f7fb;
-$color__border-input: $color__separator;
-
-// invert color
-$color__invert-main: #fff;
-$color__background-invert-btn: #6178b1;
-
 // Primary
 $color_primary: #65c6e6;
-$color_heading: #45474b;
+$color_heading: #fff;
+
+// invert color
+$invert_color__background-body: #45474b;
+$invert_color__background-button: #e6e6e6;
+
+$invert_color__text-screen: #fff;
+$invert_color__text-input: #fff;
+$invert_color__text-input-focus: $color__text-input;
+$invert_color__link: #578cc7;
+$invert_color__link-visited: $color__link;
+$invert_color__link-hover: $invert_color__text-screen;
+
+$invert_color__border: #e8e8f6;
+

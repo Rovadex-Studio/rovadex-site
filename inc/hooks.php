@@ -60,4 +60,23 @@ function update_shortcodes_avaliable_styles( $styles ) {
 add_filter( 'cherry-site-shortcodes-avaliable-styles', 'update_shortcodes_avaliable_styles' );
 
 
+function projects_pinner_html( $html ) {
+	return '<div class="projects-end-line-spinner"><div class="cherry-spinner cherry-spinner-double-bounce"></div></div>';
+}
+add_filter( 'cherry-projects-end-line-spinner-html', 'projects_pinner_html', 9, 1);
 
+
+function build_search_form( $search_form = null ) {
+	$search_form_html = '<form role="search" method="get" class="search-form" action="%1$s"><label><span class="screen-reader-text">%2$s</span><input type="search" class="search-form__field" placeholder="%3$s" value="" name="s" title="%2$s"></label><button type="submit" class="search-form__submit btn btn-primary"><i class="material-icons">%4$s</i></button></form>';
+
+	$search_form = sprintf(
+		$search_form_html,
+		get_home_url(),
+		esc_html__( 'Search for:', 'rovadex-site' ),
+		esc_html__( 'Search &#8230;', 'rovadex-site' ),
+		esc_html__( 'search', 'rovadex-site' )
+	);
+
+	return $search_form;
+}
+add_filter( 'get_search_form', 'build_search_form', 0 );

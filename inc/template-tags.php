@@ -123,7 +123,7 @@ function rovadex_nav_menu( $location = 'primary', $format = '%s', $toggle = fals
 		$toggle = printf(
 			'<button class="menu-toggle" aria-controls="%1$s-menu" aria-expanded="false">%2$s</button>',
 			$location,
-			esc_html__( 'Menu', 'rovadex' )
+			esc_html__( 'Menu', 'rovadex-site' )
 		);
 	}
 
@@ -249,16 +249,16 @@ function rovadex_entry_meta() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '%s', 'post date', 'rovadex' ),
+		esc_html_x( '%s', 'post date', 'rovadex-site' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$posted_by = sprintf(
-		esc_html_x( '%s', 'post author', 'rovadex' ),
+		esc_html_x( '%s', 'post author', 'rovadex-site' ),
 		'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 	);
 
-	echo '<span class="posted-by"><i class="nc-icon-mini users_single-body"></i>' . $posted_by . '</span><span class="posted-on"><i class="nc-icon-mini ui-1_calendar-60"></i>' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-by"><i class="fa fa-user" aria-hidden="true"></i>' . $posted_by . '</span><span class="posted-on"><i class="fa fa-calendar" aria-hidden="true"></i>' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -271,29 +271,29 @@ function rovadex_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'rovadex' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'rovadex-site' ) );
 		if ( $categories_list && rovadex_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'rovadex' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'rovadex-site' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'rovadex' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'rovadex-site' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'rovadex' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'rovadex-site' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'rovadex' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'rovadex-site' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'rovadex' ),
+			esc_html__( 'Edit %s', 'rovadex-site' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
@@ -310,9 +310,9 @@ function rovadex_get_post_category() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( '<span>' . esc_html__( '', 'rovadex' ) . '</span>' );
+		$categories_list = get_the_category_list( '<span>' . esc_html__( '', 'rovadex-site' ) . '</span>' );
 		if ( $categories_list && rovadex_categorized_blog() ) {
-			printf( '<div class="post__cats">' . esc_html__( '%1$s', 'rovadex' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+			printf( '<figcaption class="post__cats">' . esc_html__( '%1$s', 'rovadex-site' ) . '</figcaption>', $categories_list ); // WPCS: XSS OK.
 		}
 	}
 }
@@ -324,9 +324,9 @@ if ( ! function_exists( 'rovadex_get_post_tags' ) ) :
  */
 function rovadex_get_post_tags() {
 	// Hide category and tag text for pages.
-	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'rovadex' ) );
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'rovadex-site' ) );
 	if ( $tags_list ) {
-		printf( '<div class="post__tags"><i class="nc-icon-mini shopping_tag-content"></i>' . esc_html__( '%1$s', 'rovadex' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+		printf( '<div class="post__tags"><i class="fa fa-tags" aria-hidden="true"></i>' . esc_html__( '%1$s', 'rovadex-site' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 	}
 }
 endif;

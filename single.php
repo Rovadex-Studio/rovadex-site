@@ -12,8 +12,8 @@ while ( have_posts() ) : the_post();
 	get_template_part( 'template-parts/content-single', get_post_format() );
 
 	the_post_navigation( array(
-		'next_text' => '<div class="post-title">%title</div><div class="meta-nav">' . esc_html__( 'Next Post', 'rovadex' ) . '</div>',
-		'prev_text' => '<div class="post-title">%title</div><div class="meta-nav">' . esc_html__( 'Previous Post', 'rovadex' ) . '</div>',
+		'next_text' => '<div class="post-title">%title</div><div class="meta-nav">' . esc_html__( 'Next Post', 'rovadex-site' ) . '</div>',
+		'prev_text' => '<div class="post-title">%title</div><div class="meta-nav">' . esc_html__( 'Previous Post', 'rovadex-site' ) . '</div>',
 	) );
 
 	// If comments are open or we have at least one comment, load up the comment template.

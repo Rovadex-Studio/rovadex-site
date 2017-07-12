@@ -43,6 +43,7 @@
 		.menu-link-wrapper {
 			position: relative;
 		}
+
 	}
 
 	li {
@@ -54,6 +55,15 @@
 		position: relative;
 		display: block;
 		text-decoration: none;
+		color: $color__text-screen;
+
+		&.active {
+			color: $color__link;
+		}
+
+		&:hover {
+			color: $color__link;
+		}
 	}
 
 	@include media-breakpoint-up( sm ) {
@@ -132,10 +142,28 @@
 	}
 }
 
+ul.sub-menu{
+	li{
+		margin: 0;
+	}
+	a {
+		//color: $color_primary;
+		font-size: 20px;
+
+		/*&.active {
+			color: $color_heading;
+		}
+
+		&:hover {
+			color: $color_heading;
+		}*/
+	}
+}
+
+
 /* Skin Styles */
 .main-navigation {
 	a {
-		color: $color_heading;
 		padding: 0 1.2em;
 
 		&:hover {

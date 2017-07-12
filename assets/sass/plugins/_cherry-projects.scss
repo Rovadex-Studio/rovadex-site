@@ -1,15 +1,18 @@
 .projects-container {
-	width: 80%;
+    width: 100%;
+}
+
+.cherry-spinner-double-bounce {
+    background: url('assets/images/loader.gif') no-repeat 50% 50%;
 }
 
 .projects-list {
-	.projects-item {
-		margin: 0 !important;
-
-		.featured-image {
-			filter: saturate(0.1);
-			transition: filter .4s ease;
-			margin: 0;
-		}
-	}
+    .projects-item {
+        margin: 0 !important;
+        .featured-image {
+            filter: saturate(0.1);
+            transition: filter .4s ease;
+            margin: 0;
+        }
+    }
 }

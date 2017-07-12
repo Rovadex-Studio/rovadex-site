@@ -12,11 +12,13 @@
 			margin-right: 25px;
 
 			.service-icon {
-				font-size: 40px;
+				font-size: 45px;
 				line-height: 1em;
-
-				i {
-					color: #ededed;
+				i{
+					color: $color__text-screen;
+					.invert & {
+						color: $invert_color__text-screen;
+					}
 				}
 			}
 		}
@@ -33,6 +35,20 @@
 			a {
 				color: $color_heading;
 			}
+		}
+	}
+}
+
+.template-default{
+	.services-item{
+		.services-header{
+			display: flex;
+			.icon_wrap{
+				margin-right: 15px;
+			}
+		}
+		.services-content{
+			text-align: left;
 		}
 	}
 }

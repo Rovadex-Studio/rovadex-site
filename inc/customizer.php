@@ -11,8 +11,8 @@ function rovadex_get_customizer_options() {
 		'type'       => 'theme_mod',
 		'options'    => array(
 			'header_logo_url' => array(
-				'title'           => esc_html__( 'Logo Upload', 'rovadex' ),
-				'description'     => esc_html__( 'Upload logo image', 'rovadex' ),
+				'title'           => esc_html__( 'Logo Upload', 'rovadex-site' ),
+				'description'     => esc_html__( 'Upload logo image', 'rovadex-site' ),
 				'section'         => 'title_tagline',
 				'default'         => '%s/assets/images/logo.svg',
 				'field'           => 'image',
@@ -20,8 +20,8 @@ function rovadex_get_customizer_options() {
 				'extensions' => array( 'jpg', 'jpeg', 'gif', 'png', 'svg' ),
 			),
 			'retina_header_logo_url' => array(
-				'title'           => esc_html__( 'Retina Logo Upload', 'rovadex' ),
-				'description'     => esc_html__( 'Upload logo for retina-ready devices', 'rovadex' ),
+				'title'           => esc_html__( 'Retina Logo Upload', 'rovadex-site' ),
+				'description'     => esc_html__( 'Upload logo for retina-ready devices', 'rovadex-site' ),
 				'section'         => 'title_tagline',
 				'field'           => 'image',
 				'type'            => 'control',

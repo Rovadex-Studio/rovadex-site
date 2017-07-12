@@ -42,10 +42,6 @@
 			}
 		}
 
-		&.light-section {
-			color: inherit;
-		}
-
 		h2 {
 			width: 100%;
 			/*@include media-breakpoint-up(sm){
@@ -59,18 +55,6 @@
 			}
 			span {
 				position: relative;
-			}
-		}
-
-		&.dark-section {
-			color: $color__invert-main;
-
-			h2 {
-				color: $color__invert-main;
-			}
-
-			p {
-				color: $color__invert-main;
 			}
 		}
 		a.btn{
@@ -117,7 +101,7 @@
 					width: 70px;
 					height: 3px;
 					background-color: $color_primary;
-					background: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 100%);
+					background: $color__background-button;
 					top: 0;
 					left: 0;
 					display: block;
@@ -158,7 +142,7 @@
 					width: 70px;
 					height: 3px;
 					background-color: $color_primary;
-					background: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 100%);
+					background: $color__background-button;
 					top: 0;
 					left: 0;
 					display: block;
@@ -219,10 +203,6 @@
 					display: none;
 				}
 
-				.service-icon {
-					font-size: 45px;
-				}
-
 				.title_wrap {
 					margin-bottom: 10px;
 					a {
@@ -231,7 +211,8 @@
 					}
 				}
 
-				.content_wrap {
+				.service-descr{
+					font-size: 16px;
 					text-align: justify;
 				}
 
@@ -250,7 +231,7 @@
 					}
 				}
 				@include media-breakpoint-up(lg){
-					margin-bottom: 45px;
+					margin-bottom: 25px;
 				}
 			}
 		}
@@ -293,7 +274,7 @@
 					width: 70px;
 					height: 3px;
 					background-color: $color_primary;
-					background: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 100%);
+					background: $color__background-button;
 					top: 0;
 					left: 0;
 					display: block;
@@ -324,7 +305,7 @@
 					width: 70px;
 					height: 3px;
 					background-color: $color_primary;
-					background: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 100%);
+					background: $color__background-button;
 					top: 0;
 					left: 0;
 					display: block;
@@ -398,8 +379,7 @@
 				min-width: 12px;
 				border-radius: 50%;
 				border: none;
-				-webkit-transition: all 0.5s ease-in-out;
-				transition: all 0.5s ease-in-out;
+				@include transition(all 0.5s ease-in-out);
 				&.active{
 					background-color: #65c6e6;
 					opacity: 1;
@@ -447,7 +427,7 @@
 					width: 70px;
 					height: 3px;
 					background-color: $color_primary;
-					background: linear-gradient(to right, $color_gradient_1 0%, $color_gradient_2 100%);
+					background: $color__background-button;
 					top: 0;
 					left: 0;
 					display: block;
@@ -553,15 +533,20 @@ ul.rovadex-social-link{
 			display:none;
 		};
 		a {
-			color: #fff;
 			.fa{
-				color: #fff;
+				color: $color__link;
 				font-size: 28px;
+				@include transition(all 0.25s ease);
+				.invert & {
+					color: $invert_color__link;
+				}
 			}
 			&:hover{
-				color: #65c6e6;
 				.fa{
-					color: #65c6e6;
+					color: $color__link-hover;
+					.invert & {
+						color: $invert_color__link-hover;
+					}
 				}
 			};
 		}
@@ -582,7 +567,7 @@ ul.rovadex-social-link{
 				a {
 					span {
 						background-color: $color_primary;
-						transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
+						@include transition( all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) );
 					}
 				}
 			}

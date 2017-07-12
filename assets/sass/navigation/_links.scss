@@ -9,6 +9,9 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		.invert & {
+			color: $invert_color__link-hover;
+		}
 		@include transition(all 0.25s ease);
 	}
 	&:focus {
@@ -17,5 +20,21 @@ a {
 	&:hover,
 	&:active {
 		outline: 0;
+	}
+	&[href^="mailto:"]{
+		&:before{
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: 14px;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			content: "\f0e0";
+			padding-right: 14px;
+			color: $color__text-screen;
+			.invert & {
+				color: $invert_color__text-screen;
+			}
+		}
 	}
 }

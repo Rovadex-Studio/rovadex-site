@@ -25,13 +25,10 @@
 		float: left;
 		&-sep {
 			margin: 0 .55em;
-			color: $color__separator;
+			color: $color__border;
 		}
 		&-link {
 			text-decoration: none;
-			&:hover {
-				color: $color__link-hover;
-			}
 		}
 	}
 }

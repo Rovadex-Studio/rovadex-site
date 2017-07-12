@@ -21,7 +21,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rovadex' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rovadex-site' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -34,7 +34,7 @@
 					edit_post_link(
 						sprintf(
 							/* translators: %s: Name of current post */
-							esc_html__( 'Edit %s', 'rovadex' ),
+							esc_html__( 'Edit %s', 'rovadex-site' ),
 							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						),
 						'<span class="edit-link">',

@@ -26,23 +26,23 @@ function rovadex_register_required_plugins() {
 	 */
 	$plugins = array(
 		array(
-			'name' => esc_html__( 'Contact Form 7', 'rovadex' ),
+			'name' => esc_html__( 'Contact Form 7', 'rovadex-site' ),
 			'slug' => 'contact-form-7',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Services List', 'rovadex' ),
+			'name' => esc_html__( 'Cherry Services List', 'rovadex-site' ),
 			'slug' => 'cherry-services-list',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Team Members', 'rovadex' ),
+			'name' => esc_html__( 'Cherry Team Members', 'rovadex-site' ),
 			'slug' => 'cherry-team-members',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Projects', 'rovadex' ),
+			'name' => esc_html__( 'Cherry Projects', 'rovadex-site' ),
 			'slug' => 'cherry-projects',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Site Shortcodes', 'rovadex' ),
+			'name' => esc_html__( 'Cherry Site Shortcodes', 'rovadex-site' ),
 			'slug' => 'cherry-site-shortcodes',
 			'source'   => get_template_directory() . '/assets/plugins/cherry-site-shortcodes.zip',
 		)
@@ -58,7 +58,7 @@ function rovadex_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'rovadex',                  // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'rovadex-site',                  // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.

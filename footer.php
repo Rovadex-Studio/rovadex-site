@@ -16,12 +16,12 @@
 		<?php do_action( 'rovadex_render_widget_area', 'footer' ); ?>
 	</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer invert" role="contentinfo">
 		<div class="container">
 			<div class="footer-conatiner__flex">
 				<div class="site-info">
 					<span class="sep"> &copy; </span>
-					<?php printf( esc_html__( 'Rovadex 2017.', 'rovadex' ), 'rovadex' ); ?>
+					<?php printf( esc_html__( '2017 Rovadex %1$sPrivacy Policy%2$s.', 'rovadex-site' ), '<a href="privacy-policy">', '</a>' ); ?>
 				</div><!-- .site-info -->
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<?php

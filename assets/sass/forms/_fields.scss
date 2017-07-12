@@ -16,13 +16,21 @@ input[type='color'],
 textarea {
 	@include font-size(0.875);
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	border: 1px solid $color__border;
 	border-radius: 0;
 	padding: $input__indents;
-	background-color: $color__field-background;
+	background-color: $color__background-body;
 	&:focus {
 		outline: none;
 		color: $color__text-input-focus;
+	}
+	.invert &{
+		border: 1px solid $invert_color__border;
+		background-color: $color__background-body;
+
+		&:focus {
+			color: $invert_color__text-input-focus;
+		}
 	}
 }
 
@@ -36,7 +44,7 @@ input[type='reset'] {
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 1px solid $color__border;
 }
 
 textarea {

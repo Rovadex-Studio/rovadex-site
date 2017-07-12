@@ -1,7 +1,7 @@
 .site-footer {
-	background-color: $color__background-footer;
+	background-color: $invert_color__background-body;
 	color: white;
-	padding: 15px 0 30px 0;
+	padding: 15px 0;
 	font-weight: 300;
 
 	.footer-conatiner__flex {
@@ -11,6 +11,8 @@
 		justify-content: center;
 		align-content: stretch;
 		align-items: center;
+		font-size: 14px;
+		font-weight: 400;
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
 			align-items: flex-start;
@@ -32,28 +34,28 @@
 		}
 	}
 
-	a {
+	/*a {
 		color: $color__link-footer;
 		&:hover {
 			color: white;
 		}
 	}
-
+*/
 	.home & {
 		@include media-breakpoint-up(md){
 			position: fixed;
+			background-color: transparent;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			right: 0;
+			width: 320px;
+			margin: 0 auto;
+			margin: 15px auto;
+			padding: 0;
 		}
-		background-color: transparent;
-		bottom: 0;
-		left: 0;
-		z-index: 1;
-		right: 0;
-		width: 320px;
-		margin: 0 auto;
-		margin: 15px auto;
-		padding: 0;
 	}
 }
 .footer-area-wrap {
-	background-color: $color__background-footer-area-wrap;
+	background-color: $invert_color__background-body;
 }

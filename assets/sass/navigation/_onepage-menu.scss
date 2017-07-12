@@ -12,7 +12,7 @@
 
 		.icon {
 			display: inline-block;
-			fill: $color_primary;
+			fill: $color__link;
 			height: 1.5em;
 			width: 1.5em;
 			padding: 10px;
@@ -22,7 +22,7 @@
 			transition: all 1s ease-in-out;
 
 			.invert & {
-				fill: white;
+				fill: $invert_color__text-screen;
 			}
 		}
 
@@ -47,7 +47,6 @@
 				transform-origin: 1em 3.2em;
 			}
 		}
-
 		&.active {
 			.svg-menu-toggle .line-1 {
 				transform: rotate(45deg) translateY(0) translateX(0);
@@ -94,20 +93,19 @@
 
 		.menu-item {
 			text-align: center;
+			a{
+				color: white;
+				font-size: 20px;
+
+				&.active {
+					color: $color_primary;
+				}
+
+				&:hover {
+					color: $color_primary;
+				}
+			}
 		}
 	}
 }
-.menu{
-	a {
-	color: white;
-	font-size: 20px;
 
-	&.active {
-		color: $color_primary;
-	}
-
-	&:hover {
-		color: $color_primary;
-	}
-}
-}

@@ -70,3 +70,13 @@
 		display: none;
 	}
 }
+
+#rovadex-logo-svg{
+	.main-symbol, .symbol{
+		fill: $color__text-screen;
+
+		.home &{
+			fill: $invert_color__text-screen;
+		}
+	}
+}

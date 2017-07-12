@@ -5,7 +5,7 @@
 
 return apply_filters( 'rovadex_widget_area_default_settings', array(
 	'primary-sidebar' => array(
-		'name'           => esc_html__( 'Sidebar', 'rovadex' ),
+		'name'           => esc_html__( 'Sidebar', 'rovadex-site' ),
 		'description'    => '',
 		'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'   => '</aside>',
@@ -16,7 +16,7 @@ return apply_filters( 'rovadex_widget_area_default_settings', array(
 		'is_global'      => true,
 	),
 	'home-header' => array(
-		'name'           => esc_html__( 'Header Area (front page)', 'rovadex' ),
+		'name'           => esc_html__( 'Header Area (front page)', 'rovadex-site' ),
 		'description'    => '',
 		'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'   => '</aside>',
@@ -27,7 +27,7 @@ return apply_filters( 'rovadex_widget_area_default_settings', array(
 		'is_global'      => true,
 	),
 	'header' => array(
-		'name'           => esc_html__( 'Header Area', 'rovadex' ),
+		'name'           => esc_html__( 'Header Area', 'rovadex-site' ),
 		'description'    => '',
 		'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'   => '</aside>',
@@ -38,7 +38,7 @@ return apply_filters( 'rovadex_widget_area_default_settings', array(
 		'is_global'      => true,
 	),
 	'footer' => array(
-		'name'            => esc_html__( 'Footer Area', 'rovadex' ),
+		'name'            => esc_html__( 'Footer Area', 'rovadex-site' ),
 		'description'     => '',
 		'before_widget'   => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'    => '</aside>',

@@ -39,18 +39,18 @@ function rovadex_share_buttons( $context = 'loop', $args = array(), $config = ar
 	 */
 	$defaults = apply_filters( 'rovadex_default_args_share_buttons', array(
 		'facebook' => array(
-			'icon'      => 'nc-icon-mini social_logo-fb-simple',
-			'name'      => esc_html__( 'Facebook', 'rovadex' ),
+			'icon'      => 'fa fa-facebook-square',
+			'name'      => esc_html__( 'Facebook', 'rovadex-site' ),
 			'share_url' => 'https://www.facebook.com/sharer/sharer.php?u=%3$s&t=%4$s',
 		),
 		'twitter' => array(
-			'icon'      => 'nc-icon-mini social_logo-twitter',
-			'name'      => esc_html__( 'Twitter', 'rovadex' ),
+			'icon'      => 'fa fa-twitter-square',
+			'name'      => esc_html__( 'Twitter', 'rovadex-site' ),
 			'share_url' => 'https://twitter.com/intent/tweet?url=%3$s&text=%4$s',
 		),
 		'google-plus' => array(
-			'icon'      => 'nc-icon-mini social_logo-google-plus',
-			'name'      => esc_html__( 'Google+', 'rovadex' ),
+			'icon'      => 'fa fa-google-plus-square',
+			'name'      => esc_html__( 'Google+', 'rovadex-site' ),
 			'share_url' => 'https://plus.google.com/share?url=%3$s',
 		),
 	) );
@@ -102,7 +102,7 @@ function rovadex_share_buttons( $context = 'loop', $args = array(), $config = ar
 			$share_item_html,
 			htmlentities( $share_url ),
 			sanitize_html_class( $id ),
-			esc_html__( 'Share on ', 'rovadex' ) . $network['name'],
+			esc_html__( 'Share on ', 'rovadex-site' ) . $network['name'],
 			esc_attr( $network['icon'] ),
 			esc_attr( $network['name'] )
 		);

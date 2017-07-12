@@ -1,5 +1,5 @@
 ul, ol {
-	margin: 1.875em 0 2.75em;	
+	margin: 1.875em 0 2.75em;
 	li{
 		position: relative;
 	}
@@ -15,7 +15,7 @@ ul {
 		li {
 			position: relative;
 			padding-left: 18px;
-			margin: 8px 0;
+			margin: 15px 0;
 			strong {
 				font-weight: 600;
 			}
@@ -25,7 +25,7 @@ ul {
 				width: 7px;
 				height: 7px;
 				left: 0;
-				top: 10px;
+				top: 16px;
 				border-radius: 100%;
 				background-color: $color__points;
 			}

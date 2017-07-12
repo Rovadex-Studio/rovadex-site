@@ -75,9 +75,9 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			 * Make theme available for translation.
 			 * Translations can be filed in the /languages/ directory.
 			 * If you're building a theme based on Rovadex, use a find and replace
-			 * to change 'rovadex' to the name of your theme in all the template files.
+			 * to change 'rovadex-site' to the name of your theme in all the template files.
 			 */
-			load_theme_textdomain( 'rovadex', get_template_directory() . '/languages' );
+			load_theme_textdomain( 'rovadex-site', get_template_directory() . '/languages' );
 
 			// Add default posts and comments RSS feed links to head.
 			add_theme_support( 'automatic-feed-links' );
@@ -396,8 +396,8 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 
 				// If the theme's textdomain is loaded, assign the theme's translations
 				// to the framework's textdomain.
-				if ( isset( $l10n['rovadex'] ) ) {
-					$l10n[ $domain ] = $l10n['rovadex'];
+				if ( isset( $l10n['rovadex-site'] ) ) {
+					$l10n[ $domain ] = $l10n['rovadex-site'];
 				}
 
 				// Always override.  We only want the theme to handle translations.

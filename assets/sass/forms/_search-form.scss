@@ -1,16 +1,15 @@
 .search-form {
 	margin: 0;
 	padding: 0;
-	&:after {
-		display: block;
-		clear: both;
-		width: 100%;
-		content: '';
+	display: flex;
+	label{
+		flex: 1 1 auto;
+		width: auto;
+		margin-right: 5px;
 	}
 	&__field[type='search'] {
-		float: left;
+		width: 100%;
 		box-sizing: border-box;
-		width: calc(100% - 50px);
 		height: 50px;
 		padding-right: 35px;
 		.top-panel & {
@@ -24,24 +23,24 @@
 			}
 		}
 	}
-	&__submit {
-		float: left;
+	&__submit.btn.btn-primary {
+		flex: 0 0 50px;
 		width: 50px;
-		padding-right: 0;
-		padding-left: 0;
-		padding: 15px 0;
-		margin-left: -25px;
+		height: 50px;
+		border-radius: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 0;
 		.top-panel & {
 			margin-left: 0;
 		}
-		border: none;
-		border-radius: 100%;
 		@include transition( all 0.4s ease );
 		i.material-icons {
 			line-height: 20px;
 			display: block;
 			height: 20px;
 			margin: 0 auto;
+			color:$invert_color__text-screen;
 			@include font-size(1.5);
 			.top-panel & {
 				@include font-size(1.2);

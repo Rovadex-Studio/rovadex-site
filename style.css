@@ -3267,43 +3267,46 @@ body.admin-bar .mobile-menu .menu {
   .home .services-section h2.splitted {
     margin-bottom: 40px; } }
 
-@media (min-width: 600px) {
-  .home .services-section .cherry-services-row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row; } }
-
-.home .services-section .cherry-services .services-item {
-  margin-bottom: 20px; }
-  .home .services-section .cherry-services .services-item:last-child {
-    margin-bottom: 0; }
-  .home .services-section .cherry-services .services-item .icon_wrap {
-    display: none; }
-    .home .services-section .cherry-services .services-item .icon_wrap .service-icon i {
-      color: white; }
-  .home .services-section .cherry-services .services-item .title_wrap {
-    margin-bottom: 10px; }
-    .home .services-section .cherry-services .services-item .title_wrap a {
-      color: white;
-      font-size: 18px; }
-  .home .services-section .cherry-services .services-item .service-descr {
-    font-size: 16px;
-    text-align: justify; }
-  .home .services-section .cherry-services .services-item p {
-    font-size: 14px; }
-    @media (min-width: 900px) {
-      .home .services-section .cherry-services .services-item p {
-        font-size: 1rem; } }
+.home .services-section .cherry-services {
+  margin-bottom: 2em; }
   @media (min-width: 600px) {
+    .home .services-section .cherry-services {
+      margin-bottom: 1em; }
+      .home .services-section .cherry-services-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
+  .home .services-section .cherry-services .services-item {
+    margin-bottom: 20px; }
+    .home .services-section .cherry-services .services-item:last-child {
+      margin-bottom: 0; }
     .home .services-section .cherry-services .services-item .icon_wrap {
-      display: block;
-      margin-top: 10px;
-      margin-right: 35px; } }
-  @media (min-width: 1200px) {
-    .home .services-section .cherry-services .services-item {
-      margin-bottom: 25px; } }
+      display: none; }
+      .home .services-section .cherry-services .services-item .icon_wrap .service-icon i {
+        color: white; }
+    .home .services-section .cherry-services .services-item .title_wrap {
+      margin-bottom: 10px; }
+      .home .services-section .cherry-services .services-item .title_wrap a {
+        color: white;
+        font-size: 18px; }
+    .home .services-section .cherry-services .services-item .service-descr {
+      font-size: 16px;
+      text-align: justify; }
+    .home .services-section .cherry-services .services-item p {
+      font-size: 14px; }
+      @media (min-width: 900px) {
+        .home .services-section .cherry-services .services-item p {
+          font-size: 1rem; } }
+    @media (min-width: 600px) {
+      .home .services-section .cherry-services .services-item .icon_wrap {
+        display: block;
+        margin-top: 10px;
+        margin-right: 35px; } }
+    @media (min-width: 1200px) {
+      .home .services-section .cherry-services .services-item {
+        margin-bottom: 25px; } }
 
 .home .projects-section {
   background-color: #ffffff; }

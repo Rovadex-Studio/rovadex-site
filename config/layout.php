@@ -53,7 +53,6 @@ return array(
 	),
 	'is_search' => array(
 		'content' => 'col-md-8',
-		'sidebar' => 'col-md-4',
-		'args'    => array(),
+		'sidebar' => false,
 	),
 );

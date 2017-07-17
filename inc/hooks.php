@@ -61,12 +61,12 @@ add_filter( 'cherry-site-shortcodes-avaliable-styles', 'update_shortcodes_avalia
 
 
 function projects_pinner_html( $html ) {
-	return '<div class="projects-end-line-spinner"><div class="cherry-spinner cherry-spinner-double-bounce"></div></div>';
+	return '<div class="cherry-projects-ajax-loader projects-end-line-spinner"><div class="rovadex-spinner cherry-spinner"></div></div>';
 }
-add_filter( 'cherry-projects-end-line-spinner-html', 'projects_pinner_html', 9, 1);
+add_filter( 'cherry-projects-ajax-loader-html', 'projects_pinner_html', 9, 1);
 
 
-function build_search_form( $search_form = null ) {
+function rovadex_build_search_form( $search_form = '' ) {
 	$search_form_html = '<form role="search" method="get" class="search-form" action="%1$s"><label><span class="screen-reader-text">%2$s</span><input type="search" class="search-form__field" placeholder="%3$s" value="" name="s" title="%2$s"></label><button type="submit" class="search-form__submit btn btn-primary"><i class="material-icons">%4$s</i></button></form>';
 
 	$search_form = sprintf(
@@ -79,4 +79,10 @@ function build_search_form( $search_form = null ) {
 
 	return $search_form;
 }
-add_filter( 'get_search_form', 'build_search_form', 0 );
+add_filter( 'get_search_form', 'rovadex_build_search_form', 0 );
+
+function rovadex_projects_title_settings( $settings = array() ) {
+	$settings['class'] = 'invert';
+	return $settings;
+}
+add_filter( 'cherry-projects-title-settings', 'rovadex_projects_title_settings', 0 );

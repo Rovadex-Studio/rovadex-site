@@ -1,4 +1,8 @@
+.site-content{
+	margin-bottom: 50px;
+}
 .sticky {
+
 	display: block;
 }
 
@@ -89,10 +93,13 @@
 }
 
 .post {
+	margin-bottom: 10px;
 	&__cats {
-		position: absolute;
-		top: 10px;
-		left: 10px;
+		.post-thumbnail__img + &{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
 
 		text-transform: capitalize;
 		font-family: $font__headings;
@@ -207,38 +214,29 @@
 
 .entry-footer {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: flex-start;
-
-	@include media-breakpoint-up(md) {
-		//margin-left: 3em;
+	flex-direction: row;
+	justify-content: space-between;
+	.single-post &{
+		justify-content: flex-end;
 	}
+
+	@include font-size(0.875);
+	text-transform: capitalize;
 
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 	}
-	@include font-size(0.875);
-	text-transform: capitalize;
+
+	> .btn{
+		flex: 0 1 auto;
+	}
 	.post__tags {
 		order: 0;
 		flex: 0 1 auto;
 		@include media-breakpoint-up(lg) {
 			flex: 0 1 70%;
-		}
-		align-self: auto;
-	}
-	.share-btns__list {
-		order: 0;
-		flex: 0 1 auto;
-		@include media-breakpoint-up(lg) {
-			.blog &, .archive &, .search &, .post &{
-				flex: 0 1 auto;
-			}
-			flex: 0 1 25%;
 		}
 		align-self: auto;
 	}

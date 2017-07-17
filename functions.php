@@ -309,6 +309,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			require get_template_directory() . '/inc/template-tags.php';
 			require get_template_directory() . '/inc/extras.php';
 			require get_template_directory() . '/inc/customizer.php';
+			require get_template_directory() . '/inc/template-comment.php';
 			require get_template_directory() . '/inc/template-meta.php';
 			require get_template_directory() . '/inc/hooks.php';
 			require get_template_directory() . '/inc/register-plugins.php';

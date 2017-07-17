@@ -1,0 +1,45 @@
+.post-navigation{
+	.nav{
+		&-links{
+			display: flex;
+		}
+		&-next{
+			flex: 0 0 100%;
+			text-align: right;
+		}
+		&-previous{
+			flex: 0 0 50%;
+			& + .nav-next{
+				flex: 0 0 50%;
+			}
+		}
+
+	}
+}
+.pagination{
+	.nav{
+		&-links{
+			display: flex;
+			.page-numbers{
+				border: 1px solid $color_primary;
+				//background: $color__background-button;
+				height: 3em;
+				line-height: 3;
+				margin: 0 5px 5px 0;
+				min-width: 3em;
+				text-align: center;
+				text-decoration: none;
+				&.current, &.dots{
+					border: none;
+					font-weight: 600;
+				}
+				&.next, &.prev{
+					padding: 0 20px;
+					.screen-reader-text{
+						position: initial !important;
+					}
+				}
+			}
+		}
+	}
+}

@@ -127,7 +127,9 @@
 
 		homeAnimationShow: function ( $homeSection ) {
 			var $homeSection     = $homeSection,
-				timeline         = new TimelineMax( { delay: 0.4 } ),
+				timeline         = new TimelineMax( { delay: 0.4, onComplete: function() {
+					$homeSection.addClass( 'animated' );
+				} } ),
 				$svgLogo         = $( '#rovadex-logo-svg' ),
 				$shape1          = $( '.shape-1', $svgLogo ),
 				$shape2          = $( '.shape-2', $svgLogo ),
@@ -136,7 +138,11 @@
 				$symbols         = $( '.symbol', $svgLogo ),
 				$contentSection  = $( '.content-section', $homeSection );
 
-				$svgLogo.attr( {width: 840});
+			if ( $homeSection.hasClass( 'animated' ) ) {
+				return false;
+			}
+
+			$svgLogo.attr( {width: 840});
 
 			timeline.fromTo( $shape1, 0.8, { scale:0, rotation:-180, transformOrigin: '50% 50%'}, { scale:1, rotation:0, ease: Expo.easeOut } );
 			timeline.staggerFromTo( $drops, 0.5, { scale:0, transformOrigin: '50% 50%' }, { scale:1, ease: Expo.easeOut }, 0.1, '-=0.5' );

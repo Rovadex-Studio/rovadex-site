@@ -207,6 +207,12 @@
 
 				.icon_wrap {
 					display: none;
+
+					.service-icon {
+						i {
+							color: white;
+						}
+					}
 				}
 
 				.title_wrap {
@@ -423,7 +429,8 @@
 					margin-bottom: 0;
 				}
 			}
-			a{
+
+			a {
 				color:#578cc7;
 				&:actove{
 					color:#578cc7;
@@ -431,6 +438,14 @@
 			}
 
 			& .content-section {
+				color: white;
+
+				a {
+					&:before {
+						color: white;
+					}
+				}
+
 				&:before {
 					width: 70px;
 					height: 3px;

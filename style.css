@@ -3281,6 +3281,8 @@ body.admin-bar .mobile-menu .menu {
     margin-bottom: 0; }
   .home .services-section .cherry-services .services-item .icon_wrap {
     display: none; }
+    .home .services-section .cherry-services .services-item .icon_wrap .service-icon i {
+      color: white; }
   .home .services-section .cherry-services .services-item .title_wrap {
     margin-bottom: 10px; }
     .home .services-section .cherry-services .services-item .title_wrap a {
@@ -3486,18 +3488,22 @@ body.admin-bar .mobile-menu .menu {
       color: #578cc7; }
       .home .contacts-section-column a:actove {
         color: #578cc7; }
-    .home .contacts-section-column .content-section:before {
-      width: 70px;
-      height: 3px;
-      background-color: #65c6e6;
-      background: -webkit-gradient(linear, left top, right top, from(#80cfe9), to(#578cc7));
-      background: -webkit-linear-gradient(left, #80cfe9 0%, #578cc7 100%);
-      background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
-      top: 0;
-      left: 0;
-      display: block;
-      position: absolute;
-      content: ''; }
+    .home .contacts-section-column .content-section {
+      color: white; }
+      .home .contacts-section-column .content-section a:before {
+        color: white; }
+      .home .contacts-section-column .content-section:before {
+        width: 70px;
+        height: 3px;
+        background-color: #65c6e6;
+        background: -webkit-gradient(linear, left top, right top, from(#80cfe9), to(#578cc7));
+        background: -webkit-linear-gradient(left, #80cfe9 0%, #578cc7 100%);
+        background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
+        top: 0;
+        left: 0;
+        display: block;
+        position: absolute;
+        content: ''; }
 
 .wpcf7-form {
   position: relative; }

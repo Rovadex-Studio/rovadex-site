@@ -15,6 +15,7 @@
 		@include media-breakpoint-up(md){
 			height: 1024px;
 		}
+
 		.cover-image {
 			display: none;
 			position: absolute;
@@ -90,6 +91,7 @@
 		&-column {
 			& .content-section {
 				margin-top: 20px;
+				color: white;
 
 				p {
 					font-size: 36px;
@@ -166,6 +168,10 @@
 			@include media-breakpoint-up(xl){
 				background-position: 50%;
 			}
+		}
+
+		&-column {
+			color: white;
 		}
 
 		.content-section{
@@ -299,6 +305,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-flow: column nowrap;
+			color: white;
 
 			& .content-section {
 				&:before {
@@ -405,6 +412,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-flow: column nowrap;
+			color: white;
 
 			h2 {
 				@include media-breakpoint-up(sm){

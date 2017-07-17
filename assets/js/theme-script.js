@@ -118,9 +118,6 @@
 
 					TweenMax.from( $coverCurrentImage, 0.7, { scaleX: 1.7, scaleY: 1.7, ease: Circ.easeOut } );
 
-					//TweenMax.set( currentSection, { perspective:800 } );
-					//TweenMax.from( $boxCurrentImage, 1.5, { opacity:0, z:-500, rotationY:-90, delay:0.5, force3D: true, ease: Expo.easeOut } );
-
 					rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
 
 				}
@@ -159,10 +156,16 @@
 					$symbols = $( 'span', $this ),
 					randTop = rovadexThemeScript.getRandomInt(-20, 20);
 
-				var timeline = new TimelineMax( { delay: 0.5 } );
+				if ( $this.hasClass( 'animated' ) ) {
+					return false;
+				}
 
-				timeline.set( $symbols, { clearProps: 'opacity, top' } );
-				timeline.staggerFrom( $symbols, 0.8, { opacity:0, top: -100, ease: Circ.easeOut }, 0.05 );
+				var timeline = new TimelineMax( { delay: 0.5, onComplete: function(){
+					$this.addClass( 'animated' );
+				} } );
+
+				timeline.set( $symbols, { clearProps: 'opacity, left' } );
+				timeline.staggerFrom( $symbols, 0.6, { opacity:0, left: 40, ease: Expo.easeOut }, 0.05 );
 
 				timeline.play();
 

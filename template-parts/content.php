@@ -25,7 +25,6 @@
 		</div>
 		<div class="column-wrap content-wrap">
 			<header class="entry-header">
-				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 				<div class="entry-wrap">
 					<div class="entry-meta">
 						<?php
@@ -34,6 +33,7 @@
 						?>
 					</div><!-- .entry-meta -->
 				</div>
+				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			</header><!-- .entry-header -->
 			<div class="entry-content">
 				<?php rovadex()->utility()->attributes->get_content( array(

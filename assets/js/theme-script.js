@@ -218,7 +218,7 @@
 		},
 
 		homePageCarousel: function() {
-			if( $.fn.owlCarousel ){
+			if ( $.fn.owlCarousel ) {
 				$('.team-container').owlCarousel({
 					nestedItemSelector: 'team-item',
 					stageOuterClass: 'team-wrap cherry-team team-wrap template-grid-boxes',

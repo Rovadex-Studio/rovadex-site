@@ -30,19 +30,21 @@
 
 	.header-container__flex {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-content: space-around;
-		align-items: center;
-		padding: 40px 0;
-		margin-right: -$grid-gutter-width/2;
-		margin-left: -$grid-gutter-width/2;
+		flex-flow: column wrap;
+		padding: 20px 0;
+
+		@include media-breakpoint-up(sm) {
+			flex-flow: row wrap;
+			align-items: center;
+			padding: 40px 0;
+		}
+
 		.site-branding,
 		.main-navigation {
 			order: 0;
 			align-self: auto;
 		}
+
 		.site-branding {
 			flex: 0 1 auto;
 
@@ -56,6 +58,7 @@
 				}
 			}
 		}
+
 		.main-navigation {
 			flex: 1 1 auto;
 		}
@@ -72,6 +75,16 @@
 }
 
 #rovadex-logo-svg{
+	width: 250px;
+
+	@include media-breakpoint-up(sm) {
+		width: 200px;
+	}
+
+	@include media-breakpoint-up(md) {
+		width: 350px;
+	}
+
 	.symbol{
 		fill: $color__text-screen;
 

@@ -1,10 +1,8 @@
 /* Basic */
 .main-navigation {
 	display: block;
-	clear: both;
-	width: 100%;
-	-webkit-font-smoothing: antialiased;
-			font-smoothing: antialiased;
+	font-smoothing: antialiased;
+
 	ul {
 		margin: 0;
 		padding-left: 0;
@@ -279,6 +277,7 @@ ul.sub-menu{
 	z-index: 998;
 	max-width: 70%;
 	height: 100vh;
+	background-color: white;
 	transition: all .3s cubic-bezier(.35,.19,.45,.91);
 
 	.main-navigation-inner{
@@ -336,7 +335,7 @@ body.mobile-menu-visible {
 		.mobile-menu-toggle-button {
 			.menu-toggle__icon {
 				&::after {
-					content: '\f00d';
+					content: 'close';
 				}
 			}
 		}
@@ -363,9 +362,11 @@ body.mobile-menu-visible {
 		@include material-icon();
 		@include font-size(1.125);
 		vertical-align: top;
+
 		&::after {
+			color: white;
 			top: .75em;
-			content: '\f0c9';
+			content: 'dehaze';
 		}
 	}
 }

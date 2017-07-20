@@ -247,11 +247,12 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			wp_enqueue_script( 'rovadex-ease-pack', $this->assets_url() . 'js/EasePack.js', array( 'jquery' ), '1.15.5', true );
 
 			wp_enqueue_script( 'jquery-cherry-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array( 'jquery' ), '1.0.0', true );
-			wp_enqueue_script( 'jquery.fullpage.extensions', $this->assets_url() . 'js/min/jquery.fullpage.extensions.min.js', array(), '2.9.4', true );
-			wp_enqueue_script( 'jquery.fullpage', $this->assets_url() . 'js/min/jquery.fullpage.min.js', array(), '2.9.4', true );
 			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
 
 			if ( is_front_page() ) {
+				wp_enqueue_script( 'jquery.fullpage.extensions', $this->assets_url() . 'js/min/jquery.fullpage.extensions.min.js', array(), '2.9.4', true );
+				wp_enqueue_script( 'jquery.fullpage', $this->assets_url() . 'js/min/jquery.fullpage.min.js', array(), '2.9.4', true );
+
 				wp_enqueue_style( 'owl.carousel', $this->assets_url() . 'css/owl.carousel.min.css', array(), '3.4.2' );
 				wp_enqueue_script( 'owl.carousel', $this->assets_url() . 'js/min/owl.carousel.min.js', array( 'jquery' ), '3.4.2', true );
 			}

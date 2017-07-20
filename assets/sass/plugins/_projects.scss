@@ -3,17 +3,22 @@
 	.projects-filters{
 		font-weight: 600;
 		margin: 0;
-		ul{
+		.order-filters, .projects-filters-list{
 			li{
-				min-width: 110px;
 				padding: 0;
+				margin-top: 0;
+				margin-bottom: 0;
+				&[data-filter-type="order"]{
+					min-width: 110px;
+				}
+				&[data-filter-type="orderby"]{
+					min-width: 180px;
+				}
 				&:before{
 					display: none;
 				};
 			}
 		}
-	}
-	.projects-list{
 	}
 	.projects-ajax-button-wrapper{
 		.projects-ajax-button{
@@ -58,11 +63,15 @@
 	div.hover-content{
 		justify-content: center;
 		text-align: center;
+
+		&:hover{
+			transform: scale(0.95);
+		}
 		h3{
 			flex: 0 1 auto;
 			min-width: 100%;
-			color: #fff;
 			a{
+				color: $invert_color__text-screen;
 				@include transition( all 0.4s ease );
 				&:hover {
 					//text-decoration: underline;
@@ -95,21 +104,84 @@
 			}
 	}
 }
-
-.cherry-projects-single-post{
-	.featured-image{
-		a {
-			span.cover{
-				background-color: transparent;
+.single-projects .site-main{
+		&:after{
+		display:none;
+	};
+}
+.cherry-projects{
+	&-single{
+		div.cherry-projects-single__container{
+			flex-flow: column nowrap;
+			@include media-breakpoint-up(md) {
+				flex-flow: row nowrap;
 			}
 		}
-	}
-	.additional-image{
-		a {
-			span.cover{
-				background-color: transparent;
+		div.cherry-projects-single-meta{
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 16px;
+			font-weight: 400;
+			border: none;
+			margin: 0 0 1.5em 0;
+			a{
+				margin-right: 15px;
+			}
+			i{
+				margin-right: 5px;
+				top: 1px;
+				position: relative;
+			}
+		}
+
+		.cherry-skill-item{
+			div.skill-bar{
+				padding: 5px;
+				font-size: 0;
+				height: initial;
+				span{
+					background-color: $color_primary;
+				}
+			}
+		}
+
+		.featured-image{
+			margin: 0;
+			a {
+				font-size: 0;
+				span.cover{
+					background-color: rgba(35, 40, 45, 0.6);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					&:after{
+						display: inline-block;
+						font: normal normal normal 14px/1 FontAwesome;
+						font-size: inherit;
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						content: "\f00e";
+						color: $invert_color__text-screen;
+						order: 0;
+						flex: 0 1 auto;
+						align-self: auto;
+						font-size: 60px;
+					};
+				}
+				&:hover{
+					span.cover{
+						transform: scale(0.95);
+					}
+				};
+			}
+		}
+		.additional-image{
+			a {
+				span.cover{
+					background-color: transparent;
+				}
 			}
 		}
 	}
 }
-

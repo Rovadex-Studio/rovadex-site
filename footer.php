@@ -12,12 +12,15 @@
 ?>
 	</div><!-- #content -->
 
-	<div class="footer-area-wrap invert">
-		<?php do_action( 'rovadex_render_widget_area', 'footer' ); ?>
-	</div>
-
 	<footer id="colophon" class="site-footer invert" role="contentinfo">
 		<div class="container">
+			<?php
+				if ( ! is_front_page() ) { ?>
+					<div class="footer-area-wrap invert">
+						<?php do_action( 'rovadex_render_widget_area', 'footer' ); ?>
+					</div>
+			<?php } ?>
+
 			<div class="footer-conatiner__flex">
 				<div class="site-info">
 					<span class="sep"> &copy; </span>

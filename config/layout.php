@@ -52,7 +52,7 @@ return array(
 		'args'    => array(),
 	),
 	'is_search' => array(
-		'content' => 'col-md-8',
-		'sidebar' => false,
+		'content' => 'col-xs-12 col-sm-12 col-md-8 col-lg-8',
+		'sidebar' => 'col-xs-12 col-sm-12 col-md-4 col-lg-4',
 	),
 );

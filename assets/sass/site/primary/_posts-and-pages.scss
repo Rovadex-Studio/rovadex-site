@@ -1,8 +1,10 @@
 .site-content{
 	margin-bottom: 50px;
+	.home & {
+		margin-bottom: 0;
+	}
 }
 .sticky {
-
 	display: block;
 }
 
@@ -159,7 +161,7 @@
 
 .entry-header {
 
-	.blog &, .archive &, .search &, .single-post &{
+	.blog &, .archive &, .search &, .single-post &, .single-projects &{
 		position: relative;
 		margin-bottom: 1.438em;
 

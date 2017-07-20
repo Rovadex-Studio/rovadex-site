@@ -66,66 +66,67 @@
 		},
 
 		fullPageInit: function ( self ) {
-			var $fullPageSection = $( '.fullPageSection' ),
-				$sectionList     = $( '> .cherry-section', $fullPageSection),
-				$footer          = $( '.site-footer' );
+			if( $.fn.fullpage ){
+				var $fullPageSection = $( '.fullPageSection' ),
+					$sectionList     = $( '> .cherry-section', $fullPageSection),
+					$footer          = $( '.site-footer' );
 
-			rovadexThemeScript.textSplit( $( 'h2:not(.splitted)', $fullPageSection ) );
+				rovadexThemeScript.textSplit( $( 'h2:not(.splitted)', $fullPageSection ) );
 
-			$fullPageSection.fullpage( {
-				anchors: ['home', 'about', 'services', 'projects', 'team', 'news', 'contacts'],
-				menu: '#one_page_navi-menu',
-				navigation: true,
-				navigationPosition: 'left',
-				verticalCentered: false,
-				scrollingSpeed: 700,
-				responsiveWidth: 1024,
-				afterLoad: function( anchorLink, index ) {
-					var loadedSection = $( this );
+				$fullPageSection.fullpage( {
+					anchors: ['home', 'about', 'services', 'projects', 'team', 'news', 'contacts'],
+					menu: '#one_page_navi-menu',
+					navigation: true,
+					navigationPosition: 'left',
+					verticalCentered: false,
+					scrollingSpeed: 700,
+					responsiveWidth: 1024,
+					afterLoad: function( anchorLink, index ) {
+						var loadedSection = $( this );
 
-					if ( loadedSection.hasClass( 'dark-section' ) ) {
-						$( '.site-header' ).addClass( 'invert' );
-						$( '#fp-nav' ).addClass( 'invert' );
-					} else {
-						$( '.site-header' ).removeClass( 'invert' );
-						$( '#fp-nav' ).removeClass( 'invert' );
+						if ( loadedSection.hasClass( 'dark-section' ) ) {
+							$( '.site-header' ).addClass( 'invert' );
+							$( '#fp-nav' ).addClass( 'invert' );
+						} else {
+							$( '.site-header' ).removeClass( 'invert' );
+							$( '#fp-nav' ).removeClass( 'invert' );
+						}
+
+					},
+					onLeave: function( index, nextIndex, direction ) {
+						var leavingSection = $( this ),
+							currentSection = $sectionList.eq( nextIndex - 1 ),
+							$coverCurrentImage = $( '.fullpage-image', currentSection ),
+							$boxCurrentImage = $( '.box-image', currentSection );
+
+						if ( currentSection.hasClass( 'dark-section' ) ) {
+							$( '.site-header' ).addClass( 'invert' );
+							$( '#fp-nav' ).addClass( 'invert' );
+						} else {
+							$( '.site-header' ).removeClass( 'invert' );
+							$( '#fp-nav' ).removeClass( 'invert' );
+						}
+
+						if ( currentSection.hasClass( 'home-section' ) ) {
+							self.homeAnimationShow( currentSection );
+						}
+
+						if ( currentSection.hasClass( 'show-footer' ) ) {
+							TweenMax.to( $footer, 0.8, { bottom: 0, ease: Cubic.easeOut } );
+						} else {
+							TweenMax.to( $footer, 0.5, { bottom: '-200%', ease: Cubic.easeIn } );
+						}
+
+						TweenMax.from( $coverCurrentImage, 0.7, { scaleX: 1.7, scaleY: 1.7, ease: Circ.easeOut } );
+
+						//TweenMax.set( currentSection, { perspective:800 } );
+						//TweenMax.from( $boxCurrentImage, 1.5, { opacity:0, z:-500, rotationY:-90, delay:0.5, force3D: true, ease: Expo.easeOut } );
+
+						rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
+
 					}
-
-				},
-				onLeave: function( index, nextIndex, direction ) {
-					var leavingSection = $( this ),
-						currentSection = $sectionList.eq( nextIndex - 1 ),
-						$coverCurrentImage = $( '.fullpage-image', currentSection ),
-						$boxCurrentImage = $( '.box-image', currentSection );
-
-					if ( currentSection.hasClass( 'dark-section' ) ) {
-						$( '.site-header' ).addClass( 'invert' );
-						$( '#fp-nav' ).addClass( 'invert' );
-					} else {
-						$( '.site-header' ).removeClass( 'invert' );
-						$( '#fp-nav' ).removeClass( 'invert' );
-					}
-
-					if ( currentSection.hasClass( 'home-section' ) ) {
-						self.homeAnimationShow( currentSection );
-					}
-
-					if ( currentSection.hasClass( 'show-footer' ) ) {
-						TweenMax.to( $footer, 0.8, { bottom: 0, ease: Cubic.easeOut } );
-					} else {
-						TweenMax.to( $footer, 0.5, { bottom: '-200%', ease: Cubic.easeIn } );
-					}
-
-					TweenMax.from( $coverCurrentImage, 0.7, { scaleX: 1.7, scaleY: 1.7, ease: Circ.easeOut } );
-
-					//TweenMax.set( currentSection, { perspective:800 } );
-					//TweenMax.from( $boxCurrentImage, 1.5, { opacity:0, z:-500, rotationY:-90, delay:0.5, force3D: true, ease: Expo.easeOut } );
-
-					rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
-
-				}
-			} );
-			//$fullPageSection.fullpage.setResponsive(false);
+				} );
+			}
 		},
 
 		homeAnimationShow: function ( $homeSection ) {

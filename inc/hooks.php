@@ -82,7 +82,46 @@ function rovadex_build_search_form( $search_form = '' ) {
 add_filter( 'get_search_form', 'rovadex_build_search_form', 0 );
 
 function rovadex_projects_title_settings( $settings = array() ) {
-	$settings['class'] = 'invert';
+
+	if ( ! is_single() ) {
+		$settings['html'] = '<h3 %1$s><a href="%2$s" %3$s rel="bookmark">%4$s</a></h3>';
+		$settings['class'] = 'invert';
+
+	}else{
+		$settings['html'] = '<h2 %1$s>%4$s</h2>';
+		$settings['class'] = 'entry-title';
+	}
+
 	return $settings;
 }
 add_filter( 'cherry-projects-title-settings', 'rovadex_projects_title_settings', 0 );
+
+function rovadex_projects_date_settings( $settings = array() ) {
+	$settings['icon'] = '<i class="fa fa-calendar" aria-hidden="true"></i>';
+	$settings['prefix'] = '';
+	return $settings;
+}
+add_filter( 'cherry-projects-date-settings', 'rovadex_projects_date_settings' );
+
+function rovadex_projects_author_settings( $settings = array() ) {
+	$settings['icon'] = '<i class="fa fa-user" aria-hidden="true"></i>';
+	$settings['prefix'] = '';
+	return $settings;
+}
+add_filter( 'cherry-projects-author-settings', 'rovadex_projects_author_settings' );
+
+function rovadex_projects_comments_settings( $settings = array() ) {
+	$settings['icon'] = '<i class="fa fa-comment" aria-hidden="true"></i>';
+	$settings['prefix'] = '';
+	return $settings;
+}
+add_filter( 'cherry-projects-comments-settings', 'rovadex_projects_comments_settings' );
+
+function rovadex_projects_terms_list_settings( $settings = array() ) {
+	$settings['icon']   = '<i class="fa fa-tags" aria-hidden="true"></i>';
+	$settings['prefix'] = '';
+	$settings['before'] = '';
+	$settings['after']  = '';
+	return $settings;
+}
+add_filter( 'cherry-projects-terms-list-settings', 'rovadex_projects_terms_list_settings' );

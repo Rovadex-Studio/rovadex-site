@@ -15,6 +15,7 @@
 		@include media-breakpoint-up(md){
 			height: 1024px;
 		}
+
 		.cover-image {
 			display: none;
 			position: absolute;
@@ -90,6 +91,7 @@
 		&-column {
 			& .content-section {
 				margin-top: 20px;
+				color: white;
 
 				p {
 					font-size: 36px;
@@ -168,6 +170,10 @@
 			}
 		}
 
+		&-column {
+			color: white;
+		}
+
 		.content-section{
 			@include media-breakpoint-up(sm){
 				padding-top: 20px;
@@ -186,7 +192,11 @@
 		}
 
 		.cherry-services {
+			margin-bottom: 2em;
+
 			@include media-breakpoint-up(sm){
+				margin-bottom: 1em;
+
 				&-row{
 					flex-direction: row;
 				}
@@ -201,6 +211,12 @@
 
 				.icon_wrap {
 					display: none;
+
+					.service-icon {
+						i {
+							color: white;
+						}
+					}
 				}
 
 				.title_wrap {
@@ -298,6 +314,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-flow: column nowrap;
+			color: white;
 
 			& .content-section {
 				&:before {
@@ -399,6 +416,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-flow: column nowrap;
+			color: white;
 
 			h2 {
 				@include media-breakpoint-up(sm){
@@ -409,7 +427,8 @@
 					margin-bottom: 0;
 				}
 			}
-			a{
+
+			a {
 				color:#578cc7;
 				&:actove{
 					color:#578cc7;
@@ -417,6 +436,14 @@
 			}
 
 			& .content-section {
+				color: white;
+
+				a {
+					&:before {
+						color: white;
+					}
+				}
+
 				&:before {
 					width: 70px;
 					height: 3px;
@@ -431,7 +458,6 @@
 			}
 		}
 	}
-
 }
 
 ul.rovadex-social-link{

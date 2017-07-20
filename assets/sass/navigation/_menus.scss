@@ -1,6 +1,7 @@
 /* Basic */
 .main-navigation {
 	display: block;
+	position: relative;
 	font-smoothing: antialiased;
 
 	ul {
@@ -46,7 +47,6 @@
 
 	li {
 		position: relative;
-		text-align: left;
 	}
 
 	a {
@@ -67,14 +67,15 @@
 	@include media-breakpoint-up( sm ) {
 		.menu {
 			display: flex;
-			flex-wrap: wrap;
+			flex-flow: row nowrap;
 			justify-content: flex-end;
+
 			.default & {
 				display: block;
 			}
+
 			> li {
-				display: flex;
-				align-items: flex-start;
+
 				.default & {
 					display: inline-block;
 				}

@@ -34,8 +34,11 @@
 		padding: 20px 0;
 
 		@include media-breakpoint-up(sm) {
-			flex-flow: row wrap;
 			align-items: center;
+		}
+
+		@include media-breakpoint-up(md) {
+			flex-flow: row nowrap;
 			padding: 40px 0;
 		}
 
@@ -75,14 +78,12 @@
 }
 
 #rovadex-logo-svg{
-	width: 250px;
-
-	@include media-breakpoint-up(sm) {
-		width: 200px;
+	width: 90%;
+	@include media-breakpoint-up(md){
+		max-width: 650px;
 	}
-
-	@include media-breakpoint-up(md) {
-		width: 350px;
+	@include media-breakpoint-up(lg){
+		max-width: 830px;
 	}
 
 	.symbol{
@@ -93,3 +94,6 @@
 		}
 	}
 }
+.cherry-svg-image {
+
+		}

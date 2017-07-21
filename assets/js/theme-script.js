@@ -22,7 +22,7 @@
 
 		document_ready_render: function () {
 			this.onePageMenuInit( this );
-			this.responsiveMenuInit( this );
+			//this.responsiveMenuInit( this );
 			this.fullPageInit( this );
 			this.wpcf7Form();
 			this.homePageCarousel();

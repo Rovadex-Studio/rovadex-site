@@ -59,7 +59,7 @@ function rovadex_header_custom_logo() {
 	?>
 	<div class="site-logo">
 		<a class="site-logo__link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<svg version="1.1" id="rovadex-logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350px" x="0px" y="0px" viewBox="0 0 415 157" xml:space="preserve">
+			<svg version="1.1" id="rovadex-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350px" x="0px" y="0px" viewBox="0 0 415 157" xml:space="preserve">
 				<g id="inner">
 					<g id="XMLID_7_">
 						<path id="XMLID_27_" class="shape-1" fill="#009ED2" opacity="0.5" d="M26.3,46.5c6.9-15,42.6-42.2,54-44.3c9.1-1.7,75.2,10.8,80.5,20.7c10.3,19.1,19.4,74.2,15.5,79.5c-16.4,4.9-17.8,4.5-33.9,23.4c-3.9,4.5-12.4,17.1-16.4,19c-4.4,2-28.4,5.4-38.7,4.4c-17.3-1.8-39.5-22-43-25.9C30,107.2,21,58.2,26.3,46.5z"/>

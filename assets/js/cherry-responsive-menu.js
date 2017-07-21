@@ -260,7 +260,7 @@
 				$( 'body' ).removeClass( 'mobile-menu-active' );
 				$( 'body' ).removeClass( 'mobile-menu-visible' );
 
-				this.settings.templates.mobileMenuToogleButton
+				//this.settings.templates.mobileMenuToogleButton;
 
 				this.rebuildItems();
 			}

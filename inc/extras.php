@@ -143,3 +143,55 @@ function rovadex_get_svg_by_attachment_id( $attachment_id ) {
 		return false;
 	}
 }
+
+/**
+ * Get list of icons to render.
+ *
+ * @return array
+ */
+function rovadex_get_render_icons_set() {
+	return apply_filters( 'rovadex_render_icons_set', array(
+		'fa'       => '<i class="fa fa-%s"></i>',
+		'material' => '<i class="material-icons">%s</i>',
+	) );
+}
+
+/**
+ * Render font icons in content
+ *
+ * @param  string $content content to render
+ * @return string
+ */
+function rovadex_render_icons( $content ) {
+	$icons     = rovadex_get_render_icons_set();
+	$icons_set = implode( '|', array_keys( $icons ) );
+
+	$regex = '/icon:(' . $icons_set . ')?:?([a-zA-Z0-9-_]+)/';
+
+	return preg_replace_callback( $regex, 'rovadex_render_icons_callback', $content );
+}
+
+/**
+ * Callback for icons render.
+ *
+ * @param  array $matches Search matches array.
+ * @return string
+ */
+function rovadex_render_icons_callback( $matches ) {
+
+	if ( empty( $matches[1] ) && empty( $matches[2] ) ) {
+		return $matches[0];
+	}
+
+	if ( empty( $matches[1] ) ) {
+		return sprintf( '<i class="fa fa-%s"></i>', $matches[2] );
+	}
+
+	$icons = rovadex_get_render_icons_set();
+
+	if ( ! isset( $icons[ $matches[1] ] ) ) {
+		return $matches[0];
+	}
+
+	return sprintf( $icons[ $matches[1] ], $matches[2] );
+}

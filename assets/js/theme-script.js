@@ -25,6 +25,7 @@
 			//this.responsiveMenuInit( this );
 			this.fullPageInit( this );
 			this.wpcf7Form();
+			this.subscribe_init( this );
 			this.homePageCarousel();
 		},
 
@@ -244,7 +245,73 @@
 					}
 				});
 			}
-		}
+		},
+
+		subscribe_init: function( self ) {
+
+			CherryJsCore.variable.$document.on( 'click', '.subscribe-block__submit', function( event ){
+
+				event.preventDefault();
+
+				var $this       = $(this),
+					form       = $this.parents( 'form' ),
+					nonce      = form.find( 'input[name="nonce"]' ).val(),
+					mail_input = form.find( 'input[name="subscribe-mail"]' ),
+					mail       = mail_input.val(),
+					error      = form.find( '.subscribe-block__error' ),
+					success    = form.find( '.subscribe-block__success' ),
+					hidden     = 'hidden';
+
+				if ( '' === mail ) {
+					mail_input.addClass( 'error' );
+					return !1;
+				}
+
+				if ( $this.hasClass( 'processing' ) ) {
+					return !1;
+				}
+
+				$this.addClass( 'processing' );
+				error.empty();
+
+				if ( ! error.hasClass( hidden ) ) {
+					error.addClass( hidden );
+				}
+
+				if ( ! success.hasClass( hidden ) ) {
+					success.addClass( hidden );
+				}
+
+				$.ajax({
+					url: rovadex.ajaxurl,
+					type: 'post',
+					dataType: 'json',
+					data: {
+						action: 'rovadex_subscribe',
+						mail: mail,
+						nonce: nonce
+					},
+					error: function() {
+						$this.removeClass( 'processing' );
+					}
+				}).done( function( response ) {
+				console.log(response);
+					$this.removeClass( 'processing' );
+
+					if ( true === response.success ) {
+						success.removeClass( hidden );
+						mail_input.val('');
+						return 1;
+					}
+
+					error.removeClass( hidden ).html( response.data.message );
+					return !1;
+
+				});
+
+			});
+
+		},
 	}
 
 	rovadexThemeScript.init();

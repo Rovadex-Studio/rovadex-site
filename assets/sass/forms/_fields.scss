@@ -15,21 +15,30 @@ input[type='datetime-local'],
 input[type='color'],
 textarea {
 	@include font-size(0.875);
-	color: $color__text-input;
-	border: 1px solid $color__border;
-	border-radius: 0;
 	padding: $input__indents;
-	background-color: $color__background-body;
+	width: 100%;
+	border: none;
+	font-weight: 400;
+
+	color: $color__text-screen;
+	background-color: rgba(0, 0, 0, 0.1);
+
+	&::placeholder {
+		color: inherit;
+	}
 	&:focus {
 		outline: none;
 		color: $color__text-input-focus;
 	}
 	.invert &{
-		border: 1px solid $invert_color__border;
-		background-color: $color__background-body;
+		background-color: rgba(255,255,255,0.1);
+		color: $invert_color__text-screen;
 
+		&::placeholder {
+			color: inherit;
+		}
 		&:focus {
-			color: $invert_color__text-input-focus;
+			color: $invert_color__text-screen;
 		}
 	}
 }

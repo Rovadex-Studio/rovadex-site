@@ -80,18 +80,23 @@
 
 #rovadex-logo-svg{
 	width: 90%;
+	@include media-breakpoint-up(sm){
+		max-width: 250px;
+	}
 	@include media-breakpoint-up(md){
 		max-width: 650px;
 	}
 	@include media-breakpoint-up(lg){
 		max-width: 830px;
 	}
-
 	.symbol{
 		fill: $color__text-screen;
 
 		.home &{
 			fill: $invert_color__text-screen;
 		}
+	}
+	.main-symbol{
+		fill: $invert_color__text-screen;
 	}
 }

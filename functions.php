@@ -247,7 +247,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			wp_enqueue_script( 'rovadex-ease-pack', $this->assets_url() . 'js/EasePack.js', array( 'jquery' ), '1.15.5', true );
 
 			wp_enqueue_script( 'jquery-cherry-responsive-menu', $this->assets_url() . 'js/cherry-responsive-menu.js', array( 'jquery' ), '1.0.0', true );
-			wp_enqueue_script( 'theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
+			wp_enqueue_script( 'rovadex-theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
 
 			if ( is_front_page() ) {
 				wp_enqueue_script( 'jquery.fullpage.extensions', $this->assets_url() . 'js/min/jquery.fullpage.extensions.min.js', array(), '2.9.4', true );
@@ -260,6 +260,10 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+
+			wp_localize_script( 'rovadex-theme-script', 'rovadex', array(
+				'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
+			) );
 		}
 
 		/**
@@ -307,17 +311,19 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 		 */
 		public function load_files() {
 
-			require get_template_directory() . '/inc/template-tags.php';
-			require get_template_directory() . '/inc/extras.php';
-			require get_template_directory() . '/inc/customizer.php';
-			require get_template_directory() . '/inc/template-comment.php';
-			require get_template_directory() . '/inc/template-meta.php';
-			require get_template_directory() . '/inc/hooks.php';
-			require get_template_directory() . '/inc/register-plugins.php';
+			require_once get_template_directory() . '/inc/template-tags.php';
+			require_once get_template_directory() . '/inc/extras.php';
+			require_once get_template_directory() . '/inc/customizer.php';
+			require_once get_template_directory() . '/inc/template-comment.php';
+			require_once get_template_directory() . '/inc/template-meta.php';
+			require_once get_template_directory() . '/inc/hooks.php';
+			require_once get_template_directory() . '/inc/register-plugins.php';
 
-			require get_template_directory() . '/inc/classes/class-widget-area.php';
-			require get_template_directory() . '/inc/classes/class-wrapping.php';
-			require get_template_directory() . '/inc/classes/class-tgm-plugin-activation.php';
+			require_once get_template_directory() . '/inc/classes/class-widget-area.php';
+			require_once get_template_directory() . '/inc/classes/class-wrapping.php';
+			require_once get_template_directory() . '/inc/classes/class-tgm-plugin-activation.php';
+
+			require_once get_template_directory() . '/inc/widgets/subscribe-follow/class-subscribe-follow-widget.php';
 
 		}
 

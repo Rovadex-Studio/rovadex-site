@@ -67,7 +67,7 @@
 	@include media-breakpoint-up( sm ) {
 		.menu {
 			display: flex;
-			flex-flow: row nowrap;
+			flex-flow: row wrap;
 			justify-content: flex-end;
 
 			.default & {
@@ -110,7 +110,7 @@
 			position: absolute;
 			z-index: 999;
 			top: 120%;
-			left: 0;
+			right: 0;
 			opacity: 0;
 			visibility: hidden;
 			transition: top .2s linear .1s,
@@ -146,16 +146,7 @@ ul.sub-menu{
 		margin: 0;
 	}
 	a {
-		//color: $color_primary;
 		font-size: 20px;
-
-		/*&.active {
-			color: $color_heading;
-		}
-
-		&:hover {
-			color: $color_heading;
-		}*/
 	}
 }
 
@@ -276,7 +267,7 @@ ul.sub-menu{
 	top: 0;
 	right: -70%;
 	z-index: 998;
-	max-width: 70%;
+	width: 70%;
 	height: 100vh;
 	background-color: white;
 	transition: all .3s cubic-bezier(.35,.19,.45,.91);
@@ -288,6 +279,8 @@ ul.sub-menu{
 	}
 
 	li {
+		text-align: center;
+
 		&.menu-hover {
 			> .menu-link-wrapper {
 				&:after {
@@ -299,6 +292,10 @@ ul.sub-menu{
 				transition: max-height 0.4s cubic-bezier(.76,.09,.29,.97);
 			}
 		}
+	}
+
+	.menu {
+		padding: 30px 0;
 	}
 
 	.sub-menu {

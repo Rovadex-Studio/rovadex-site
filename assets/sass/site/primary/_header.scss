@@ -30,7 +30,7 @@
 
 	.header-container__flex {
 		display: flex;
-		flex-flow: column wrap;
+		flex-flow: row nowrap;
 		padding: 20px 0;
 
 		@include media-breakpoint-up(sm) {
@@ -79,7 +79,7 @@
 }
 
 #rovadex-logo-svg{
-	width: 90%;
+	//width: 150px;
 	@include media-breakpoint-up(sm){
 		max-width: 250px;
 	}

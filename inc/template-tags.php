@@ -173,7 +173,7 @@ function rovadex_site_description() {
 function rovadex_breadcrumbs() {
 
 	$breadcrumbs_settings = apply_filters( 'rovadex_breadcrumbs_settings', array(
-		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
+		'wrapper_format'    => '<div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_on_front'     => false,
 		'separator' => '&#124;',

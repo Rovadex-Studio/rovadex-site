@@ -18,10 +18,10 @@ textarea {
 	padding: $input__indents;
 	width: 100%;
 	border: none;
-	font-weight: 400;
+	font-weight: 300;
 
-	color: $color__text-screen;
-	background-color: rgba(0, 0, 0, 0.1);
+	color: $color__background-sub-menu;
+	background-color: rgba(69, 71, 75, 0.1);
 
 	&::placeholder {
 		color: inherit;

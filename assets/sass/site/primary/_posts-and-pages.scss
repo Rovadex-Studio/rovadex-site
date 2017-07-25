@@ -1,25 +1,11 @@
-/*html{
-	overflow-x: hidden;
-	width: 100vw;
-}*/
 .site-content{
-	margin: 0 0 4em;
+	padding: 0 0 4em;
 	.home & {
-		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 }
 .sticky {
 	display: block;
-}
-
-.blog, .search, .archive, .single-post {
-	#primary, #primary-sidebar {
-		margin-top: 2.125em;
-		@include media-breakpoint-up(md) {
-			margin-top: 4.375em;
-		}
-	}
-
 }
 
 .posted-on .updated:not(.published){
@@ -59,10 +45,6 @@
 	.blog &, .archive &, .search &, .single-post & {
 		.image-wrap{
 			margin-bottom: 1.5em;
-
-			@include media-breakpoint-up(md) {
-				margin-bottom: 3em;
-			}
 		}
 		figure.post-thumbnail {
 			margin: 0; /* Extra wide images within figure tags dont overflow the content area. */
@@ -179,57 +161,52 @@
 }
 
 .entry-header {
-
-	.blog &, .archive &, .search &, .single-post &, .single-projects &{
+	position: relative;
+	margin-bottom: 1.438em;
+	z-index: 10;
+	.home &{
+		position: initial;
+		margin-bottom: initial;
+	}
+	.entry-title {
 		position: relative;
-		margin-bottom: 1.438em;
-
-		.entry-wrap {
-			position: relative;
-			padding-bottom: 0.5em;
-		}
-
-		.entry-title {
-			margin-bottom: 1.5em;
-			position: relative;
-
-			a {
-				color: $color__text-screen;
-				&:hover {
-					color: $color__link;
-				}
-			}
-
-			&:after {
-				width: 70px;
-				height: 3px;
-				background-color: $color_primary;
-				bottom: -17px;
-				left: 0;
-				display: block;
-				position: absolute;
-				content: '';
+		line-height: 1.5em;
+		a {
+			color: $color__text-screen;
+			&:hover {
+				color: $color__link;
 			}
 		}
 
-		.entry-content {
-			position: relative;
-			margin-top: 0.75em;
-
-			p {
-				margin-bottom: 0;
-			}
+		&:after {
+			width: 70px;
+			height: 3px;
+			background-color: $color_primary;
+			bottom: -12px;
+			left: 0;
+			display: block;
+			position: absolute;
+			content: '';
 		}
+	}
 
-		.post__tags {
-			display: inline-block;
-		}
-		.entry-meta {
-			margin-top: 0;
+	.entry-content {
+		position: relative;
+		//margin-top: 0.75em;
+
+		p {
 			margin-bottom: 0;
-			font-size: 16px;
-			font-weight: 400;
 		}
+	}
+
+	.post__tags {
+		display: inline-block;
+	}
+	.entry-meta {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 16px;
+		font-weight: 400;
 	}
 }
 
@@ -260,5 +237,13 @@
 			flex: 0 1 70%;
 		}
 		align-self: auto;
+	}
+}
+.page-id-480{
+	.site-content{
+		position: relative;
+		[class^="col-"]{
+			position: initial;
+		}
 	}
 }

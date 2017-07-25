@@ -2,10 +2,7 @@
 
 	<?php do_action( 'rovadex_render_widget_area', 'full-width-header-area' ); ?>
 
-	<?php rovadex_breadcrumbs(); ?>
-
 	<div class="<?php echo rovadex_site_content_classes(); ?>">
-
 		<div class="row no-gutters">
 
 			<div id="primary" class="col-xs-12">

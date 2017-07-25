@@ -28,19 +28,19 @@ add_filter( 'body_class', 'rovadex_body_sidebar_class' );
  *
  * @param array $mimes Default mime types.
  */
-function add_mime_types( $mimes ) {
+function rovadex_add_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
 
 	return $mimes;
 }
-add_filter( 'upload_mimes', 'add_mime_types' );
+add_filter( 'upload_mimes', 'rovadex_add_mime_types' );
 
 /**
  * Customize one page menu item link attr line
  *
  * @return Object
  */
-function customize_nav_menu_link_attributes( $atts, $item, $args ) {
+function rovadex_customize_nav_menu_link_attributes( $atts, $item, $args ) {
 
 	if ( 'one_page_navi' === $args->theme_location ) {
 		$menuanchor = str_replace( '#', '', $item->url );
@@ -50,20 +50,20 @@ function customize_nav_menu_link_attributes( $atts, $item, $args ) {
 
 	return $atts;
 }
-add_filter( 'nav_menu_link_attributes', 'customize_nav_menu_link_attributes', 10, 3 );
+add_filter( 'nav_menu_link_attributes', 'rovadex_customize_nav_menu_link_attributes', 10, 3 );
 
-function update_shortcodes_avaliable_styles( $styles ) {
+function rovadex_update_shortcodes_avaliable_styles( $styles ) {
 	unset( $styles['grid'] );
 
 	return $styles;
 }
-add_filter( 'cherry-site-shortcodes-avaliable-styles', 'update_shortcodes_avaliable_styles' );
+add_filter( 'cherry-site-shortcodes-avaliable-styles', 'rovadex_update_shortcodes_avaliable_styles' );
 
 
-function projects_pinner_html( $html ) {
+function rovadex_projects_spinner_html( $html ) {
 	return '<div class="cherry-projects-ajax-loader projects-end-line-spinner"><div class="rovadex-spinner cherry-spinner"></div></div>';
 }
-add_filter( 'cherry-projects-ajax-loader-html', 'projects_pinner_html', 9, 1);
+add_filter( 'cherry-projects-ajax-loader-html', 'rovadex_projects_spinner_html', 9, 1);
 
 
 function rovadex_build_search_form( $search_form = '' ) {

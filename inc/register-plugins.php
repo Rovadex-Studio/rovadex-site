@@ -42,9 +42,9 @@ function rovadex_register_required_plugins() {
 			'slug' => 'cherry-projects',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Site Shortcodes', 'rovadex-site' ),
-			'slug' => 'cherry-site-shortcodes',
-			'source'   => get_template_directory() . '/assets/plugins/cherry-site-shortcodes.zip',
+			'name'   => esc_html__( 'Cherry Site Shortcodes', 'rovadex-site' ),
+			'slug'   => 'cherry-site-shortcodes',
+			'source' => 'https://github.com/CherryFramework/cherry-site-shortcodes/archive/master.zip',
 		)
 	);
 

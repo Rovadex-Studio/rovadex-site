@@ -1,4 +1,10 @@
-.search-form {
+    /* background: url(../img/icon-search.png) no-repeat right 10px center #fff !important*/
+.dwqa-search {
+	 & input[type="text"] {
+		background: url(./assets/images/icon-search.png) no-repeat right 10px center rgba(0,0,0,0.1) !important;
+	}
+}
+.search-form, .dwqa-search {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -7,7 +13,7 @@
 		width: auto;
 		margin-right: 5px;
 	}
-	&__field[type='search'] {
+	&__field[type='search'], & input[type="text"] {
 		width: 100%;
 		box-sizing: border-box;
 		height: 50px;

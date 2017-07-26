@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 		<h3 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One response.;', '%1$s Responses.', get_comments_number(), 'rovadex-site' ) ),
+					esc_html( _nx( 'One response.', '%1$s Responses.', get_comments_number(), 'rovadex-site' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);

@@ -47,14 +47,14 @@ function rovadex_get_customizer_options() {
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',
-				'default' => '0fabd7822dcc3cb8547dcf9109750d92-us10',
+				'default' => '',
 			),
 			'mailchimp_list_id' => array(
 				'title'   => esc_html__( 'MailChimp list ID', 'cherry' ),
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',
-				'default' => '2a6603b219',
+				'default' => '',
 			),
 		),
 	) );

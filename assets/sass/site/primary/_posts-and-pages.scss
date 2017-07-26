@@ -245,5 +245,10 @@
 		[class^="col-"]{
 			position: initial;
 		}
+		.cover-image {
+			left: 0;
+			background-color: #f7f7f8;
+			background-position: 50% 20px;
+		}
 	}
 }

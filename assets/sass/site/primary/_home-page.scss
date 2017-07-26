@@ -395,6 +395,90 @@
 			display: none;
 		}
 	}
+
+	.testimonials-section {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		min-height: 500px;
+
+		.cover-image {
+
+			@include media-breakpoint-up(sm){
+				width: 65%;
+				height: 110%;
+				top: -5%;
+				right: -150px;
+			}
+			@include media-breakpoint-up(md) {
+				width: 52%;
+				height: 160%;
+				top: -26%;
+				right: -180px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 49%;
+				height: 210%;
+				top: -52%;
+				right: -150px;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 55%;
+				height: 280%;
+				top: -85%;
+				right: -253px;
+			}
+		}
+
+		&-column {
+			& .content-section {
+				&:before {
+					width: 70px;
+					height: 3px;
+					background-color: $color_primary;
+					background: $color__background-button;
+					top: 0;
+					left: 0;
+					display: block;
+					position: absolute;
+					content: '';
+				}
+				.home-page-testimonials{
+					.tm-testi{
+						&-slider__prev, &-slider__next{
+							display: none;
+						}
+						&__inner{
+							blockquote{
+								background-color: transparent;
+								padding: 0;
+								flex-direction: row;
+								@include media-breakpoint-up(md) {
+									padding: 0 40% 0 0;
+								}
+							}
+						}
+						&__item-body{
+							footer{
+								margin-top: 10px;
+								>cite, >span{
+									display: block;
+								}
+							}
+						}
+						&__item-name{
+							font-size: 24px;
+							font-style: normal;
+						}
+						&__item-avatar{
+							align-self: flex-start;
+							margin: 0 20px 20px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.contacts-section {
 		background-color: #25272d;
 		padding-top: 50px;
@@ -524,7 +608,6 @@ ul.rovadex-social-link{
 	display: none;
 	position: absolute;
 	top: 0;
-	left:0;
 	width: 100%;
 	height: 100%;
 	z-index: 0;

@@ -75,7 +75,7 @@
 				rovadexThemeScript.textSplit( $( 'h2:not(.splitted)', $fullPageSection ) );
 
 				$fullPageSection.fullpage( {
-					anchors: ['home', 'about', 'services', 'projects', 'team', 'news', 'contacts'],
+					anchors: ['home', 'about', 'services', 'projects', 'team', 'testimonials', 'contacts'],
 					menu: '#one_page_navi-menu',
 					navigation: true,
 					navigationPosition: 'left',
@@ -94,6 +94,14 @@
 						}
 
 					},
+					/*afterResize: function( responsive ) {
+						if ( 768 > $( window ).width() ) {
+							console.log($( '.tm-testi-slider' ));
+							$( '.tm-testi-slider' )[0].swiper.destroy( false, true );
+						} else {
+							$( '.tm-testi-slider' )[0].swiper.update( true );
+						}
+					},*/
 					onLeave: function( index, nextIndex, direction ) {
 						var leavingSection = $( this ),
 							currentSection = $sectionList.eq( nextIndex - 1 ),
@@ -295,7 +303,6 @@
 						$this.removeClass( 'processing' );
 					}
 				}).done( function( response ) {
-				console.log(response);
 					$this.removeClass( 'processing' );
 
 					if ( true === response.success ) {
@@ -311,7 +318,7 @@
 
 			});
 
-		},
+		}
 	}
 
 	rovadexThemeScript.init();

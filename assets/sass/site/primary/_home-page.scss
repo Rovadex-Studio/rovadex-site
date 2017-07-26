@@ -375,9 +375,6 @@
 			display: flex;
 			justify-content: center;
 			.owl-dot{
-				width: 12px;
-				height: 12px;
-				margin: 0 10px;
 				background-color: white;
 				opacity: 0.3;
 				text-indent: -9999px;
@@ -401,13 +398,19 @@
 		padding-bottom: 50px;
 		min-height: 500px;
 
+		@include media-breakpoint-down(xs){
+			.container{
+				max-width: 100%;
+			}
+		}
+
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
 				width: 65%;
-				height: 110%;
-				top: -5%;
-				right: -150px;
+				height: 130%;
+				top: -15%;
+				right: -220px;
 			}
 			@include media-breakpoint-up(md) {
 				width: 52%;
@@ -472,6 +475,10 @@
 						&__item-avatar{
 							align-self: flex-start;
 							margin: 0 20px 20px 0;
+						}
+						&-slider__pags{
+							text-align: left;
+							bottom: -10px;
 						}
 					}
 				}
@@ -613,5 +620,16 @@ ul.rovadex-social-link{
 	z-index: 0;
 	@include media-breakpoint-up(sm){
 		display: block;
+	}
+}
+
+.swiper-pagination-bullet, .owl-dot{
+	width: 12px;
+	height: 12px;
+	margin: 0 10px 0 0;
+	@include media-breakpoint-down(md){
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
 	}
 }

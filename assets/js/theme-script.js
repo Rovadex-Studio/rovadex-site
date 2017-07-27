@@ -76,6 +76,7 @@
 
 				$fullPageSection.fullpage( {
 					anchors: ['home', 'about', 'services', 'projects', 'team', 'testimonials', 'contacts'],
+					navigationTooltips: ['Home', 'About', 'Services', 'Projects', 'Team', 'Testimonials', 'Contacts'],
 					menu: '#one_page_navi-menu',
 					navigation: true,
 					navigationPosition: 'left',
@@ -85,7 +86,7 @@
 					afterLoad: function( anchorLink, index ) {
 						var loadedSection = $( this );
 
-						if ( loadedSection.hasClass( 'dark-section' ) ) {
+						if ( loadedSection.hasClass( 'invert' ) ) {
 							$( '.site-header' ).addClass( 'invert' );
 							$( '#fp-nav' ).addClass( 'invert' );
 						} else {
@@ -94,21 +95,13 @@
 						}
 
 					},
-					/*afterResize: function( responsive ) {
-						if ( 768 > $( window ).width() ) {
-							console.log($( '.tm-testi-slider' ));
-							$( '.tm-testi-slider' )[0].swiper.destroy( false, true );
-						} else {
-							$( '.tm-testi-slider' )[0].swiper.update( true );
-						}
-					},*/
 					onLeave: function( index, nextIndex, direction ) {
 						var leavingSection = $( this ),
 							currentSection = $sectionList.eq( nextIndex - 1 ),
 							$coverCurrentImage = $( '.fullpage-image', currentSection ),
 							$boxCurrentImage = $( '.box-image', currentSection );
 
-						if ( currentSection.hasClass( 'dark-section' ) ) {
+						if ( currentSection.hasClass( 'invert' ) ) {
 							$( '.site-header' ).addClass( 'invert' );
 							$( '#fp-nav' ).addClass( 'invert' );
 						} else {

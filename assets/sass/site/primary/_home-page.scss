@@ -640,9 +640,13 @@ ul.rovadex-social-link{
 					overflow: hidden;
 				}
 			}
-			a {
-				span {
-					.invert &{
+		}
+	}
+	&.invert{
+		ul {
+			li {
+				a {
+					span {
 						background-color: white;
 					}
 				}

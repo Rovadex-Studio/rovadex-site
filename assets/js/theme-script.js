@@ -36,7 +36,7 @@
 		onePageMenuInit: function ( self ) {
 			var $navigation    = $( '.onepage-navigation' ),
 				$toogleButton  = $( '.navi-toggle-button', $navigation ),
-				$menuContainer = $( '.menu-onepage-menu-container', $navigation ),
+				$menuContainer = $( '.menu-main-menu-container', $navigation ),
 				$menu          = $( '.one_page_navi-menu', $navigation ),
 				$menuItems     = $( '> .menu-item', $menu );
 
@@ -78,6 +78,7 @@
 					anchors: ['home', 'about', 'services', 'projects', 'team', 'testimonials', 'contacts'],
 					navigationTooltips: ['Home', 'About', 'Services', 'Projects', 'Team', 'Testimonials', 'Contacts'],
 					menu: '#one_page_navi-menu',
+					navigation: true,
 					navigation: true,
 					navigationPosition: 'left',
 					verticalCentered: false,

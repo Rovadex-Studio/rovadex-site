@@ -7,12 +7,22 @@
 }
 
 .site-header {
+	//min-height: 259px;
+	background: #3b3b3b;
+	background: url( 'assets/images/header-bg.png' );
+	background-size: cover;
+	background-position: 50% 100%;
+	margin-bottom: 4em;
+
 	.home & {
 		position: fixed;
 		width: 100%;
 		top: 0;
 		left: 0;
 		z-index: 1;
+		background: none;
+		margin-bottom: initial;
+		min-height: initial;
 
 		.header-container__flex {
 			padding-top: 30px;
@@ -79,7 +89,6 @@
 }
 
 #rovadex-logo-svg{
-	//width: 150px;
 	@include media-breakpoint-up(sm){
 		max-width: 250px;
 	}
@@ -90,13 +99,6 @@
 		max-width: 830px;
 	}
 	.symbol{
-		fill: $color__text-screen;
-
-		.home &{
 			fill: $invert_color__text-screen;
-		}
-	}
-	.main-symbol{
-		fill: $invert_color__text-screen;
 	}
 }

@@ -66,7 +66,7 @@
 						} else {
 							rovadex_nav_menu(
 								'primary',
-								'<nav id="site-navigation" class="main-navigation" role="navigation">%s</nav>',
+								'<nav id="site-navigation" class="main-navigation invert" role="navigation">%s</nav>',
 								true,
 								array(
 									'before' => '<div class="menu-link-wrapper">',

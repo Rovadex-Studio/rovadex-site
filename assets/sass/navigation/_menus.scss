@@ -63,6 +63,23 @@
 			color: $color__link;
 		}
 	}
+	&.invert{
+		a {
+			color: $invert_color__text-screen;
+		}
+		.sub-menu{
+			a {
+				color: $color__text-screen;
+				&.active {
+					color: $color__link;
+				}
+
+				&:hover {
+					color: $color__link;
+				}
+			}
+		}
+	}
 
 	@include media-breakpoint-up( sm ) {
 		.menu {

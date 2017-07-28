@@ -318,6 +318,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			require_once get_template_directory() . '/inc/template-meta.php';
 			require_once get_template_directory() . '/inc/hooks.php';
 			require_once get_template_directory() . '/inc/register-plugins.php';
+			require_once get_template_directory() . '/inc/extensions/dw-question-answer.php';
 
 			require_once get_template_directory() . '/inc/classes/class-widget-area.php';
 			require_once get_template_directory() . '/inc/classes/class-wrapping.php';

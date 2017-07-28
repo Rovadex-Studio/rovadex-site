@@ -125,3 +125,12 @@ function rovadex_projects_terms_list_settings( $settings = array() ) {
 	return $settings;
 }
 add_filter( 'cherry-projects-terms-list-settings', 'rovadex_projects_terms_list_settings' );
+
+function rovadex_single_questions_sidebar( $id ) {
+	if( rovadex_is_dw_qa_page() ){
+		return'single-page-questions';
+	}
+
+	return $id;
+}
+add_filter( 'rovadex_rendering_current_widget_area', 'rovadex_single_questions_sidebar');

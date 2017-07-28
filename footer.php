@@ -40,6 +40,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<?php include_once('inc/analyticstracking.php') ?>
+<?php include_once('inc/extensions/analyticstracking.php') ?>
 </body>
 </html>

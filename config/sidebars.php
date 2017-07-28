@@ -15,6 +15,17 @@ return apply_filters( 'rovadex_widget_area_default_settings', array(
 		'after_wrapper'  => '</div>',
 		'is_global'      => true,
 	),
+	'single-page-questions' => array(
+		'name'           => esc_html__( 'Single Questions', 'rovadex-site' ),
+		'description'    => '',
+		'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'   => '</aside>',
+		'before_title'   => '<h6 class="widget-title">',
+		'after_title'    => '</h6>',
+		'before_wrapper' => '<div id="%1$s" %2$s role="complementary">',
+		'after_wrapper'  => '</div>',
+		'is_global'      => true,
+	),
 	'home-header' => array(
 		'name'           => esc_html__( 'Header Area (front page)', 'rovadex-site' ),
 		'description'    => '',

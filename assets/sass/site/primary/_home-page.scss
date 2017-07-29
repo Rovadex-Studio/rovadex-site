@@ -34,9 +34,7 @@
 
 		h2 {
 			width: 100%;
-			/*@include media-breakpoint-up(sm){
-				margin-bottom: 0px;
-			}*/
+
 			@include media-breakpoint-up(md){
 				margin-bottom: 40px;
 			}
@@ -174,9 +172,17 @@
 			}
 		}
 
-		@include media-breakpoint-up(md){
-			h2.splitted{
+		h2 {
+			width: 100%;
+
+			@include media-breakpoint-up(md){
 				margin-bottom: 40px;
+			}
+			&:first-child {
+				margin-bottom: 0;
+			}
+			span {
+				position: relative;
 			}
 		}
 

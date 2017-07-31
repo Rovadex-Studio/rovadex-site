@@ -118,7 +118,7 @@ function rovadex_projects_comments_settings( $settings = array() ) {
 add_filter( 'cherry-projects-comments-settings', 'rovadex_projects_comments_settings' );
 
 function rovadex_projects_terms_list_settings( $settings = array() ) {
-	$settings['icon']   = '<i class="fa fa-tags" aria-hidden="true"></i>';
+	$settings['icon']   = '';
 	$settings['prefix'] = '';
 	$settings['before'] = '';
 	$settings['after']  = '';
@@ -134,3 +134,14 @@ function rovadex_single_questions_sidebar( $id ) {
 	return $id;
 }
 add_filter( 'rovadex_rendering_current_widget_area', 'rovadex_single_questions_sidebar');
+
+function rovadex_projects_permalink_text() {
+	return esc_html__( 'More info', 'rovadex-site' );
+}
+add_filter( 'cherry-projects-permalink-text', 'rovadex_projects_permalink_text');
+
+function rovadex_projects_zoom_text() {
+	return esc_html__( 'Show', 'rovadex-site' );
+}
+add_filter( 'cherry-projects-zoom-link-text', 'rovadex_projects_zoom_text');
+

@@ -162,31 +162,26 @@
 
 .entry-header {
 	position: relative;
-	margin-bottom: 1.438em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	z-index: 10;
+
 	.home &{
 		position: initial;
 		margin-bottom: initial;
 	}
+
 	.entry-title {
 		position: relative;
+		margin: 0;
 		line-height: 1.5em;
+
 		a {
 			color: $color__text-screen;
 			&:hover {
 				color: $color__link;
 			}
-		}
-
-		&:after {
-			width: 70px;
-			height: 3px;
-			background-color: $color_primary;
-			bottom: -12px;
-			left: 0;
-			display: block;
-			position: absolute;
-			content: '';
 		}
 	}
 

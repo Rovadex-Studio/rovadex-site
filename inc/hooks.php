@@ -102,15 +102,6 @@ function rovadex_projects_comments_settings( $settings = array() ) {
 }
 add_filter( 'cherry-projects-comments-settings', 'rovadex_projects_comments_settings' );
 
-function rovadex_projects_terms_list_settings( $settings = array() ) {
-	$settings['icon']   = '';
-	$settings['prefix'] = '';
-	$settings['before'] = '';
-	$settings['after']  = '';
-	return $settings;
-}
-add_filter( 'cherry-projects-terms-list-settings', 'rovadex_projects_terms_list_settings' );
-
 function rovadex_single_questions_sidebar( $id ) {
 	if( 'primary-sidebar' === $id && rovadex_is_dw_qa_page() ){
 		return'single-page-questions';

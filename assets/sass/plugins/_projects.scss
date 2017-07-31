@@ -3,17 +3,21 @@
 
 	.projects-filters{
 		margin: 0 0 2em 0;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+
+		.projects-filters-list-wrapper {
+
+		}
+
 		.order-filters, .projects-filters-list{
 			li{
 				padding: 0;
 				margin-top: 0;
 				margin-bottom: 0;
-				&[data-filter-type="order"]{
-					min-width: 110px;
-				}
-				&[data-filter-type="orderby"]{
-					min-width: 180px;
-				}
+
 				&:before{
 					display: none;
 				};
@@ -91,10 +95,6 @@
 		}
 	}
 
-	.term-wrap {
-
-	}
-
 	h3 {
 		margin: 1.5em 0;
 	}
@@ -145,8 +145,14 @@
 			}
 
 			.cherry-projects-single__content {
-				.entry-title {
+				.post-terms {
+					margin-bottom: 1em;
 
+					a {
+						padding: 5px 15px;
+						color: white;
+						background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
+					}
 				}
 			}
 		}

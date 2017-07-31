@@ -3,10 +3,6 @@
 	.home & {
 		padding-bottom: 0;
 	}
-
-	&_wrap {
-		margin-top: 3.5em;
-	}
 }
 .sticky {
 	display: block;
@@ -71,6 +67,12 @@
 }
 
 .site-main{
+	margin-top: 3.5em;
+
+	.home & {
+		margin-top: 0;
+	}
+
 	&:after {
 		.has_sidebar & {
 			width: 1px;
@@ -174,9 +176,10 @@
 	padding: 2em 0;
 	z-index: 10;
 
-	.home &{
+	.home & {
 		position: initial;
 		margin-bottom: initial;
+		padding: 0;
 	}
 
 	.entry-title {

@@ -3,6 +3,10 @@
 	.home & {
 		padding-bottom: 0;
 	}
+
+	&_wrap {
+		margin-top: 3.5em;
+	}
 }
 .sticky {
 	display: block;
@@ -162,31 +166,29 @@
 
 .entry-header {
 	position: relative;
-	margin-bottom: 1.438em;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f7f7f7;
+	padding: 2em 0;
 	z-index: 10;
+
 	.home &{
 		position: initial;
 		margin-bottom: initial;
 	}
+
 	.entry-title {
 		position: relative;
+		margin: 0;
 		line-height: 1.5em;
+
 		a {
 			color: $color__text-screen;
 			&:hover {
 				color: $color__link;
 			}
-		}
-
-		&:after {
-			width: 70px;
-			height: 3px;
-			background-color: $color_primary;
-			bottom: -12px;
-			left: 0;
-			display: block;
-			position: absolute;
-			content: '';
 		}
 	}
 

@@ -7,12 +7,10 @@
 }
 
 .site-header {
-	//min-height: 259px;
 	background: #3b3b3b;
 	background: url( 'assets/images/header-bg.png' );
 	background-size: cover;
 	background-position: 50% 100%;
-	margin-bottom: 4em;
 
 	.home & {
 		position: fixed;

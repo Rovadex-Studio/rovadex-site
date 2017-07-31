@@ -81,21 +81,6 @@ function rovadex_build_search_form( $search_form = '' ) {
 }
 add_filter( 'get_search_form', 'rovadex_build_search_form', 0 );
 
-function rovadex_projects_title_settings( $settings = array() ) {
-
-	if ( ! is_single() ) {
-		$settings['html'] = '<h3 %1$s><a href="%2$s" %3$s rel="bookmark">%4$s</a></h3>';
-		$settings['class'] = 'invert';
-
-	}else{
-		$settings['html'] = '<h2 %1$s>%4$s</h2>';
-		$settings['class'] = 'entry-title';
-	}
-
-	return $settings;
-}
-add_filter( 'cherry-projects-title-settings', 'rovadex_projects_title_settings', 0 );
-
 function rovadex_projects_date_settings( $settings = array() ) {
 	$settings['icon'] = '<i class="fa fa-calendar" aria-hidden="true"></i>';
 	$settings['prefix'] = '';
@@ -118,7 +103,7 @@ function rovadex_projects_comments_settings( $settings = array() ) {
 add_filter( 'cherry-projects-comments-settings', 'rovadex_projects_comments_settings' );
 
 function rovadex_projects_terms_list_settings( $settings = array() ) {
-	$settings['icon']   = '<i class="fa fa-tags" aria-hidden="true"></i>';
+	$settings['icon']   = '';
 	$settings['prefix'] = '';
 	$settings['before'] = '';
 	$settings['after']  = '';
@@ -134,3 +119,14 @@ function rovadex_single_questions_sidebar( $id ) {
 	return $id;
 }
 add_filter( 'rovadex_rendering_current_widget_area', 'rovadex_single_questions_sidebar');
+
+function rovadex_projects_permalink_text() {
+	return esc_html__( 'More info', 'rovadex-site' );
+}
+add_filter( 'cherry-projects-permalink-text', 'rovadex_projects_permalink_text');
+
+function rovadex_projects_zoom_text() {
+	return esc_html__( 'Show', 'rovadex-site' );
+}
+add_filter( 'cherry-projects-zoom-link-text', 'rovadex_projects_zoom_text');
+

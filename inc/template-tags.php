@@ -176,7 +176,7 @@ function rovadex_breadcrumbs() {
 		'wrapper_format'    => '<div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_on_front'     => false,
-		'separator' => '&#124;',
+		'separator'         => '/',
 		'labels'            => array(
 			'browse' => '',
 		),

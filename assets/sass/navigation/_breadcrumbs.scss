@@ -1,6 +1,6 @@
 .breadcrumbs {
 	position: relative;
-	margin: 1.35em 0;
+	margin: 0;
 	text-transform: none;
 	&__title {
 		display: none;
@@ -11,7 +11,7 @@
 	&__items {
 		float: left;
 		@include font-size(0.75);
-		color: $color__link;
+		color: $color_breadcrumbs;
 	}
 	&__browse {
 		float: left;

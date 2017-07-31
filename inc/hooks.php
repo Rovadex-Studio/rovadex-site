@@ -81,21 +81,6 @@ function rovadex_build_search_form( $search_form = '' ) {
 }
 add_filter( 'get_search_form', 'rovadex_build_search_form', 0 );
 
-function rovadex_projects_title_settings( $settings = array() ) {
-
-	if ( ! is_single() ) {
-		$settings['html'] = '<h3 %1$s><a href="%2$s" %3$s rel="bookmark">%4$s</a></h3>';
-		$settings['class'] = 'invert';
-
-	}else{
-		$settings['html'] = '<h2 %1$s>%4$s</h2>';
-		$settings['class'] = 'entry-title';
-	}
-
-	return $settings;
-}
-add_filter( 'cherry-projects-title-settings', 'rovadex_projects_title_settings', 0 );
-
 function rovadex_projects_date_settings( $settings = array() ) {
 	$settings['icon'] = '<i class="fa fa-calendar" aria-hidden="true"></i>';
 	$settings['prefix'] = '';

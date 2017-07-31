@@ -3,6 +3,10 @@
 	.home & {
 		padding-bottom: 0;
 	}
+
+	&_wrap {
+		margin-top: 3.5em;
+	}
 }
 .sticky {
 	display: block;
@@ -163,8 +167,11 @@
 .entry-header {
 	position: relative;
 	display: flex;
+	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: space-between;
+	background-color: #f7f7f7;
+	padding: 2em 0;
 	z-index: 10;
 
 	.home &{

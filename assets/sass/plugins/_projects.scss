@@ -12,15 +12,30 @@
 
 		}
 
-		.order-filters, .projects-filters-list{
-			li{
-				padding: 0;
-				margin-top: 0;
-				margin-bottom: 0;
+		.projects-filters-list {
+			list-style: none;
 
-				&:before{
+			li {
+				margin: 0 5px;
+				padding: 0;
+
+				&.active {
+					background: #80cfe9;
+					background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
+
+					span {
+						color: white;
+					}
+				}
+
+				span {
+					padding: 5px 10px;
+				}
+
+				&:before {
 					display: none;
-				};
+				}
+
 			}
 		}
 	}
@@ -51,7 +66,7 @@
 			position: relative;
 			&:after{
 				content:' ';
-				background: url('assets/images/loader.gif') no-repeat 50% 50%;
+				background: url('assets/images/loader.svg') no-repeat 50% 50%;
 				background-size: 55px;
 				width: 55px;
 				height: 55px;
@@ -78,8 +93,8 @@
 	}
 
 	div.hover-content {
-		background: #373737; /* Old browsers */
-		background: radial-gradient(ellipse at center, #373737 0%,#0c0c0c 100%);
+		background: #80cfe9;
+		background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
 		transform-style: preserve-3d;
 		transform: rotateY(-180deg);
 		backface-visibility: hidden;
@@ -91,17 +106,55 @@
 		color: white;
 
 		&:hover {
-			color: $color_primary;
+			color: white;
 		}
 	}
 
 	h3 {
 		margin: 1.5em 0;
+
+		a {
+			cursor: pointer;
+
+			&:hover {
+				color: white;
+
+			}
+		}
 	}
 
 	a.simple-button {
 		@include btn();
 		padding: 15px 35px;
+	}
+
+	a.simple-icon {
+		width: 50px;
+		height: 50px;
+		border: 1px solid white;
+		border-radius: 50%;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+			span {
+				margin: 0;
+			}
+
+			&:hover {
+				background-color: white;
+
+				span {
+					color: $color_icon;
+				}
+			}
+	}
+
+	.icons-wrap {
+		min-width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 
 	&:hover {
@@ -140,7 +193,7 @@
 				margin-right: 0;
 
 				@include media-breakpoint-up(md) {
-					margin-right: 35px;
+					margin-right: 45px;
 				}
 			}
 
@@ -235,8 +288,8 @@
 								justify-content: center;
 								align-items: center;
 								opacity: 1;
-								background: #373737; /* Old browsers */
-								background: radial-gradient(ellipse at center, rgba(55, 55, 55, 0.5) 0%, rgba(12, 12, 12, 0.5) 100%);
+								background: rgba(128, 207, 233, 0.5);
+								background: linear-gradient(to right, rgba(128, 207, 233, 0.3) 0%, rgba(87, 140, 199, 0.7) 100%);
 
 								&:before {
 									@include material-icon();

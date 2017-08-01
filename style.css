@@ -4562,26 +4562,15 @@ input.dwqa-btn {
     perspective: 1000px; }
   .projects-item-instance .featured-image {
     margin: 0;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     z-index: 2;
     -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
     transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89); }
   .projects-item-instance div.hover-content {
+    opacity: 0;
     background: #80cfe9;
-    background: -webkit-gradient(linear, left top, right top, from(#80cfe9), to(#578cc7));
-    background: -webkit-linear-gradient(left, #80cfe9 0%, #578cc7 100%);
-    background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(128, 207, 233, 0.8)), to(#578cc7));
+    background: -webkit-linear-gradient(left, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%);
+    background: linear-gradient(to right, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%);
     z-index: 1;
     -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
     transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89); }
@@ -4670,13 +4659,10 @@ input.dwqa-btn {
     -ms-flex-pack: center;
     justify-content: center; }
   .projects-item-instance:hover .featured-image {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
     -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
     transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89); }
   .projects-item-instance:hover div.hover-content {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    opacity: 1;
     -webkit-transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89);
     transition: all 0.7s cubic-bezier(0.11, 0.6, 0.24, 0.89); }
 
@@ -4733,7 +4719,13 @@ input.dwqa-btn {
   font-size: 0;
   height: initial; }
   .cherry-projects-single .cherry-skill-item div.skill-bar span {
-    background-color: #65c6e6; }
+    background: #80cfe9;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(128, 207, 233, 0.8)), to(#578cc7));
+    background: -webkit-linear-gradient(left, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%);
+    background: linear-gradient(to right, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%); }
+    .cherry-projects-single .cherry-skill-item div.skill-bar span em {
+      color: white;
+      margin-right: 5px; }
 
 .cherry-projects-single .featured-image {
   margin: 0; }

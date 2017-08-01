@@ -55,6 +55,7 @@
 	.cherry-projects-ajax-loader{
 		background:none;
 		position: fixed;
+
 		.rovadex-spinner{
 			width: 50px;
 			height: 50px;
@@ -64,6 +65,7 @@
 			margin-top: -25px;
 			display: block;
 			position: relative;
+
 			&:after{
 				content:' ';
 				background: url('assets/images/loader.svg') no-repeat 50% 50%;
@@ -85,19 +87,20 @@
 
 	.featured-image {
 		margin: 0;
-		transform-style: preserve-3d;
-		transform: rotateY(0deg);
-		backface-visibility: hidden;
+		//transform-style: preserve-3d;
+		//transform: rotateY(0deg);
+		//backface-visibility: hidden;
 		z-index: 2;
 		transition: all 0.7s cubic-bezier(.11,.6,.24,.89);
 	}
 
 	div.hover-content {
+		opacity: 0;
 		background: #80cfe9;
-		background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
-		transform-style: preserve-3d;
-		transform: rotateY(-180deg);
-		backface-visibility: hidden;
+		background: linear-gradient(to right, rgba(128, 207, 233, 0.8) 0%, rgba(87, 140, 199, 1) 100%);
+		//transform-style: preserve-3d;
+		//transform: rotateY(-180deg);
+		//backface-visibility: hidden;
 		z-index: 1;
 		transition: all 0.7s cubic-bezier(.11,.6,.24,.89);
 	}
@@ -160,12 +163,13 @@
 	&:hover {
 
 		.featured-image {
-			transform: rotateY(180deg);
+			//transform: rotateY(180deg);
 			transition: all 0.7s cubic-bezier(.11,.6,.24,.89);
 		}
 
 		div.hover-content {
-			transform: rotateY(0deg);
+			opacity: 1;
+			//transform: rotateY(0deg);
 			transition: all 0.7s cubic-bezier(.11,.6,.24,.89);
 		}
 	}
@@ -217,23 +221,33 @@
 			font-weight: 400;
 			border: none;
 			margin: 0 0 1.5em 0;
-			a{
+
+			a {
 				margin-right: 15px;
 			}
-			i{
+
+			i {
 				margin-right: 5px;
 				top: 1px;
 				position: relative;
 			}
 		}
 
-		.cherry-skill-item{
-			div.skill-bar{
+		.cherry-skill-item {
+
+			div.skill-bar {
 				padding: 5px;
 				font-size: 0;
 				height: initial;
-				span{
-					background-color: $color_primary;
+
+				span {
+					background: #80cfe9;
+					background: linear-gradient(to right, rgba(128, 207, 233, 0.8) 0%, rgba(87, 140, 199, 1) 100%);
+
+					em {
+						color: white;
+						margin-right: 5px;
+					}
 				}
 			}
 		}
@@ -310,7 +324,6 @@
 				}
 			}
 		}
-
 
 	}
 }

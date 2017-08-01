@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 	<?php if ( ! is_single() ) : ?>
-		<header class="entry-header">
+		<header class="entry-header main-entry-header">
 			<?php if ( ! is_front_page() ) : ?>
 				<h1 class="entry-title"><?php wp_title(''); ?></h1>
 			<?php endif; ?>

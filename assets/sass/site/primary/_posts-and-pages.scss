@@ -1,7 +1,12 @@
 .site-content{
 	padding: 0 0 4em;
+
 	.home & {
 		padding-bottom: 0;
+	}
+
+	&_wrap {
+		margin-top: 50px;
 	}
 }
 .sticky {
@@ -67,7 +72,6 @@
 }
 
 .site-main{
-	margin-top: 3.5em;
 
 	.home & {
 		margin-top: 0;
@@ -166,7 +170,7 @@
 	}
 }
 
-.entry-header {
+.main-entry-header {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
@@ -175,6 +179,9 @@
 	background-color: #f7f7f7;
 	padding: 2em 0;
 	z-index: 10;
+}
+
+.entry-header {
 
 	.home & {
 		position: initial;

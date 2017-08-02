@@ -4063,6 +4063,45 @@ ul.rovadex-social-link {
     padding-left: 1.875rem; }
 
 /*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+.error-404 .page-header {
+  text-align: center; }
+
+.error-404 .error-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .error-404 .error-wrap .image-wrap {
+    width: 80%;
+    margin-bottom: 40px; }
+    @media (min-width: 900px) {
+      .error-404 .error-wrap .image-wrap {
+        width: 30%; } }
+  .error-404 .error-wrap .form-wrap {
+    width: 100%; }
+    @media (min-width: 900px) {
+      .error-404 .error-wrap .form-wrap {
+        width: 60%; } }
+    .error-404 .error-wrap .form-wrap p {
+      text-align: center; }
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -4248,6 +4287,26 @@ ul.rovadex-social-link {
 .team-single-item .team-skills {
   clear: both;
   margin-bottom: 30px; }
+  .team-single-item .team-skills .team-skills_bar {
+    padding: 5px;
+    height: auto;
+    background-color: #f1f1f1; }
+  .team-single-item .team-skills .team-skills_line {
+    background: #80cfe9;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(128, 207, 233, 0.8)), to(#578cc7));
+    background: -webkit-linear-gradient(left, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%);
+    background: linear-gradient(to right, rgba(128, 207, 233, 0.8) 0%, #578cc7 100%);
+    height: 20px;
+    position: relative; }
+    .team-single-item .team-skills .team-skills_line:before {
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      color: white;
+      font-size: 14px;
+      line-height: 20px;
+      font-style: italic;
+      content: attr(data-width); }
 
 .team-loader .cherry-spinner-double-bounce .cherry-double-bounce1, .team-loader .cherry-spinner-double-bounce .cherry-double-bounce2 {
   background-color: #65c6e6; }
@@ -4537,6 +4596,22 @@ input.dwqa-btn {
           padding: 5px 10px; }
         .cherry-projects-wrapper .projects-filters .projects-filters-list li:before {
           display: none; }
+  .cherry-projects-wrapper .projects-ajax-button-wrapper {
+    margin-top: 40px; }
+    .cherry-projects-wrapper .projects-ajax-button-wrapper div.projects-ajax-button {
+      border-radius: 0; }
+      .cherry-projects-wrapper .projects-ajax-button-wrapper div.projects-ajax-button span {
+        padding: 5px 30px;
+        border-radius: 0;
+        font-weight: 400;
+        background: #80cfe9;
+        background: -webkit-gradient(linear, left top, right top, from(#80cfe9), to(#578cc7));
+        background: -webkit-linear-gradient(left, #80cfe9 0%, #578cc7 100%);
+        background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%); }
+        .cherry-projects-wrapper .projects-ajax-button-wrapper div.projects-ajax-button span:hover {
+          background: -webkit-gradient(linear, left top, right top, from(#578cc7), to(#80cfe9));
+          background: -webkit-linear-gradient(left, #578cc7 0%, #80cfe9 100%);
+          background: linear-gradient(to right, #578cc7 0%, #80cfe9 100%); }
   .cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button {
     font-weight: 600;
     margin-top: 20px; }

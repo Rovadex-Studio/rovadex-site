@@ -40,6 +40,29 @@
 		}
 	}
 
+	.projects-ajax-button-wrapper {
+		margin-top: 40px;
+
+		div.projects-ajax-button {
+			border-radius: 0;
+
+			span {
+				padding: 5px 30px;
+				border-radius: 0;
+				font-weight: 400;
+
+				background: #80cfe9;
+				background: linear-gradient(to right, #80cfe9 0%, #578cc7 100%);
+
+				&:hover {
+					background: linear-gradient(to right, #578cc7 0%, #80cfe9 100%);
+				}
+			}
+
+		}
+
+	}
+
 	.projects-ajax-button-wrapper{
 		.projects-ajax-button{
 			font-weight: 600;

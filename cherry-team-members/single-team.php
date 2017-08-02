@@ -59,11 +59,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		/**
 		 * Fires after main content output
 		 */
-		do_action( 'cherry_team_after_main_content' );
+		//do_action( 'cherry_team_after_main_content' );
 	?>
 
 	<?php
 		/**
 		 * Hook for placing page sidebar
 		 */
-		do_action( 'cherry_team_sidebar' );
+		//do_action( 'cherry_team_sidebar' );

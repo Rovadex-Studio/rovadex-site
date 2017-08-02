@@ -58,6 +58,7 @@
 		}
 
 		.site-branding {
+			display: none;
 			flex: 0 1 auto;
 
 			@include media-breakpoint-up(sm) {

@@ -11,7 +11,9 @@
 	background: url( 'assets/images/header-bg.png' );
 	background-size: cover;
 	background-position: 50% 100%;
-
+	.site-description{
+		display:none;
+	}
 	.home & {
 		position: fixed;
 		width: 100%;
@@ -58,7 +60,6 @@
 		}
 
 		.site-branding {
-			display: none;
 			flex: 0 1 auto;
 
 			@include media-breakpoint-up(sm) {

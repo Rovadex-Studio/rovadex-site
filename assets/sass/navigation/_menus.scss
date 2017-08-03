@@ -53,7 +53,7 @@
 		position: relative;
 		display: block;
 		text-decoration: none;
-		color: $color__text-screen;
+		color: $invert_color__text-screen;
 
 		&.active {
 			color: $color__link;
@@ -63,7 +63,7 @@
 			color: $color__link;
 		}
 	}
-	&.invert{
+	/*&.invert{
 		a {
 			color: $invert_color__text-screen;
 		}
@@ -79,7 +79,7 @@
 				}
 			}
 		}
-	}
+	}*/
 
 	@include media-breakpoint-up( sm ) {
 		.menu {
@@ -260,6 +260,7 @@ ul.sub-menu{
 			}
 		}
 		a {
+			color: $color__text-screen;
 			@include font-size(0.875);
 			@include media-breakpoint-up(sm) {
 				width: 15em;

@@ -28,17 +28,22 @@
 			z-index: 1;
 			padding-top: 20px;
 			margin-top: 20px;
+			text-align: center;
+
 			@include media-breakpoint-up(md){
 				padding-top: 30px;
 				margin-top: 50px;
+				text-align: left;
 			}
 		}
 
 		h2 {
 			width: 100%;
+			text-align: center;
 
 			@include media-breakpoint-up(md){
 				margin-bottom: 40px;
+				text-align: left;
 			}
 			&:first-child {
 				margin-bottom: 0;
@@ -99,10 +104,16 @@
 					background-color: $color_primary;
 					background: $color__background-button;
 					top: 0;
-					left: 0;
+					left: 50%;
+					margin-left: -35px;
 					display: block;
 					position: absolute;
 					content: '';
+
+					@include media-breakpoint-up(md){
+						left: 0;
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -139,10 +150,16 @@
 					background-color: $color_primary;
 					background: $color__background-button;
 					top: 0;
-					left: 0;
+					left: 50%;
+					margin-left: -35px;
 					display: block;
 					position: absolute;
 					content: '';
+
+					@include media-breakpoint-up(md){
+						left: 0;
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -301,10 +318,16 @@
 					background-color: $color_primary;
 					background: $color__background-button;
 					top: 0;
-					left: 0;
+					left: 50%;
+					margin-left: -35px;
 					display: block;
 					position: absolute;
 					content: '';
+
+					@include media-breakpoint-up(md){
+						left: 0;
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -333,10 +356,16 @@
 					background-color: $color_primary;
 					background: $color__background-button;
 					top: 0;
-					left: 0;
+					left: 50%;
+					margin-left: -35px;
 					display: block;
 					position: absolute;
 					content: '';
+
+					@include media-breakpoint-up(md){
+						left: 0;
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -446,10 +475,10 @@
 				right: -20px;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 55%;
-				height: 280%;
-				top: -85%;
-				right: -253px;
+				width: 45%;
+				height: 200%;
+				top: -45%;
+				right: -100px;
 			}
 		}
 
@@ -565,11 +594,16 @@ ul.rovadex-social-link{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 	font-size: 0;
 	margin: 10px 0 20px;
+
+	@include media-breakpoint-up(md) {
+		justify-content: flex-start;
+	}
+
 	>li{
 		padding: 0;
 		margin: 0 10px 0 0;

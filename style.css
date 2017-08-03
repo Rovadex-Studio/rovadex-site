@@ -3119,6 +3119,8 @@ body.admin-bar .mobile-menu .menu {
   background: url("assets/images/header-bg.png");
   background-size: cover;
   background-position: 50% 100%; }
+  .site-header .site-description {
+    display: none; }
   .home .site-header {
     position: fixed;
     width: 100%;

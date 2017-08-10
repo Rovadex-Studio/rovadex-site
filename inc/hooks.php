@@ -121,3 +121,12 @@ function rovadex_projects_zoom_text() {
 }
 add_filter( 'cherry-projects-zoom-link-text', 'rovadex_projects_zoom_text');
 
+function rovadex_load_custom_fonts() {
+	rovadex()->get_config( 'fonts' );
+}
+add_action( 'wp_head', 'rovadex_load_custom_fonts' );
+
+function rovadex_load_analytics() {
+	include_once( get_template_directory() . '/inc/extensions/analyticstracking.php' );
+}
+add_action( 'wp_footer', 'rovadex_load_analytics' );

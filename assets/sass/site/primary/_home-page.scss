@@ -9,13 +9,22 @@
 	}
 
 	.home-page-section {
+		position: relative;
 		display: flex;
 		align-items: center;
 		overflow: hidden;
 		padding-top: 50px;
 		padding-bottom: 50px;
-		@include media-breakpoint-up(md){
-			height: 1024px;
+		// @include media-breakpoint-up(md){
+		// 	height: 1024px;
+		// }
+
+		@media ( min-width: 1024px ) {
+			height: 803px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			height: 900px;
 		}
 
 		.container {
@@ -723,7 +732,7 @@ ul.rovadex-social-link{
 	}
 }
 
-.swiper-pagination-bullet, .owl-dot{
+span.swiper-pagination-bullet, .owl-dot{
 	width: 12px;
 	height: 12px;
 	margin: 0 10px 0 0;

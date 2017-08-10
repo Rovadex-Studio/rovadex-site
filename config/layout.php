@@ -10,7 +10,7 @@ return array(
 	'is_single' => array(
 		'content' => 'col-md-8',
 		'sidebar' => 'col-md-4',
-		'args'    => array(),
+		'args'    => array( 'post' ),
 	),
 	'is_page' => array(
 		'content' => 'col-xs-12 col-sm-12 col-md-12 col-lg-12',
@@ -22,8 +22,8 @@ return array(
 		'args'    => array(),
 	),
 	'is_singular' => array(
-		'content' => 'col-md-8',
-		'sidebar' => 'col-md-4',
+		'content' => 'col-md-12',
+		'sidebar' => false,
 		'args'    => array(),
 	),
 	'is_tax' => array(

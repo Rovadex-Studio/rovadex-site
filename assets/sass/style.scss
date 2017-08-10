@@ -1,10 +1,10 @@
 /*!
 Theme Name: Rovadex
 Theme URI: https://rovadex.com/
-Author: Rovadex team
-Author URI: http://rovadex.com
-Description: rovadex.com theme
-Version: 1.0.0
+Author: Rovadex Team
+Author URI: https://rovadex.com/
+Description: This is a WordPress theme for rovadex.com
+Version: 1.0.0-beta
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rovadex-site
@@ -13,7 +13,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Wapuula is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Rovadex is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -102,6 +102,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/buttons";
 
 /*--------------------------------------------------------------
+# Vendor
+--------------------------------------------------------------*/
+@import "vendor/jquery.fullpage";
+@import "vendor/owl.carousel";
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
@@ -114,12 +120,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+// @import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Share
 --------------------------------------------------------------*/
-@import "modules/share";
+// @import "modules/share";
 
 /*--------------------------------------------------------------
 # Plugins

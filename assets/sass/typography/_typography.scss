@@ -4,12 +4,16 @@ input,
 select,
 textarea {
 	color: $color__text-screen;
-	font-family: $font__main;
+	font-family: $font__system;
 	@include font-size(1);
 	line-height: $font__line-height-body;
 
 	.invert, .invert &{
 		color: $invert_color__text-screen;
+	}
+
+	.fonts-loaded & {
+		font-family: $font__main;
 	}
 }
 

@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font__headings;
+	font-family: $font__system;
 	font-weight: 600;
 	clear: both;
 	text-transform: uppercase;
@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
 
 	@include media-breakpoint-up(sm){
 		margin: 0 0 30px 0;
+	}
+
+	.fonts-loaded & {
+		font-family: $font__headings;
 	}
 }
 

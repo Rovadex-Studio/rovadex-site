@@ -136,7 +136,11 @@
 	}
 
 	h3 {
-		margin: 1.5em 0;
+		margin: 0.5em 0;
+
+		@include media-breakpoint-up(md) {
+			margin: 1.5em 0;
+		}
 
 		a {
 			cursor: pointer;
@@ -275,7 +279,12 @@
 		}
 
 		.featured-image{
-			margin: 0;
+			margin: 0 0 40px 0;
+
+			@include media-breakpoint-up(md) {
+				margin: 0;
+			}
+
 			a {
 				font-size: 0;
 				span.cover{

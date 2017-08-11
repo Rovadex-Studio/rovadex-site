@@ -54,6 +54,10 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
+svg {
+	max-width: 100%;
+}
+
 figure {
 	margin: 2em 0; /* Extra wide images within figure tags dont overflow the content area. */
 }

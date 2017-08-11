@@ -71,10 +71,14 @@
 
 	.home-section {
 		background-color: #383838;
+		@include media-breakpoint-down(xs) {
+			height: 100vh !important;
+		}
 		padding-top: 80px;
 		padding-bottom: 80px;
 
 		.cover-image {
+			display: block;
 			width: 100%;
 			height: 100%;
 		}
@@ -102,9 +106,13 @@
 				color: white;
 
 				p {
-					font-size: 36px;
-					line-height: 50px;
+					font-size: 22px;
+					line-height: 1.38;
 					font-weight: 300;
+
+					@include media-breakpoint-up(md) {
+						font-size: 36px;
+					}
 				}
 
 				&:before {
@@ -424,6 +432,11 @@
 						.team-listing_photo img{
 							display: block;
 							width: 100%;
+							@include media-breakpoint-down(sm) {
+								height: 350px;
+								object-fit: cover;
+								object-position: 50% 25%;
+							}
 						}
 					}
 				}
@@ -442,7 +455,7 @@
 				border: none;
 				@include transition(all 0.5s ease-in-out);
 				&.active{
-					background-color: #65c6e6;
+					background-color: $color_primary;
 					opacity: 1;
 				}
 			}
@@ -499,10 +512,15 @@
 					background-color: $color_primary;
 					background: $color__background-button;
 					top: 0;
-					left: 0;
+					left: 50%;
+					margin-left: -35px;
 					display: block;
 					position: absolute;
 					content: '';
+					@include media-breakpoint-up(md) {
+						left: 0;
+						margin-left: 0;
+					}
 				}
 				.home-page-testimonials{
 					.tm-testi{
@@ -536,9 +554,14 @@
 							margin: 0 20px 20px 0;
 						}
 						&-slider__pags{
-							text-align: left;
 							bottom: -10px;
+							@include media-breakpoint-up(md) {
+								text-align: left;
+							}
 						}
+					}
+					.swiper-pagination-bullet-active {
+						background-color: $color_primary;
 					}
 				}
 			}

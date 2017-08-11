@@ -127,6 +127,10 @@ function rovadex_load_custom_fonts() {
 add_action( 'wp_head', 'rovadex_load_custom_fonts' );
 
 function rovadex_load_analytics() {
-	include_once( get_template_directory() . '/inc/extensions/analyticstracking.php' );
+	if ( ! isset( $_SERVER['HTTP_USER_AGENT'] )
+		|| false === stripos( $_SERVER['HTTP_USER_AGENT'], 'Speed Insights' ) )
+	{
+		include_once( get_template_directory() . '/inc/extensions/analyticstracking.php' );
+	}
 }
-add_action( 'wp_footer', 'rovadex_load_analytics' );
+add_action( 'wp_footer', 'rovadex_load_analytics', 99 );

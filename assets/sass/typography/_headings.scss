@@ -15,6 +15,14 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	.main-entry-header & {
+		@include media-breakpoint-down( sm ) {
+			font-size: 1.2em;
+		}
+	}
+}
+
 h2 {
 	font-size: 30px;
 	line-height: 1em;
@@ -22,7 +30,7 @@ h2 {
 		@include media-breakpoint-up(sm){
 			font-size: 50px;
 		}
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(lg){
 			font-size: 80px;
 		}
 	}

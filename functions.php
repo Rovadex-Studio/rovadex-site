@@ -58,7 +58,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			// Overrides the load textdomain function for the 'cherry-framework' domain.
 			add_filter( 'override_load_textdomain', array( $this, 'override_load_textdomain' ), 5, 3 );
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ), 11 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
 		}
 
@@ -184,6 +184,9 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 					'cherry-breadcrumbs' => array(
 						'autoload' => false,
 					),
+					'cherry5-assets-loader' => array(
+						'autoload' => false,
+					),
 				),
 			) );
 
@@ -234,27 +237,22 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 		 * @return void
 		 */
 		public function enqueue_assets() {
-
-			wp_enqueue_style( 'rovadex-fonts', $this->fonts_url() );
 			wp_enqueue_style( 'font-awesome', $this->assets_url() . 'css/font-awesome.min.css', array(), '2.2.0' );
 			wp_enqueue_style( 'material-icons', $this->assets_url() . 'css/material-icons.min.css', array(), '2.2.0' );
-			wp_enqueue_style( 'jquery.fullpage', $this->assets_url() . 'css/jquery.fullpage.min.css', array(), '2.9.4' );
-			wp_enqueue_style( 'owl.carousel', $this->assets_url() . 'css/owl.carousel.min.css', array(), '3.4.2' );
-			wp_enqueue_style( 'rovadex-style', get_stylesheet_uri() );
-
-			// Register JavaScripts.
-			wp_enqueue_script( 'rovadex-tween-max', $this->assets_url() . 'js/min/TweenMax.min.js', array( 'jquery' ), '1.19.1', true );
-			wp_enqueue_script( 'rovadex-timeline-max', $this->assets_url() . 'js/min/TimelineMax.min.js', array( 'jquery' ), '1.19.1', true );
-			wp_enqueue_script( 'rovadex-ease-pack', $this->assets_url() . 'js/min/EasePack.min.js', array( 'jquery' ), '1.15.5', true );
+			wp_enqueue_style( 'rovadex-style', get_stylesheet_uri(), null, '1.0.0-beta5' );
 
 			wp_enqueue_script( 'jquery-cherry-responsive-menu', $this->assets_url() . 'js/min/cherry-responsive-menu.min.js', array( 'jquery' ), '1.0.0', true );
-			wp_enqueue_script( 'rovadex-theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
 
 			if ( is_front_page() ) {
+				wp_enqueue_script( 'rovadex-tween-max', $this->assets_url() . 'js/min/TweenMax.min.js', array( 'jquery' ), '1.19.1', true );
+				wp_enqueue_script( 'rovadex-timeline-max', $this->assets_url() . 'js/min/TimelineMax.min.js', array( 'jquery' ), '1.19.1', true );
+				wp_enqueue_script( 'rovadex-ease-pack', $this->assets_url() . 'js/min/EasePack.min.js', array( 'jquery' ), '1.15.5', true );
 				wp_enqueue_script( 'jquery.fullpage.extensions', $this->assets_url() . 'js/min/jquery.fullpage.extensions.min.js', array(), '2.9.4', true );
 				wp_enqueue_script( 'jquery.fullpage', $this->assets_url() . 'js/min/jquery.fullpage.min.js', array(), '2.9.4', true );
 				wp_enqueue_script( 'owl.carousel', $this->assets_url() . 'js/min/owl.carousel.min.js', array( 'jquery' ), '3.4.2', true );
 			}
+
+			wp_enqueue_script( 'rovadex-theme-script', $this->assets_url() . 'js/theme-script.js', array(), '1.0.0', true );
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
@@ -263,44 +261,8 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			wp_localize_script( 'rovadex-theme-script', 'rovadex', array(
 				'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
 			) );
-		}
 
-		/**
-		 * Return Google fonts URL
-		 *
-		 * @return string
-		 */
-		public function fonts_url() {
-
-			$fonts = $this->get_config( 'fonts' );
-
-			if ( empty( $fonts ) ) {
-				return;
-			}
-
-			$host     = 'https://fonts.googleapis.com/css';
-			$prepared = array();
-			$subset   = array();
-
-			foreach ( $fonts as $font ) {
-
-				if ( ! in_array( $font['charset'], $subset ) ) {
-					$subset[] = $font['charset'];
-				}
-
-				$prepared[] = sprintf( '%1$s:%2$s', $font['family'], $font['styles'] );
-			}
-
-			$family = implode( '|', $prepared );
-			$subset = implode( ',', $subset );
-
-			return add_query_arg(
-				array(
-					'family' => urlencode( $family ),
-					'subset' => urlencode( $subset ),
-				),
-				$host
-			);
+			do_action( 'rovadex_enqueue_assets' );
 		}
 
 		/**
@@ -317,6 +279,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 			require_once get_template_directory() . '/inc/template-meta.php';
 			require_once get_template_directory() . '/inc/hooks.php';
 			require_once get_template_directory() . '/inc/register-plugins.php';
+			require_once get_template_directory() . '/inc/optimizer.php';
 			require_once get_template_directory() . '/inc/extensions/dw-question-answer.php';
 
 			require_once get_template_directory() . '/inc/classes/class-widget-area.php';

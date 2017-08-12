@@ -7,8 +7,8 @@
 }
 
 .site-header {
-	background: #3b3b3b;
-	background: url( 'assets/images/header-bg.png' );
+	background-color: #3b3b3b;
+	background-image: url( 'assets/images/header-bg.png' );
 	background-size: cover;
 	background-position: 50% 100%;
 	.site-description{
@@ -44,7 +44,7 @@
 		padding: 20px 0;
 
 		@include media-breakpoint-up(sm) {
-			flex-flow: row nowrap;
+			flex-flow: column nowrap;
 			align-items: center;
 		}
 
@@ -63,7 +63,13 @@
 			flex: 0 1 auto;
 
 			@include media-breakpoint-up(sm) {
+				margin: 0;
+				flex-basis: 100%;
+			}
+
+			@include media-breakpoint-up(md) {
 				margin-right: 40px;
+				flex-basis: auto;
 			}
 
 			.site-logo {

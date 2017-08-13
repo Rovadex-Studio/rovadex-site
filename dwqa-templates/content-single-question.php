@@ -13,12 +13,12 @@
 		<?php if ( dwqa_is_enable_status() ) : ?>
 		<div class="dwqa-question-status">
 			<span>
-				<?php _e( 'This question is:', 'dwqa' ) ?>
+				<?php _e( 'This question is:', 'rovadex-site' ) ?>
 				<select id="dwqa-question-status" data-nonce="<?php echo wp_create_nonce( '_dwqa_update_privacy_nonce' ) ?>" data-post="<?php the_ID(); ?>">
-					<optgroup label="<?php _e( 'Status', 'dwqa' ); ?>">
-						<option <?php selected( dwqa_question_status(), 'open' ) ?> value="open"><?php _e( 'Open', 'dwqa' ) ?></option>
-						<option <?php selected( dwqa_question_status(), 'closed' ) ?> value="close"><?php _e( 'Closed', 'dwqa' ) ?></option>
-						<option <?php selected( dwqa_question_status(), 'resolved' ) ?> value="resolved"><?php _e( 'Resolved', 'dwqa' ) ?></option>
+					<optgroup label="<?php _e( 'Status', 'rovadex-site' ); ?>">
+						<option <?php selected( dwqa_question_status(), 'open' ) ?> value="open"><?php _e( 'Open', 'rovadex-site' ) ?></option>
+						<option <?php selected( dwqa_question_status(), 'closed' ) ?> value="close"><?php _e( 'Closed', 'rovadex-site' ) ?></option>
+						<option <?php selected( dwqa_question_status(), 'resolved' ) ?> value="resolved"><?php _e( 'Resolved', 'rovadex-site' ) ?></option>
 					</optgroup>
 				</select>
 			</span>
@@ -27,18 +27,18 @@
 	<?php endif; ?>
 	<div class="dwqa-question-vote" data-nonce="<?php echo wp_create_nonce( '_dwqa_question_vote_nonce' ) ?>" data-post="<?php the_ID(); ?>">
 		<span class="dwqa-vote-count"><?php echo dwqa_vote_count() ?></span>
-		<a class="dwqa-vote dwqa-vote-up" href="#"><?php _e( 'Vote Up', 'dwqa' ); ?></a>
-		<a class="dwqa-vote dwqa-vote-down" href="#"><?php _e( 'Vote Down', 'dwqa' ); ?></a>
+		<a class="dwqa-vote dwqa-vote-up" href="#"><?php _e( 'Vote Up', 'rovadex-site' ); ?></a>
+		<a class="dwqa-vote dwqa-vote-down" href="#"><?php _e( 'Vote Down', 'rovadex-site' ); ?></a>
 	</div>
 	<div class="dwqa-question-meta">
 		<?php $user_id = get_post_field( 'post_author', get_the_ID() ) ? get_post_field( 'post_author', get_the_ID() ) : false ?>
-		<?php printf( __( '<span><a href="%s">%s%s</a> %s asked %s ago</span>', 'dwqa' ), dwqa_get_author_link( $user_id ), get_avatar( $user_id, 48 ), get_the_author(),  dwqa_print_user_badge( $user_id ), human_time_diff( get_post_time( 'U', true ) ) ) ?>
+		<?php printf( __( '<span><a href="%s">%s%s</a> %s asked %s ago</span>', 'rovadex-site' ), dwqa_get_author_link( $user_id ), get_avatar( $user_id, 48 ), get_the_author(),  dwqa_print_user_badge( $user_id ), human_time_diff( get_post_time( 'U', true ) ) ) ?>
 		<span class="dwqa-question-actions"><?php dwqa_question_button_action() ?></span>
 	</div>
 	<div class="dwqa-question-content"><?php the_content(); ?></div>
 	<div class="dwqa-question-footer">
 		<div class="dwqa-question-meta">
-			<?php echo get_the_term_list( get_the_ID(), 'dwqa-question_tag', '<span class="dwqa-question-tag">' . __( 'Question Tags: ', 'dwqa' ), ', ', '</span>' ); ?>
+			<?php echo get_the_term_list( get_the_ID(), 'dwqa-question_tag', '<span class="dwqa-question-tag">' . __( 'Question Tags: ', 'rovadex-site' ), ', ', '</span>' ); ?>
 		</div>
 	</div>
 	<?php do_action( 'dwqa_before_single_question_comment' ); ?>

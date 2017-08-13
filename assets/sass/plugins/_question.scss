@@ -122,8 +122,20 @@
 		float: left;
 			button {
 				border-radius: 0;
+
 				&:first-child {
 					margin-left: 0;
+				}
+				&:hover {
+					color: $invert_color__link;
+					box-shadow: none;
+				}
+			}
+			.tmce-active{
+				button {
+					background: #f5f5f5;
+					color: #555;
+					border-bottom-color: #f5f5f5;
 				}
 			}
 	}

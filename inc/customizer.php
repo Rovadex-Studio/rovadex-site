@@ -37,20 +37,20 @@ function rovadex_get_customizer_options() {
 
 			/** `MailChimp` section */
 			'mailchimp' => array(
-				'title'       => esc_html__( 'MailChimp', 'cherry' ),
-				'description' => esc_html__( 'Setup MailChimp settings for subscribe widget', 'cherry' ),
+				'title'       => esc_html__( 'MailChimp', 'rovadex-site' ),
+				'description' => esc_html__( 'Setup MailChimp settings for subscribe widget', 'rovadex-site' ),
 				'priority'    => 109,
 				'type'        => 'section',
 			),
 			'mailchimp_api_key' => array(
-				'title'   => esc_html__( 'MailChimp API key', 'cherry' ),
+				'title'   => esc_html__( 'MailChimp API key', 'rovadex-site' ),
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',
 				'default' => '',
 			),
 			'mailchimp_list_id' => array(
-				'title'   => esc_html__( 'MailChimp list ID', 'cherry' ),
+				'title'   => esc_html__( 'MailChimp list ID', 'rovadex-site' ),
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',

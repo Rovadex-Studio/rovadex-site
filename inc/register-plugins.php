@@ -30,6 +30,10 @@ function rovadex_register_required_plugins() {
 			'slug' => 'contact-form-7',
 		),
 		array(
+			'name' => esc_html__( 'Elementor Page Builder', 'rovadex-site' ),
+			'slug' => 'elementor',
+		),
+		array(
 			'name' => esc_html__( 'Cherry Services List', 'rovadex-site' ),
 			'slug' => 'cherry-services-list',
 		),
@@ -40,6 +44,10 @@ function rovadex_register_required_plugins() {
 		array(
 			'name' => esc_html__( 'Cherry Projects', 'rovadex-site' ),
 			'slug' => 'cherry-projects',
+		),
+		array(
+			'name' => esc_html__( 'Cherry Testimonials', 'rovadex-site' ),
+			'slug' => 'cherry-testi',
 		),
 		array(
 			'name'   => esc_html__( 'Cherry Site Shortcodes', 'rovadex-site' ),

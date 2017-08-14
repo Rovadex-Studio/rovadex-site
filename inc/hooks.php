@@ -19,6 +19,8 @@ function rovadex_body_sidebar_class( $classes ) {
 		$classes[] = 'has_sidebar';
 	}
 
+	$classes[] = wp_is_mobile() ? 'is-mobile' : '';
+
 	return $classes;
 }
 add_filter( 'body_class', 'rovadex_body_sidebar_class' );

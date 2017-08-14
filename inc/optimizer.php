@@ -112,7 +112,10 @@ add_filter( 'wpcf7_load_js', 'rovadex_cf7_assets' );
 add_filter( 'wpcf7_load_css', 'rovadex_cf7_assets' );
 function rovadex_cf7_assets( $flag ) {
 
-	if ( is_front_page() || is_page( 'contacts' ) ) {
+	if ( is_front_page()
+		|| is_page( 'contacts' )
+		|| is_page( 'services' )
+	) {
 		return $flag;
 	}
 

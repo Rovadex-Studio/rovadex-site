@@ -197,6 +197,12 @@
 		min-width: 100%;
 		display: flex;
 		justify-content: center;
+		a.zoom-link{
+			display: none;
+			@include media-breakpoint-up(md){
+				display: flex;
+			}
+		}
 	}
 
 	&:hover {

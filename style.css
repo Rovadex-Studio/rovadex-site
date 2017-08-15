@@ -4932,9 +4932,12 @@ div.wpcf7 span.ajax-loader {
       margin-bottom: 0; }
 
 .dwqa-search {
-  margin-bottom: 2em; }
+  margin-bottom: 1em; }
   .dwqa-search input {
     border-radius: 6px; }
+  @media (min-width: 900px) {
+    .dwqa-search {
+      margin-bottom: 2em; } }
 
 .dwqa-questions-list {
   border: none; }
@@ -4961,23 +4964,58 @@ div.wpcf7 span.ajax-loader {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 1em; }
+  @media (min-width: 900px) {
+    .dwqa-question-filter {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 .dwqa-question-filter-items {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 3px 0; }
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto; }
+  .dwqa-question-filter-items a {
+    display: inline-block; }
+  @media (min-width: 900px) {
+    .dwqa-question-filter-items {
+      padding: 3px 0; } }
 
 .dwqa-question-filter-sort-by {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
-  flex: 0 1 auto; }
+  flex: 0 1 auto;
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1; }
+  @media (min-width: 900px) {
+    .dwqa-question-filter-sort-by {
+      -webkit-box-ordinal-group: 1;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; } }
   .dwqa-question-filter-sort-by .dwqa-sort-by {
     padding: 5px;
     border-radius: 6px; }
+    @media (max-width: 899px) {
+      .dwqa-question-filter-sort-by .dwqa-sort-by {
+        float: none;
+        width: 100%;
+        margin-bottom: .75em; } }
 
 .dwqa-question-item {
   border-width: 1px;

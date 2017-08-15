@@ -17,7 +17,7 @@ gulp.task('css', () => {
 				browsers: ['last 10 versions'],
 				cascade: false
 		}))
-		.pipe(minify())
+		// .pipe(minify())
 		.pipe(rename('style.css'))
 		.pipe(gulp.dest('./'))
 		.pipe(notify('Compile Sass Done!'));

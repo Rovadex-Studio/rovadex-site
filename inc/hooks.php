@@ -19,6 +19,8 @@ function rovadex_body_sidebar_class( $classes ) {
 		$classes[] = 'has_sidebar';
 	}
 
+	$classes[] = wp_is_mobile() ? 'is-mobile' : '';
+
 	return $classes;
 }
 add_filter( 'body_class', 'rovadex_body_sidebar_class' );
@@ -134,3 +136,9 @@ function rovadex_load_analytics() {
 	}
 }
 add_action( 'wp_footer', 'rovadex_load_analytics', 99 );
+
+function rovadex_popup_title_settings( $settings ) {
+	$settings['html'] = '<h3 %1$s>%4$s</h3>';
+	return $settings;
+}
+add_filter( 'cherry-popup-title-settings', 'rovadex_popup_title_settings' );

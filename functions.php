@@ -239,7 +239,7 @@ if ( ! class_exists( 'Rovadex_Theme' ) ) {
 		public function enqueue_assets() {
 			wp_enqueue_style( 'font-awesome', $this->assets_url() . 'css/font-awesome.min.css', array(), '2.2.0' );
 			wp_enqueue_style( 'material-icons', $this->assets_url() . 'css/material-icons.min.css', array(), '2.2.0' );
-			wp_enqueue_style( 'rovadex-style', get_stylesheet_uri(), null, '1.0.0-beta5' );
+			wp_enqueue_style( 'rovadex-style', get_stylesheet_uri(), null, '1.0.0' );
 
 			wp_enqueue_script( 'jquery-cherry-responsive-menu', $this->assets_url() . 'js/min/cherry-responsive-menu.min.js', array( 'jquery' ), '1.0.0', true );
 

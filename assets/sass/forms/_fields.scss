@@ -13,7 +13,23 @@ input[type='time'],
 input[type='datetime'],
 input[type='datetime-local'],
 input[type='color'],
-textarea {
+textarea,
+div.wpcf7 input[type='email'],
+div.wpcf7 input[type='text'],
+div.wpcf7 input[type='url'],
+div.wpcf7 input[type='password'],
+div.wpcf7 input[type='search'],
+div.wpcf7 input[type='number'],
+div.wpcf7 input[type='tel'],
+div.wpcf7 input[type='range'],
+div.wpcf7 input[type='date'],
+div.wpcf7 input[type='month'],
+div.wpcf7 input[type='week'],
+div.wpcf7 input[type='time'],
+div.wpcf7 input[type='datetime'],
+div.wpcf7 input[type='datetime-local'],
+div.wpcf7 input[type='color'],
+div.wpcf7 textarea {
 	@include font-size(0.875);
 	padding: $input__indents;
 	width: 100%;
@@ -22,6 +38,7 @@ textarea {
 
 	color: $color__background-sub-menu;
 	background-color: rgba(69, 71, 75, 0.1);
+	border-radius: none;
 
 	&::placeholder {
 		color: inherit;

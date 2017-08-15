@@ -238,12 +238,7 @@
 						0: {
 							items: 1,
 						},
-						// breakpoint from 480 up
-						480: {
-							items: 1,
-						},
-						// breakpoint from 768 up
-						768: {
+						500: {
 							items: 2,
 						}
 					}

@@ -27,10 +27,10 @@
 			this.wpcf7Form();
 			this.subscribe_init( this );
 			this.homePageCarousel();
+			this.mobileProjectFilter();
 		},
 
 		window_load_render: function () {
-
 		},
 
 		onePageMenuInit: function ( self ) {
@@ -308,7 +308,41 @@
 				});
 
 			});
+		},
+		mobileProjectFilter: function() {
+			if( $('.projects-filters-list')[0] ){
+				$('.projects-filters-list').each( function( index, item ){
+					var select = '',
+						selectItems = '',
+						selectClass = $( this ).attr('class');
 
+					$( '>li', this ).each( function( index, item ){
+
+						var selectItem  = $( this ),
+							itemCatID   = $( '>span', selectItem ).data( 'cat-id' ),
+							itemSlug    = $( '>span', selectItem ).data( 'slug' ),
+							itemText    = selectItem.text(),
+							activeClass = selectItem.hasClass('active') ? 'active' : '' ;
+
+						selectItems += '<option ' + activeClass + ' value="' + itemSlug + '">' + itemText + '</option>';
+					} )
+
+
+					select = $( '<select class="projects-filters-select" data-list-class="' + selectClass + '">' + selectItems + '</select>' );
+
+					$( this ).after( select )
+					select.on( 'change', rovadexThemeScript.changeProjectFilter )
+				})
+			}
+		},
+		changeProjectFilter: function( event ){
+			var select = $(this),
+				value = select[0].value,
+				filterClass = select.data( 'list-class' );
+
+			filterClass = '.' + filterClass.replace( ' ', '.' );
+
+			$( filterClass + ' li span[data-slug="' + value + '"]').trigger( 'click' );
 		}
 	}
 

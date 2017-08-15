@@ -71,6 +71,11 @@ input[type='reset'] {
 
 select {
 	border: 1px solid $color__border;
+	padding: 5px;
+	border-radius: 6px;
+	height: 43px;
+	font-size: 1rem;
+	line-height: 2;
 }
 
 textarea {

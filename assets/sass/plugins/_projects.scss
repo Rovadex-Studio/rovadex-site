@@ -9,11 +9,16 @@
 		align-items: center;
 
 		.projects-filters-list-wrapper {
-
+			width: 100%;
 		}
 
 		.projects-filters-list {
 			list-style: none;
+			display: none;
+
+			@include media-breakpoint-up(md){
+				display: block;
+			}
 
 			li {
 				margin: 0 5px;
@@ -35,6 +40,14 @@
 					display: none;
 				}
 
+			}
+		}
+		.projects-filters-select{
+			display: block;
+			width: 100%;
+
+			@include media-breakpoint-up(md){
+				display: none;
 			}
 		}
 	}

@@ -125,7 +125,9 @@
 						//TweenMax.set( currentSection, { perspective:800 } );
 						//TweenMax.from( $boxCurrentImage, 1.5, { opacity:0, z:-500, rotationY:-90, delay:0.5, force3D: true, ease: Expo.easeOut } );
 
-						rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
+						if ( ! $( 'body' ).hasClass( 'fp-responsive' ) ) {
+							rovadexThemeScript.titleShow( $( 'h2.splitted', currentSection ) );
+						}
 					}
 				} );
 			}

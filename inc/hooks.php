@@ -142,3 +142,19 @@ function rovadex_popup_title_settings( $settings ) {
 	return $settings;
 }
 add_filter( 'cherry-popup-title-settings', 'rovadex_popup_title_settings' );
+
+/**
+ * Replaces `[...]` (appended to automatically generated excerpts) with `...`.
+ *
+ * @param  string $more The string shown within the more link.
+ * @return string
+ */
+function rovadex_excerpt_more( $more ) {
+
+	if ( is_admin() ) {
+		return $more;
+	}
+
+	return ' &hellip;';
+}
+add_filter( 'excerpt_more', 'rovadex_excerpt_more' );

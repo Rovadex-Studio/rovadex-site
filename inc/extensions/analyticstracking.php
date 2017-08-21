@@ -29,6 +29,11 @@
 		"https://plus.google.com/u/3/116514722762561656594",
 		"https://github.com/Rovadex-Studio",
 		"https://www.instagram.com/rovadex.studio"
-	]
+	],
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"email": "rovadex@gmail.com",
+		"contactType": "Customer service"
+	}
 }
 </script>

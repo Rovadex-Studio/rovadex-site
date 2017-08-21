@@ -33,7 +33,8 @@
 	"contactPoint": {
 		"@type": "ContactPoint",
 		"email": "rovadex@gmail.com",
-		"contactType": "Customer service"
+		"contactType": "Customer service",
+		"url": "https://rovadex.com/contacts"
 	}
 }
 </script>

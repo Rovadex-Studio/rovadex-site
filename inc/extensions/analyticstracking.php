@@ -22,7 +22,7 @@
 	"name": "Rovadex Studio",
 	"alternateName": "Rovadex Media",
 	"url": "https://rovadex.com",
-	"logo": "https://rovadex.com/assets/images/rovadex-logo-transparent.png"
+	"logo": "https://rovadex.com/assets/images/rovadex-logo-transparent.png",
 	"sameAs": [
 		"https://www.facebook.com/rovadexcom-1928996710689892",
 		"https://www.linkedin.com/company-beta/18176570 ",

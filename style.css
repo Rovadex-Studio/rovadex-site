@@ -4468,9 +4468,6 @@ html.fp-enabled,
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row; }
-    @media (min-width: 900px) {
-      .home .testimonials-section-column .content-section .home-page-testimonials .tm-testi__inner blockquote {
-        padding: 0 50% 0 0; } }
   .home .testimonials-section-column .content-section .home-page-testimonials .tm-testi__item-body footer {
     margin-top: 10px; }
     .home .testimonials-section-column .content-section .home-page-testimonials .tm-testi__item-body footer > cite, .home .testimonials-section-column .content-section .home-page-testimonials .tm-testi__item-body footer > span {

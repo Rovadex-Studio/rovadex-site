@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 	 */
 	grunt.initConfig({
 		criticalcss: {
+			// on command line - grunt criticalcss:home
 			home: {
 				options: {
 					url: "http://localhost:8888/rovadex",
@@ -17,6 +18,7 @@ module.exports = function(grunt) {
 					ignoreConsole: true
 				}
 			},
+			// on command line - grunt criticalcss:subpages
 			subpages: {
 				options: {
 					url: "http://localhost:8888/rovadex/contacts/",
@@ -26,11 +28,31 @@ module.exports = function(grunt) {
 					filename: "./style.css",
 					buffer: 800*1024,
 					forceInclude: [
+						'.main-navigation',
 						'.mobile-menu-toggle-button',
 						'.main-navigation.mobile-menu',
+						'.site-content_wrap',
 						'.main-entry-header',
+						'.entry-title',
 						'.breadcrumbs',
-						'.cherry-section'
+						'.cherry-section',
+						'.container',
+						'.row',
+						'.col-xs-12',
+						'.col-md-3',
+						'.col-md-6',
+						'.col-md-offset-3',
+						'.btn-primary',
+
+						// Contacts
+						'.contact-form',
+						'input[type="text"]',
+						'input[type="email"]',
+						'textarea',
+						'button',
+						'input[type="submit"]',
+						'input[type="reset"]',
+						'.rovadex-social-link',
 					],
 					ignoreConsole: true
 				}

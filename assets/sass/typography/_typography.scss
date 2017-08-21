@@ -8,7 +8,7 @@ textarea {
 	@include font-size(1);
 	line-height: $font__line-height-body;
 
-	.invert, .invert &{
+	.invert & {
 		color: $invert_color__text-screen;
 	}
 

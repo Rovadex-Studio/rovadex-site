@@ -126,7 +126,7 @@ add_filter( 'cherry-projects-zoom-link-text', 'rovadex_projects_zoom_text');
 function rovadex_load_custom_fonts() {
 	rovadex()->get_config( 'fonts' );
 }
-add_action( 'wp_head', 'rovadex_load_custom_fonts' );
+// add_action( 'wp_head', 'rovadex_load_custom_fonts' );
 
 function rovadex_load_analytics() {
 	if ( ! isset( $_SERVER['HTTP_USER_AGENT'] )

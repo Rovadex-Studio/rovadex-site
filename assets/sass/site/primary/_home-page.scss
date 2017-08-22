@@ -144,15 +144,15 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 50%;
-				height: 90%;
-				top: 5%;
+				width: 30%;
+				height: 80%;
+				top: 10%;
 				right: 5%;
 			}
 			@include media-breakpoint-up(md) {
 				width: 50%;
-				height: 90%;
-				top: 5%;
+				height: 80%;
+				top: 10%;
 				right: 5%;
 			}
 			@include media-breakpoint-up(lg) {
@@ -311,29 +311,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 60%;
-				height: 100%;
-				top: 0%;
-				left: -200px;
+				width: 30%;
+				height: 80%;
+				top: 10%;
+				left: 3%;
 			}
 			@include media-breakpoint-up(md) {
-				width: 60%;
-				height: 122%;
-				top: -8%;
-				left: -260px;
+				width: 30%;
+				height: 80%;
+				top: 10%;
+				left: 4%;
 			}
 			@include media-breakpoint-up(lg) {
 				width: 40%;
-				height: 130%;
-				top: -11%;
-				left: 20px;
+				height: 80%;
+				top: 10%;
+				left: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 165%;
-				top: -30%;
-				left: -20px;
-
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				left: 10%;
 			}
 		}
 

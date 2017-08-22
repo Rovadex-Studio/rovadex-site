@@ -3645,7 +3645,7 @@ html.fp-enabled,
 
 @media (min-width: 900px) {
   .home .about-section .cover-image {
-    width: 50%;
+    width: 40%;
     height: 80%;
     top: 10%;
     right: 5%; } }
@@ -3740,7 +3740,11 @@ html.fp-enabled,
       .home .services-section .cherry-services .services-item .service-descr {
         font-size: 14px;
         text-align: justify;
-        font-weight: lighter; }
+        font-weight: lighter;
+        text-align: center; }
+        @media (min-width: 900px) {
+          .home .services-section .cherry-services .services-item .service-descr {
+            text-align: left; } }
       .home .services-section .cherry-services .services-item p {
         font-size: 14px; }
         @media (min-width: 900px) {
@@ -3765,13 +3769,13 @@ html.fp-enabled,
 @media (min-width: 900px) {
   .home .projects-section .cover-image {
     width: 30%;
-    height: 80%;
-    top: 10%;
+    height: 90%;
+    top: 5%;
     left: 4%; } }
 
 @media (min-width: 1200px) {
   .home .projects-section .cover-image {
-    width: 40%;
+    width: 35%;
     height: 80%;
     top: 10%;
     left: 10%; } }
@@ -3911,8 +3915,8 @@ html.fp-enabled,
   @media (min-width: 900px) {
     .home .testimonials-section .cover-image {
       width: 40%;
-      height: 80%;
-      top: 10%;
+      height: 90%;
+      top: 5%;
       right: 5%; } }
   @media (min-width: 1200px) {
     .home .testimonials-section .cover-image {

@@ -3767,14 +3767,14 @@ html.fp-enabled,
     width: 40%;
     height: 130%;
     top: -11%;
-    left: 0px; } }
+    left: 20px; } }
 
 @media (min-width: 1600px) {
   .home .projects-section .cover-image {
     width: 45%;
     height: 165%;
     top: -30%;
-    left: -150px; } }
+    left: -20px; } }
 
 .home .projects-section-column .content-section:before {
   width: 70px;
@@ -4307,7 +4307,8 @@ span.swiper-pagination-bullet, .owl-dot {
 .cherry-team .team-item .team-listing_position {
   font-size: 25px;
   font-weight: 300;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
 
 .cherry-team .team-item .team-listing_socials .team-socials_icon {
   color: #fff; }

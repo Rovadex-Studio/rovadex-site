@@ -3769,8 +3769,8 @@ html.fp-enabled,
 @media (min-width: 900px) {
   .home .projects-section .cover-image {
     width: 30%;
-    height: 90%;
-    top: 5%;
+    height: 80%;
+    top: 10%;
     left: 4%; } }
 
 @media (min-width: 1200px) {
@@ -3915,8 +3915,8 @@ html.fp-enabled,
   @media (min-width: 900px) {
     .home .testimonials-section .cover-image {
       width: 40%;
-      height: 90%;
-      top: 5%;
+      height: 80%;
+      top: 10%;
       right: 5%; } }
   @media (min-width: 1200px) {
     .home .testimonials-section .cover-image {

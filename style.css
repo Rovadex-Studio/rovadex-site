@@ -3638,24 +3638,31 @@ html.fp-enabled,
 
 @media (min-width: 600px) {
   .home .about-section .cover-image {
-    width: 65%;
-    height: 110%;
-    top: -5%;
-    right: -100px; } }
+    width: 50%;
+    height: 90%;
+    top: 5%;
+    right: 5%; } }
 
 @media (min-width: 900px) {
   .home .about-section .cover-image {
     width: 50%;
-    height: 122%;
-    top: -8%;
-    right: -120px; } }
+    height: 90%;
+    top: 5%;
+    right: 5%; } }
+
+@media (min-width: 1200px) {
+  .home .about-section .cover-image {
+    width: 35%;
+    height: 80%;
+    top: 10%;
+    right: 10%; } }
 
 @media (min-width: 1600px) {
   .home .about-section .cover-image {
-    width: 45%;
-    height: 175%;
-    top: -30%;
-    right: -100px; } }
+    width: 35%;
+    height: 80%;
+    top: 10%;
+    right: 10%; } }
 
 .home .about-section-column .content-section:before {
   width: 70px;

@@ -22,9 +22,6 @@
 		overflow: hidden;
 		padding-top: 50px;
 		padding-bottom: 50px;
-		// @include media-breakpoint-up(md){
-		// 	height: 1024px;
-		// }
 
 		@media ( min-width: 1024px ) {
 			height: 803px;
@@ -147,22 +144,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 65%;
-				height: 110%;
-				top: -5%;
-				right: -100px;
+				width: 50%;
+				height: 90%;
+				top: 5%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(md) {
 				width: 50%;
-				height: 122%;
-				top: -8%;
-				right: -120px;
+				height: 90%;
+				top: 5%;
+				right: 5%;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 175%;
-				top: -30%;
-				right: -100px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 		}
 

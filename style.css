@@ -3638,16 +3638,16 @@ html.fp-enabled,
 
 @media (min-width: 600px) {
   .home .about-section .cover-image {
-    width: 50%;
-    height: 90%;
-    top: 5%;
+    width: 30%;
+    height: 80%;
+    top: 10%;
     right: 5%; } }
 
 @media (min-width: 900px) {
   .home .about-section .cover-image {
     width: 50%;
-    height: 90%;
-    top: 5%;
+    height: 80%;
+    top: 10%;
     right: 5%; } }
 
 @media (min-width: 1200px) {
@@ -3757,31 +3757,31 @@ html.fp-enabled,
 
 @media (min-width: 600px) {
   .home .projects-section .cover-image {
-    width: 60%;
-    height: 100%;
-    top: 0%;
-    left: -200px; } }
+    width: 30%;
+    height: 80%;
+    top: 10%;
+    left: 3%; } }
 
 @media (min-width: 900px) {
   .home .projects-section .cover-image {
-    width: 60%;
-    height: 122%;
-    top: -8%;
-    left: -260px; } }
+    width: 30%;
+    height: 80%;
+    top: 10%;
+    left: 4%; } }
 
 @media (min-width: 1200px) {
   .home .projects-section .cover-image {
     width: 40%;
-    height: 130%;
-    top: -11%;
-    left: 20px; } }
+    height: 80%;
+    top: 10%;
+    left: 10%; } }
 
 @media (min-width: 1600px) {
   .home .projects-section .cover-image {
-    width: 45%;
-    height: 165%;
-    top: -30%;
-    left: -20px; } }
+    width: 35%;
+    height: 80%;
+    top: 10%;
+    left: 10%; } }
 
 .home .projects-section-column .content-section:before {
   width: 70px;
@@ -3904,28 +3904,28 @@ html.fp-enabled,
       max-width: 100%; } }
   @media (min-width: 600px) {
     .home .testimonials-section .cover-image {
-      width: 65%;
-      height: 130%;
-      top: -15%;
-      right: -220px; } }
+      width: 40%;
+      height: 90%;
+      top: 5%;
+      right: 5%; } }
   @media (min-width: 900px) {
     .home .testimonials-section .cover-image {
-      width: 52%;
-      height: 133%;
-      top: -13%;
-      right: -40px; } }
+      width: 40%;
+      height: 80%;
+      top: 10%;
+      right: 5%; } }
   @media (min-width: 1200px) {
     .home .testimonials-section .cover-image {
-      width: 40%;
-      height: 170%;
-      top: -31%;
-      right: -20px; } }
+      width: 35%;
+      height: 80%;
+      top: 10%;
+      right: 10%; } }
   @media (min-width: 1600px) {
     .home .testimonials-section .cover-image {
-      width: 45%;
-      height: 200%;
-      top: -45%;
-      right: -100px; } }
+      width: 35%;
+      height: 80%;
+      top: 10%;
+      right: 10%; } }
   .home .testimonials-section-column .content-section:before {
     width: 70px;
     height: 3px;

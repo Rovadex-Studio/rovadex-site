@@ -488,28 +488,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 65%;
-				height: 130%;
-				top: -15%;
-				right: -220px;
+				width: 40%;
+				height: 90%;
+				top: 5%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(md) {
-				width: 52%;
-				height: 133%;
-				top: -13%;
-				right: -40px;
+				width: 40%;
+				height: 80%;
+				top: 10%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(lg) {
-				width: 40%;
-				height: 170%;
-				top: -31%;
-				right: -20px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 200%;
-				top: -45%;
-				right: -100px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 		}
 

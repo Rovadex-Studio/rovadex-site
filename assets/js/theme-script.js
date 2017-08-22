@@ -95,6 +95,10 @@
 							$( '#fp-nav' ).removeClass( 'invert' );
 						}
 
+						if ( loadedSection.hasClass( 'home-section' ) ) {
+							self.homeAnimationShow( loadedSection );
+						}
+
 					},
 					onLeave: function( index, nextIndex, direction ) {
 						var leavingSection = $( this ),

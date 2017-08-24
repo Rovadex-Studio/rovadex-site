@@ -22,9 +22,6 @@
 		overflow: hidden;
 		padding-top: 50px;
 		padding-bottom: 50px;
-		// @include media-breakpoint-up(md){
-		// 	height: 1024px;
-		// }
 
 		@media ( min-width: 1024px ) {
 			height: 803px;
@@ -147,22 +144,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 65%;
-				height: 110%;
-				top: -5%;
-				right: -100px;
+				width: 30%;
+				height: 80%;
+				top: 10%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(md) {
-				width: 50%;
-				height: 122%;
-				top: -8%;
-				right: -120px;
+				width: 40%;
+				height: 80%;
+				top: 10%;
+				right: 5%;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 175%;
-				top: -30%;
-				right: -100px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 		}
 
@@ -281,6 +284,11 @@
 					font-size: 14px;
 					text-align: justify;
 					font-weight: lighter;
+					text-align: center;
+
+					@include media-breakpoint-up(md){
+						text-align: left;
+					}
 				}
 
 				p {
@@ -308,29 +316,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 60%;
-				height: 100%;
-				top: 0%;
-				left: -200px;
+				width: 30%;
+				height: 80%;
+				top: 10%;
+				left: 3%;
 			}
 			@include media-breakpoint-up(md) {
-				width: 60%;
-				height: 122%;
-				top: -8%;
-				left: -260px;
+				width: 30%;
+				height: 80%;
+				top: 10%;
+				left: 4%;
 			}
 			@include media-breakpoint-up(lg) {
-				width: 40%;
-				height: 130%;
-				top: -11%;
-				left: 0px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				left: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 165%;
-				top: -30%;
-				left: -150px;
-
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				left: 10%;
 			}
 		}
 
@@ -486,28 +493,28 @@
 		.cover-image {
 
 			@include media-breakpoint-up(sm){
-				width: 65%;
-				height: 130%;
-				top: -15%;
-				right: -220px;
+				width: 40%;
+				height: 90%;
+				top: 5%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(md) {
-				width: 52%;
-				height: 133%;
-				top: -13%;
-				right: -40px;
+				width: 40%;
+				height: 80%;
+				top: 10%;
+				right: 5%;
 			}
 			@include media-breakpoint-up(lg) {
-				width: 40%;
-				height: 170%;
-				top: -31%;
-				right: -20px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 			@include media-breakpoint-up(xl) {
-				width: 45%;
-				height: 200%;
-				top: -45%;
-				right: -100px;
+				width: 35%;
+				height: 80%;
+				top: 10%;
+				right: 10%;
 			}
 		}
 
@@ -539,9 +546,6 @@
 								background-color: transparent;
 								padding: 0;
 								flex-direction: row;
-								@include media-breakpoint-up(md) {
-									padding: 0 50% 0 0;
-								}
 							}
 						}
 						&__item-body{

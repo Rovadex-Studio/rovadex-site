@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'cherry_services_before_main_content' );
 	?>
 	<?php if ( apply_filters( 'cherry_services_show_page_title', true ) ) : ?>
-		<?php cherry_services_tools()->page_title( '<h1 class="page-title">%s</h1>' ); ?>
+		<?php cherry_services_tools()->page_title( '<h1 class="page-title entry-title">%s</h1>' ); ?>
 	<?php endif; ?>
 	<div class="services-container">
 	<?php

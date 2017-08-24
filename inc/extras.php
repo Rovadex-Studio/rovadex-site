@@ -125,7 +125,7 @@ function rovadex_get_image_id_by_url( $image_src ) {
  */
 function rovadex_get_svg_by_attachment_id( $attachment_id ) {
 	$transient = md5( $attachment_id );
-	$svg = get_transient( $transient );
+	$svg       = get_transient( $transient );
 
 	if ( $svg ) {
 		return $svg;

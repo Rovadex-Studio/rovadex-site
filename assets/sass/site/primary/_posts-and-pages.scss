@@ -26,7 +26,7 @@
 	display: block;
 }
 
-.posted-on .updated:not(.published){
+.posted-on .updated:not(.published), .page-author{
 	display: none;
 }
 

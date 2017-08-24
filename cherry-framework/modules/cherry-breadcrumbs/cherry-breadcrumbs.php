@@ -117,7 +117,7 @@ if ( ! class_exists( 'Cherry_Breadcrumbs' ) ) {
 				'show_mobile'       => true,
 				'show_tablet'       => true,
 				'wrapper_format'    => '<div>%1$s</div><div>%2$s</div>',
-				'page_title_format' => '<h1 class="page-title">%s</h1>',
+				'page_title_format' => '<h1 class="page-title entry-title">%s</h1>',
 				'item_format'       => '<div class="%2$s">%1$s</div>',
 				'home_format'       => '<a href="%4$s" class="%2$s is-home" rel="home" title="%3$s">%1$s</a>',
 				'link_format'       => '<a href="%4$s" class="%2$s" rel="tag" title="%3$s">%1$s</a>',

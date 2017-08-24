@@ -13,6 +13,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer invert" role="contentinfo">
+		<?php
+			// Update date post - need for google
+			rovadex_page_entry_meta();
+		?>
 		<div class="container">
 			<?php
 				if ( ! is_front_page() ) { ?>

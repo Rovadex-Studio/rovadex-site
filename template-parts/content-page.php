@@ -29,7 +29,7 @@
 						sprintf(
 							/* translators: %s: Name of current post */
 							esc_html__( 'Edit %s', 'rovadex-site' ),
-							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+							the_title( '<span class="screen-reader-text entry-title">"', '"</span>', false )
 						),
 						'<span class="edit-link">',
 						'</span>'

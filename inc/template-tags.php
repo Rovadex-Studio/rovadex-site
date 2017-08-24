@@ -373,3 +373,23 @@ function rovadex_category_transient_flusher() {
 }
 add_action( 'edit_category', 'rovadex_category_transient_flusher' );
 add_action( 'save_post',     'rovadex_category_transient_flusher' );
+
+if ( ! function_exists( 'rovadex_entry_updated' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function rovadex_page_entry_meta() {
+	$output_string = '<span class="posted-on"><time class="entry-date updated" datetime="%3$s">%4$s</time></span>';
+
+	$output_string = sprintf( $output_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+	$output_string .= '<span class="page-author author vcard">' . get_the_author() . '</span>';
+
+	echo $output_string; // WPCS: XSS OK.
+
+}
+endif;

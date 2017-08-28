@@ -137,6 +137,24 @@ function rovadex_load_analytics() {
 }
 add_action( 'wp_footer', 'rovadex_load_analytics', 99 );
 
+function rovadex_google_tag_head() {
+	if ( ! isset( $_SERVER['HTTP_USER_AGENT'] )
+		|| false === stripos( $_SERVER['HTTP_USER_AGENT'], 'Speed Insights' ) )
+	{
+		include_once( get_template_directory() . '/inc/extensions/google-tag-head.php' );
+	}
+}
+add_action( 'google_tag_head', 'rovadex_google_tag_head', 99 );
+
+function rovadex_google_tag_body() {
+	if ( ! isset( $_SERVER['HTTP_USER_AGENT'] )
+		|| false === stripos( $_SERVER['HTTP_USER_AGENT'], 'Speed Insights' ) )
+	{
+		include_once( get_template_directory() . '/inc/extensions/google-tag-body.php' );
+	}
+}
+add_action( 'google_tag_body', 'rovadex_google_tag_body', 99 );
+
 function rovadex_popup_title_settings( $settings ) {
 	$settings['html'] = '<h3 %1$s>%4$s</h3>';
 	return $settings;

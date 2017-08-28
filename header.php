@@ -17,10 +17,12 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="icon" href="<?php echo rovadex()->assets_url() . 'images/favicon.ico' ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo rovadex()->assets_url() . 'images/favicon.ico' ?>" type="image/x-icon" />
+<?php do_action( 'google_tag_head' ); ?>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'google_tag_body' ); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rovadex-site' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">

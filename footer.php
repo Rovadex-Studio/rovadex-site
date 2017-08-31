@@ -28,7 +28,12 @@
 		<div class="footer-conatiner__flex">
 			<div class="site-info">
 				<span class="sep"> &copy; </span>
-				<?php printf( esc_html__( '2017 Rovadex %1$sPrivacy Policy%2$s.', 'rovadex-site' ), '<a href="privacy-policy">', '</a>' ); ?>
+				<?php
+					$open_tag_a = '<a href="' . get_bloginfo( 'url' ) . '/privacy-policy">';
+					$close_tag_a = '</a>';
+
+					printf( esc_html__( '2017 Rovadex %1$sPrivacy Policy%2$s.', 'rovadex-site' ), $open_tag_a, $close_tag_a );
+				?>
 			</div><!-- .site-info -->
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 				<?php
